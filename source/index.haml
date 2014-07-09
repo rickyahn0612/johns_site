@@ -5,7 +5,8 @@
 #main_nav
   .container
     .logo.float_left
-      %h2 SOCCER CLUB
+      = image_tag 'images/Adidas-Soccer-Logo.png', style: 'width: 70px; float: left;'
+      %h2.float_right SOCCER CLUB
     .nav_container.float_right
       %ul
         %li.active HOME
@@ -71,8 +72,10 @@
         %h3
           FACILITY
         .black_line
-        %p 
-          In this bed I made and every night I close my eyes.
+        .arrow_box.float_left{style: 'margin-right: 10px;'}
+          %i.fa.fa-angle-left
+        .arrow_box.float_left
+          %i.fa.fa-angle-right
       .info_box_container.float_left
         = image_tag 'images/indoor-soccer-facility-1.jpg', style: 'width: 335px; height: 220px;'
       .content_container.float_right
@@ -98,12 +101,12 @@
         %p CALL US AT (123) 123-1234
         .footer_icon_circle
           %i.fa.fa-phone
-      .footer_boxes.float_left 
+      .footer_boxes.float_left{style: 'background: #91CE6B;'}
         %br
         %br
         %h3 JULY 17 2014
         %p Grand Opening
-        .footer_icon_circle
+        .footer_icon_circle{style: 'background: #91CE6B'}
           %i.fa.fa-calendar
       .footer_boxes.float_right
         %br
@@ -112,6 +115,25 @@
         %p 50% Off for 1 Year
         .footer_icon_circle
           %i.fa.fa-thumbs-o-up
+      .clear
+      .footer_box.float_left
+        %h3 CONTACT INFORMATION
+        %p{style: 'color: #949494;'} Soccer Club
+        %p 1020 Any St <br /> San Francisco CA 94107
+        %p (123) 123-1234
+        %p info@soccerclub.com
+      .footer_box.float_left
+        %h3 OPENING HOURS
+        %ul
+          %li MONDAY &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 12:00pm - 4:00pm
+          %li TUESDAY &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 12:00pm - 4:00pm
+          %li WEDNESDAY &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 12:00pm - 4:00pm
+          %li THURSDAY &nbsp  &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 12:00pm - 4:00pm
+          %li FRIDAY  &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 12:00pm - 4:00pm
+          %li SATURDAY &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 12:00pm - 4:00pm
+      .footer_box.float_left
+        %h3 FIND US HERE
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3118.7384738875526!2d-121.3748546!3d38.5858699!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809adb9ec24b780f%3A0xc43758882a731c3a!2sLos+Molinos+Way!5e0!3m2!1sen!2sus!4v1404939826166" width="400" height="220" frameborder="0" style="border:0"></iframe>
       
 
 

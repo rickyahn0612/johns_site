@@ -40,7 +40,7 @@ body {
 
   .container {
   	.logo {
-  		width: 190px;
+  		width: 270px;
   		font-weight: bold;
   	}
 
@@ -185,6 +185,20 @@ body {
     width: 140px;
     padding: 10px;
 
+    .arrow_box {
+      margin-top: 20px;
+      width: 50px;
+      height: 40px;
+      border: solid #484848 2px;
+      text-align: center;
+
+      i {
+        font-size: 37px;
+        color: #484848;
+        font-weight: bold;
+      }
+    }
+
     p {
       font: normal 14px/20px Montserrat, Arial, Tahoma, sans-serif;
       -webkit-text-stroke: 0.001px transparent;
@@ -233,12 +247,11 @@ body {
 
 #footer {
   background: black;
-  height: 200px;
+  height: 430px;
 
   .footer_boxes  {
     background: #87BD65;
     width: 399px;
-    height: 100px;
     position: relative;
     text-align: center;
     border-right: solid black 1px;
@@ -268,6 +281,34 @@ body {
         color: white;
         font-size: 30px;
         margin-top: 10px;
+      }
+    }
+  }
+
+  .footer_box {
+    width: 400px;
+    margin-top: 40px;
+
+    p {
+      color: #515351;
+    }
+
+    h3 {
+      color: white;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        font-size: 12px;
+        padding: 0;
+        color: white;
+        margin-bottom: 20px;
+        border-bottom: solid #515351 1px;
+        color: #515351;
+        width: 330px;
       }
     }
   }
