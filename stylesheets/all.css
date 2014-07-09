@@ -31,34 +31,35 @@ body {
     color: #BEBEBE; }
   /* line 33, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
   #top_header .opening_hours {
-    width: 400px; }
+    width: 400px;
+    font-size: 11px; }
 
-/* line 38, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
+/* line 39, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
 #main_nav {
   padding: 20px 0 20px 0; }
-  /* line 42, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
+  /* line 43, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
   #main_nav .container .logo {
     width: 270px;
     font-weight: bold; }
-  /* line 47, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
+  /* line 48, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
   #main_nav .container .nav_container {
     width: 750px; }
-    /* line 50, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
+    /* line 51, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
     #main_nav .container .nav_container ul {
       list-style: none;
       color: #969595;
       font-size: 14px;
       padding-top: 14px; }
-      /* line 56, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
+      /* line 57, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
       #main_nav .container .nav_container ul li {
         display: inline;
         margin-right: 40px; }
-      /* line 60, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
+      /* line 61, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
       #main_nav .container .nav_container ul .active {
         border: solid #87BD65 2px;
         padding: 10px 15px 10px 15px; }
 
-/* line 69, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
+/* line 70, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
 #banner {
   background: red;
   height: 550px;
@@ -68,67 +69,67 @@ body {
   -o-background-size: cover;
   background-size: cover;
   opacity: 0.8; }
-  /* line 79, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
+  /* line 80, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
   #banner .banner_content {
     margin-top: 80px;
     z-index: 1000;
     width: 600px; }
-    /* line 84, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
+    /* line 85, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
     #banner .banner_content h1 {
       margin: 0;
       font-size: 60px; }
-    /* line 89, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
+    /* line 90, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
     #banner .banner_content h2 {
       margin: 0;
       font-size: 27px; }
-    /* line 94, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
+    /* line 95, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
     #banner .banner_content .line {
       border-bottom: solid black 1px;
       height: 1px; }
 
-/* line 101, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
+/* line 102, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
 #home_content_container {
   background: #E9E9E9; }
-  /* line 104, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
+  /* line 105, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
   #home_content_container .popular_classes_container {
     background: black;
     height: 400px;
     width: 140px;
     padding: 10px;
     color: white; }
-    /* line 111, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
+    /* line 112, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
     #home_content_container .popular_classes_container .arrow_box {
       width: 50px;
       height: 40px;
       border: solid #484848 2px;
       text-align: center; }
-      /* line 117, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
+      /* line 118, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
       #home_content_container .popular_classes_container .arrow_box i {
         font-size: 37px;
         color: #484848;
         font-weight: bold; }
-    /* line 124, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
+    /* line 125, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
     #home_content_container .popular_classes_container .grey_line {
       border-bottom: solid #555555 2px;
       height: 1px;
       width: 90px; }
-    /* line 130, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
+    /* line 131, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
     #home_content_container .popular_classes_container p {
       color: #555555;
       font-size: 14px; }
-  /* line 136, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
+  /* line 137, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
   #home_content_container .popular_classes {
     width: 1030px; }
-    /* line 139, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
+    /* line 140, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
     #home_content_container .popular_classes .info_box_container {
       background: white;
       width: 335px;
       height: 420px; }
-      /* line 144, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
+      /* line 145, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
       #home_content_container .popular_classes .info_box_container .image_container {
         height: 200px;
         position: relative; }
-        /* line 148, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
+        /* line 149, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
         #home_content_container .popular_classes .info_box_container .image_container .image_content_container {
           background: black;
           color: white;
@@ -138,98 +139,99 @@ body {
           position: absolute;
           bottom: 0;
           margin-left: 100px; }
-      /* line 161, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
+      /* line 162, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
       #home_content_container .popular_classes .info_box_container .content_container {
         text-align: center;
         padding: 20px; }
-        /* line 165, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
+        /* line 166, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
         #home_content_container .popular_classes .info_box_container .content_container h3 {
           font-weight: bold; }
-        /* line 169, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
+        /* line 170, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
         #home_content_container .popular_classes .info_box_container .content_container p {
           color: #7A7A7A;
           font: normal 14px/20px Montserrat, Arial, Tahoma, sans-serif;
           -webkit-text-stroke: 0.001px transparent;
           -webkit-font-smoothing: antialiased; }
 
-/* line 182, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
+/* line 183, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
 .facility_container .facility_green_box {
   background: #87BD65;
   height: 200px;
   width: 140px;
   padding: 10px; }
-  /* line 188, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
+  /* line 189, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
   .facility_container .facility_green_box .arrow_box {
     margin-top: 20px;
     width: 50px;
     height: 40px;
     border: solid #484848 2px;
     text-align: center; }
-    /* line 195, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
+    /* line 196, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
     .facility_container .facility_green_box .arrow_box i {
       font-size: 37px;
       color: #484848;
       font-weight: bold; }
-  /* line 202, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
+  /* line 203, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
   .facility_container .facility_green_box p {
     font: normal 14px/20px Montserrat, Arial, Tahoma, sans-serif;
     -webkit-text-stroke: 0.001px transparent;
     -webkit-font-smoothing: antialiased; }
-  /* line 208, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
+  /* line 209, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
   .facility_container .facility_green_box .black_line {
     border-bottom: solid black 2px;
     width: 80px;
     height: 1px; }
-/* line 215, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
+/* line 216, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
 .facility_container .info_box_container {
   background: white;
   width: 330px;
   height: 220px; }
-/* line 221, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
+/* line 222, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
 .facility_container .content_container {
   background: white;
   height: 200px;
   padding: 10px;
   padding-left: 20px;
   width: 652px; }
-  /* line 228, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
+  /* line 229, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
   .facility_container .content_container a {
     color: #7A7A7A; }
-  /* line 232, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
+  /* line 233, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
   .facility_container .content_container p {
     color: #7A7A7A;
     font: normal 14px/20px Montserrat, Arial, Tahoma, sans-serif;
     -webkit-text-stroke: 0.001px transparent;
     -webkit-font-smoothing: antialiased; }
 
-/* line 241, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
+/* line 242, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
 .testimonials_container {
   background: white;
   height: 200px;
   text-align: center;
   padding: 20px; }
 
-/* line 248, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
+/* line 249, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
 #footer {
   background: black;
-  height: 430px; }
-  /* line 252, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
+  height: 500px; }
+  /* line 253, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
   #footer .footer_boxes {
     background: #87BD65;
     width: 399px;
+    height: 120px;
     position: relative;
     text-align: center;
     border-right: solid black 1px; }
-    /* line 259, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
+    /* line 261, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
     #footer .footer_boxes h3 {
       color: white;
       margin: 0;
       margin-bottom: 5px; }
-    /* line 265, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
+    /* line 267, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
     #footer .footer_boxes p {
       font-weight: bold;
       margin: 0; }
-    /* line 270, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
+    /* line 272, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
     #footer .footer_boxes .footer_icon_circle {
       z-index: 0;
       background: #87BD65;
@@ -239,29 +241,34 @@ body {
       position: absolute;
       top: -30px;
       margin-left: 170px; }
-      /* line 280, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
+      /* line 282, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
       #footer .footer_boxes .footer_icon_circle i {
         color: white;
         font-size: 30px;
         margin-top: 10px; }
-  /* line 288, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
+  /* line 290, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
   #footer .footer_box {
     width: 400px;
     margin-top: 40px; }
-    /* line 292, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
+    /* line 294, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
+    #footer .footer_box i {
+      color: #87BD65;
+      margin-right: 3px; }
+    /* line 299, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
     #footer .footer_box p {
       color: #515351; }
-    /* line 296, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
+    /* line 303, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
     #footer .footer_box h3 {
       color: white; }
-    /* line 300, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
+    /* line 307, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
     #footer .footer_box ul {
       list-style: none;
       padding: 0; }
-      /* line 304, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
+      /* line 311, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
       #footer .footer_box ul li {
         font-size: 12px;
         padding: 0;
+        padding-bottom: 10px;
         color: white;
         margin-bottom: 20px;
         border-bottom: solid #515351 1px;
