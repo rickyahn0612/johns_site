@@ -1,0 +1,229 @@
+body {
+  margin: 0;
+  font-family: Montserrat, Arial, Tahoma, sans-serif;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.float_left {
+  float: left;
+}
+
+.float_right {
+  float: right;  
+}
+
+.clear {
+  clear: both;
+}
+
+#top_header {
+  background: black;
+  height: 43px;
+  color: #7D7D7D;
+  font-size: 13px;
+
+  .light_grey {
+  	color: #BEBEBE;
+  }
+  
+  .opening_hours {
+    width: 400px;
+  }
+}
+
+#main_nav {
+  padding: 20px 0 20px 0;
+
+  .container {
+  	.logo {
+  		width: 190px;
+  		font-weight: bold;
+  	}
+
+  	.nav_container {
+      width: 700px;
+
+      ul {
+        list-style: none; 
+        color: #969595; 
+        font-size: 14px; 
+        padding-top: 14px;
+
+        li {
+          display: inline; 
+          margin-right: 40px; 
+        }
+        .active {
+          border: solid #87BD65 2px; 
+          padding: 10px 15px 10px 15px;
+        }
+      }
+  	}
+  }
+}
+
+#banner {
+  background: red;
+  height: 550px;
+  background: url('../images/soccer.jpg');
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  opacity: 0.8;
+
+  .banner_content {
+    margin-top: 80px; 
+    z-index: 1000; 
+    width: 600px;
+
+    h1 {
+      margin: 0;
+      font-size: 60px;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 27px;
+    }
+
+    .line {
+      border-bottom: solid black 1px; 
+      height: 1px;
+    }
+  }
+}
+
+#home_content_container {
+  background: #E9E9E9;
+
+  .popular_classes_container {
+    background: black;
+    height: 400px;
+    width: 140px;
+    padding: 10px;
+    color: white;
+
+    .grey_line {
+      border-bottom: solid #555555 2px;
+      height: 1px;
+      width: 90px;
+    }
+
+    p {
+      color: #555555;
+      font-size: 14px;
+    }
+  }
+
+  .popular_classes {
+    width: 1020px;
+    height: 420px;
+
+    .info_box_container {
+      background: white;
+      width: 330px;
+      height: 420px;
+
+      .image_container {
+        background: blue;
+        height: 200px;
+        position: relative; 
+
+        .image_content_container {
+          background: black;
+          color: white;
+          text-align: center;
+          width: 100px;
+          padding: 12px;
+          position: absolute;
+          bottom: 0;
+          margin-left: 100px;
+
+        }
+      }
+
+      .content_container {
+        text-align: center;
+        padding: 20px;
+      }
+    }
+  }
+}
+
+.facility_container {
+
+  .facility_green_box {
+    background: #87BD65;
+    height: 200px;
+    width: 140px;
+    padding: 10px;
+
+    .black_line {
+      border-bottom: solid black 2px;
+      width: 80px;
+      height: 1px;
+    }
+  }
+
+  .info_box_container {
+    background: white;
+    width: 330px;
+    height: 220px;
+  }
+
+  .content_container {
+    background: white;
+    height: 200px;
+    padding: 10px;
+    width: 655px;
+
+  }
+}
+
+.testimonials_container {
+  background: white;
+  height: 200px;
+  text-align: center;
+  padding: 20px;
+}
+
+#footer {
+  background: black;
+  height: 200px;
+
+  .footer_boxes  {
+    background: #87BD65;
+    width: 399px;
+    height: 100px;
+    position: relative;
+    text-align: center;
+    border-right: solid black 1px;
+
+    h3 {
+      color: white;
+      margin: 0;
+      margin-bottom: 5px;
+    }
+
+    p {
+      font-weight: bold;
+      margin: 0;
+    }
+
+    .footer_icon_circle {
+      z-index: 0;
+      background: #87BD65;
+      border-radius: 60px;
+      width: 60px;
+      height: 60px;
+      position: absolute;
+      top: -30px;
+      margin-left: 170px;
+    }
+  }
+}
