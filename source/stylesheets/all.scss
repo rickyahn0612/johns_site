@@ -32,6 +32,7 @@ body {
   
   .opening_hours {
     width: 400px;
+    font-size: 11px;
   }
 }
 
@@ -247,11 +248,12 @@ body {
 
 #footer {
   background: black;
-  height: 430px;
+  height: 500px;
 
   .footer_boxes  {
     background: #87BD65;
     width: 399px;
+    height: 120px;
     position: relative;
     text-align: center;
     border-right: solid black 1px;
@@ -289,6 +291,11 @@ body {
     width: 400px;
     margin-top: 40px;
 
+    i {
+      color: #87BD65;
+      margin-right: 3px;
+    }
+
     p {
       color: #515351;
     }
@@ -304,6 +311,7 @@ body {
       li {
         font-size: 12px;
         padding: 0;
+        padding-bottom: 10px;
         color: white;
         margin-bottom: 20px;
         border-bottom: solid #515351 1px;
