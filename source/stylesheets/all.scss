@@ -34,6 +34,27 @@ body {
     width: 400px;
     font-size: 11px;
   }
+
+  .social_media.float_right {
+    color: white; 
+    font-size: 22px; 
+    color: #818181; 
+    padding-top: 0px;
+
+    ul {
+      list-style: none;
+      margin: 0;
+      margin-top: 8px;
+      padding: 0;
+
+      li {
+        display: inline; 
+        padding-right: 20px;
+        padding-left: 20px;
+        border-right: solid #292929 1px;
+      }
+    }
+  }
 }
 
 #main_nav {
@@ -46,7 +67,7 @@ body {
   	}
 
   	.nav_container {
-      width: 750px;
+      width: 820px;
 
       ul {
         list-style: none; 
