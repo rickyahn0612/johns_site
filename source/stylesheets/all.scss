@@ -45,7 +45,7 @@ body {
   	}
 
   	.nav_container {
-      width: 700px;
+      width: 750px;
 
       ul {
         list-style: none; 
@@ -108,6 +108,19 @@ body {
     padding: 10px;
     color: white;
 
+    .arrow_box {
+      width: 50px;
+      height: 40px;
+      border: solid #484848 2px;
+      text-align: center;
+
+      i {
+        font-size: 37px;
+        color: #484848;
+        font-weight: bold;
+      }
+    }
+
     .grey_line {
       border-bottom: solid #555555 2px;
       height: 1px;
@@ -121,16 +134,14 @@ body {
   }
 
   .popular_classes {
-    width: 1020px;
-    height: 420px;
+    width: 1030px;
 
     .info_box_container {
       background: white;
-      width: 330px;
+      width: 335px;
       height: 420px;
 
       .image_container {
-        background: blue;
         height: 200px;
         position: relative; 
 
@@ -150,6 +161,17 @@ body {
       .content_container {
         text-align: center;
         padding: 20px;
+
+        h3 {
+          font-weight: bold;
+        }
+
+        p {
+          color: #7A7A7A;
+          font: normal 14px/20px Montserrat, Arial, Tahoma, sans-serif;
+          -webkit-text-stroke: 0.001px transparent;
+          -webkit-font-smoothing: antialiased;
+        }
       }
     }
   }
@@ -162,6 +184,12 @@ body {
     height: 200px;
     width: 140px;
     padding: 10px;
+
+    p {
+      font: normal 14px/20px Montserrat, Arial, Tahoma, sans-serif;
+      -webkit-text-stroke: 0.001px transparent;
+      -webkit-font-smoothing: antialiased;
+    }
 
     .black_line {
       border-bottom: solid black 2px;
@@ -180,8 +208,19 @@ body {
     background: white;
     height: 200px;
     padding: 10px;
-    width: 655px;
+    padding-left: 20px;
+    width: 652px;
 
+    a {
+      color: #7A7A7A;
+    }
+
+    p {
+      color: #7A7A7A;
+      font: normal 14px/20px Montserrat, Arial, Tahoma, sans-serif;
+      -webkit-text-stroke: 0.001px transparent;
+      -webkit-font-smoothing: antialiased;
+    }
   }
 }
 
@@ -224,6 +263,12 @@ body {
       position: absolute;
       top: -30px;
       margin-left: 170px;
+
+      i {
+        color: white;
+        font-size: 30px;
+        margin-top: 10px;
+      }
     }
   }
 }
