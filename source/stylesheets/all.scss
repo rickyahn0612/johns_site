@@ -91,7 +91,7 @@ body {
 
         li {
           display: inline; 
-          margin-right: 10px; 
+          margin-right: 4px; 
           padding: 11px 17px 11px 17px;
 
           a {
@@ -103,6 +103,10 @@ body {
             cursor: pointer;
           }
 
+        }
+        .actives {
+          border: solid #87BD65 2px; 
+          padding: 10px 15px 10px 15px;
         }
         .active {
           border: solid #87BD65 2px; 

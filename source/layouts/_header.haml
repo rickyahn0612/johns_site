@@ -20,10 +20,10 @@
         = link_to 'SOCCER CLUB', 'index.html'
     .nav_container.float_right
       %ul.main_nav
-        %li.active 
-          = link_to 'HOME', 'index.html'
-        %li 
-          = link_to 'ABOUT', 'about.html'
+        %li{class: "#{'actives' if current_page.url == '/'}"}
+          = link_to 'HOME', '/'
+        %li{class: "#{'actives' if current_page.url == '/about.html'}"}
+          = link_to 'ABOUT', '/about.html'
         %li SCHEDULE 
         %li STANDINGS
         %li RULES
