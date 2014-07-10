@@ -22,12 +22,10 @@
       });
     });
     $('ul.main_nav li').mouseenter(function() {
-      $(this).siblings().removeClass('active');
       return $(this).addClass('active');
     });
-    return $('ul.main_nav li').on('click', function(e) {
-      $(this).siblings().removeClass('active');
-      return $(this).addClass('active');
+    return $('ul.main_nav li').mouseleave(function() {
+      return $(this).removeClass('active');
     });
   });
 
