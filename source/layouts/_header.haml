@@ -1,0 +1,30 @@
+#top_header
+  .container 
+    .opening_hours.float_left{style: 'padding-top: 3px;'}
+      %p OPENING HOURS : MON - SAT <span class="light_grey">6AM - 9PM</span>, SUN 8AM - 6PM
+    .social_media.float_right
+      %ul
+        %li{style: 'border-left: solid #292929 1px;'}
+          %i.fa.fa-facebook
+        %li
+          %i.fa.fa-twitter
+        %li
+          %i.fa.fa-instagram
+        %li
+          %i.fa.fa-youtube
+#main_nav
+  .container
+    .logo.float_left
+      = image_tag 'images/Adidas-Soccer-Logo.png', style: 'width: 70px; float: left;'
+      %h2.float_right SOCCER CLUB
+    .nav_container.float_right
+      %ul
+        %li.active HOME
+        %li 
+          = link_to 'ABOUT', 'about.html'
+        %li SCHEDULE 
+        %li STANDINGS
+        %li RULES
+        %li FACILITY 
+        %li CONTACT
+    .clear
