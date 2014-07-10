@@ -70,6 +70,13 @@ body {
   	.logo {
   		width: 270px;
   		font-weight: bold;
+
+      h2 {
+
+        a {
+          color: #000000;
+        }
+      }
   	}
 
   	.nav_container {
@@ -83,12 +90,18 @@ body {
 
         li {
           display: inline; 
-          margin-right: 40px; 
+          margin-right: 10px; 
+          padding: 11px 16px 11px 16px;
 
           a {
             color: #969595;
             text-decoration: none;
           }
+
+          &:hover {
+            cursor: pointer;
+          }
+
         }
         .active {
           border: solid #87BD65 2px; 
@@ -374,24 +387,33 @@ body {
 }
 
 .about_top_header_image_container {
-    background: url('../images/feet_running.jpg');
-    background-size: cover;
-    moz-background-size: cover;
-    webkit-background-size: cover;
-    height: 170px;
-    width: 100%;
+  background: url('../images/feet_running.jpg');
+  background-size: cover;
+  moz-background-size: cover;
+  webkit-background-size: cover;
+  height: 170px;
+  width: 100%;
 }
 
 .about_content_container {
   background: #E9E9E9;
-  height: 40000px;
 
   .about_content_wrapper {
     background: white;
-    height: 40000px;
+    height: 1100px;
     padding: 20px;
     padding-left: 30px;
     padding-right: 30px;
+
+    ul {
+
+      li {
+
+        -webkit-text-stroke: 0.001px transparent;
+        -webkit-font-smoothing: antialiased;       
+        color: #7A7A7A;
+      }
+    }
 
     .left_content {
       width: 700px;
@@ -400,7 +422,7 @@ body {
         color: #7A7A7A;
         -webkit-text-stroke: 0.001px transparent;
         -webkit-font-smoothing: antialiased;
-        font-size: 13px;
+        font-size: 15px;
       }
     }
 
@@ -417,7 +439,7 @@ body {
 
       .content {
         padding-left: 20px;
-        padding-top: 10px;
+        padding-top: 1px;
         background: black;
         height: 140px;
         color: white;

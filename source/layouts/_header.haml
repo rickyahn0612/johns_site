@@ -15,11 +15,13 @@
 #main_nav
   .container
     .logo.float_left
-      = image_tag 'images/Adidas-Soccer-Logo.png', style: 'width: 70px; float: left;'
-      %h2.float_right SOCCER CLUB
+      = link_to(image_tag('images/Adidas-Soccer-Logo.png', style: 'width: 70px; float: left;'), 'index.html')
+      %h2.float_right 
+        = link_to 'SOCCER CLUB', 'index.html'
     .nav_container.float_right
-      %ul
-        %li.active HOME
+      %ul.main_nav
+        %li.active 
+          = link_to 'HOME', 'index.html'
         %li 
           = link_to 'ABOUT', 'about.html'
         %li SCHEDULE 

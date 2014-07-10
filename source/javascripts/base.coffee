@@ -9,3 +9,11 @@ $ ->
       )
     )
   )
+
+  $('ul.main_nav li').mouseenter ->
+    $(@).siblings().removeClass('active')
+    $(@).addClass('active')
+
+  $('ul.main_nav li').on 'click', (e) ->
+    $(@).siblings().removeClass('active')
+    $(@).addClass('active')
