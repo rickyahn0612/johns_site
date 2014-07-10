@@ -1,6 +1,6 @@
 (function() {
   $(function() {
-    return $('body').fadeIn(1000, function() {
+    $('body').fadeIn(1000, function() {
       return $('.banner_content h2').animate({
         'bottom': 480,
         'opacity': 1
@@ -20,6 +20,14 @@
           });
         });
       });
+    });
+    $('ul.main_nav li').mouseenter(function() {
+      $(this).siblings().removeClass('active');
+      return $(this).addClass('active');
+    });
+    return $('ul.main_nav li').on('click', function(e) {
+      $(this).siblings().removeClass('active');
+      return $(this).addClass('active');
     });
   });
 
