@@ -27,6 +27,7 @@ body {
 }
 
 #top_header {
+  min-width: 1200px;
   background: black;
   height: 43px;
   color: #7D7D7D;
@@ -65,6 +66,7 @@ body {
 
 #main_nav {
   padding: 20px 0 20px 0;
+  min-width: 1200px;
 
   .container {
 
@@ -118,7 +120,7 @@ body {
 }
 
 #banner {
-  background: red;
+  min-width: 1200px;
   height: 550px;
   background: url('../images/soccer.jpg');
   -webkit-background-size: cover;
@@ -169,6 +171,7 @@ body {
 
 #home_content_container {
   background: #E9E9E9;
+  min-width: 1200px;
 
   .popular_classes_container {
     background: black;
@@ -317,6 +320,7 @@ body {
 #footer {
   background: black;
   height: 500px;
+  min-width: 1200px;
 
   .footer_boxes  {
     background: #87BD65;
@@ -398,10 +402,12 @@ body {
   webkit-background-size: cover;
   height: 170px;
   width: 100%;
+  min-width: 1200px;
 }
 
 .about_content_container {
   background: #E9E9E9;
+  min-width: 1200px;
 
   .about_content_wrapper {
     background: white;
