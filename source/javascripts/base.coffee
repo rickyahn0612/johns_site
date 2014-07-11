@@ -14,9 +14,7 @@ $ ->
 
   $('ul.main_nav li').mouseleave ->
     $(@).removeClass('active')
-  # $('ul.main_nav li').mouseleave ->
-  #   $(@).removeClass('active')
 
-  # $('ul.main_nav li').on 'click', (e) ->
-  #   $(@).siblings().removeClass('active')
-  #   $(@).addClass('active')
+  $("#owl-demo").owlCarousel({
+    navigation : true
+  })
