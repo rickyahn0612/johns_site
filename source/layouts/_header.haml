@@ -3,7 +3,7 @@
     .row
       .col-xs-6
         .opening_hours{style: 'padding-top: 14px;'}
-          %p OPENING HOURS : MON - SAT <span class="light_grey">6AM - 9PM</span>, SUN 8AM - 6PM
+          %p OPENING HOURS : MON - SAT <span class="light_grey">7pm - 10pm</span>, WEEKENDS <span class="light_grey">COMING SOON</span>
       .col-xs-6
         .social_media.float_right
           %ul
@@ -33,7 +33,8 @@
               = link_to 'TEAM REGISTRATION', '/team_registration.html'
             %li SCHEDULE
             %li STANDINGS
-            %li CONTACT
+            %li{class: "#{'actives' if current_page.url == '/contact.html'}"}
+              = link_to 'CONTACT', '/contact.html'
 
 
     .clear
