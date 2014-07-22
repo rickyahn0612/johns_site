@@ -1,34 +1,39 @@
 #top_header
   .container 
-    .opening_hours.float_left{style: 'padding-top: 3px;'}
-      %p OPENING HOURS : MON - SAT <span class="light_grey">6AM - 9PM</span>, SUN 8AM - 6PM
-    .social_media.float_right
-      %ul
-        %li{style: 'border-left: solid #292929 1px;'}
-          %i.fa.fa-facebook
-        %li
-          %i.fa.fa-twitter
-        %li
-          %i.fa.fa-instagram
-        %li
-          %i.fa.fa-youtube
+    .row
+      .col-xs-6
+        .opening_hours{style: 'padding-top: 14px;'}
+          %p OPENING HOURS : MON - SAT <span class="light_grey">6AM - 9PM</span>, SUN 8AM - 6PM
+      .col-xs-6
+        .social_media.float_right
+          %ul
+            %li{style: 'border-left: solid #292929 1px;'}
+              %i.fa.fa-facebook
+            %li
+              %i.fa.fa-twitter
+            %li
+              %i.fa.fa-instagram
+            %li
+              %i.fa.fa-youtube
 #main_nav
   .container
-    .logo.float_left
-      = link_to(image_tag('images/Adidas-Soccer-Logo.png', style: 'width: 70px; float: left;'), 'index.html')
-      %h2.float_right 
-        = link_to 'SOCCER CLUB', 'index.html'
-    .nav_container.float_right
-      %ul.main_nav
-        %li{class: "#{'actives' if current_page.url == '/'}"}
-          = link_to 'HOME', '/'
-        %li{class: "#{'actives' if current_page.url == '/about.html'}"}
-          = link_to 'ABOUT', '/about.html'
-        %li FREE AGENTS
-        %li TEAM REGISTRATION
-        %li SCHEDULE
-        %li STANDINGS
-        %li CONTACT
+    .row
+      .col-xs-3
+        %h2.float_left.logo
+          = link_to 'URBANFUTSAL.LA', 'index.html'
+      .col-xs-9
+        .nav_container.float_right
+          %ul.main_nav
+            %li{class: "#{'actives' if current_page.url == '/'}"}
+              = link_to 'HOME', '/'
+            %li{class: "#{'actives' if current_page.url == '/about.html'}"}
+              = link_to 'ABOUT', '/about.html'
+            %li FREE AGENTS
+            %li{class: "#{'actives' if current_page.url == '/team_registration.html'}"}
+              = link_to 'TEAM REGISTRATION', '/team_registration.html'
+            %li SCHEDULE
+            %li STANDINGS
+            %li CONTACT
 
 
     .clear

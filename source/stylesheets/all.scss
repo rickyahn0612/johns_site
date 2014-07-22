@@ -21,7 +21,7 @@ body {
 }
 
 .container {
-  width: 1200px;
+  width: 1200px !important;
   margin: 0 auto;
 }
 
@@ -82,19 +82,17 @@ body {
   .container {
 
   	.logo {
-  		width: 270px;
+  		font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
   		font-weight: bold;
 
-      h2 {
-
-        a {
-          color: #000000;
-        }
-      }
+    a {
+        color: #000000;
+        text-decoration: none;
+      }    
   	}
 
   	.nav_container {
-      width: 820px;
+      margin-top: 15px;
 
       ul {
         list-style: none; 
@@ -217,12 +215,20 @@ body {
   }
 
   .popular_classes {
-    width: 1030px;
+    width: 1000px;
+    position: relative;
+    right: 37px;
 
     .info_box_container {
       background: white;
-      width: 335px;
-      height: 420px;
+      width: 320px;
+      margin-right: 20px !important;
+      height: 400px;
+
+      img {
+        height: 200px;
+        width: inherit;
+      }
 
       .image_container {
         height: 200px;
@@ -262,11 +268,46 @@ body {
 
 .facility_container {
 
+  #carousel-example-generic {
+    width:1010px;
+    position: relative;
+    right: 40px;
+  }
+
   .facility_green_box {
     background: #87BD65;
-    height: 200px;
+    height: 220px;
     width: 140px;
     padding: 10px;
+
+    .carousel-control {
+      border: solid #484848 2px;
+      text-align: center;
+      background-image: none !important;
+      width: 50px;
+      height: 40px;
+      padding: 20px;
+      top: 85px !important;
+      margin-left: 20px;
+      color: black !important;
+      font-weight: 100;
+      font-size: 40px;
+      text-shadow: none !important;
+    }
+
+    i {
+      position: relative;
+      top: -30px;
+    }
+
+    .carousel-control.right {
+      position: absolute;
+      left:60px;
+    }
+
+    .carousel-control.left {
+      position: absolute;
+    }
 
     .arrow_box {
       margin-top: 20px;
@@ -296,23 +337,30 @@ body {
   }
 
   .info_box_container {
-    background: white;
     width: 330px;
     height: 220px;
+
+    img {
+      width: 323px; 
+      height: 220px;
+    }
   }
 
   .content_container {
     background: white;
-    height: 200px;
+    height: 220px;
     padding: 10px;
     padding-left: 20px;
-    width: 652px;
+    width: 693px;
+    position: relative;
+    right: -30px;
 
     a {
       color: #7A7A7A;
     }
 
     p {
+      width: 620px;
       color: #7A7A7A;
       font: normal 14px/20px Montserrat, Arial, Tahoma, sans-serif;
       -webkit-text-stroke: 0.001px transparent;
@@ -478,6 +526,28 @@ body {
       }
 
     }
+  }
+}
+
+
+// Team Registration Form 
+#team_registration_form {
+
+  h1 {
+    color: #787878;
+  }
+
+  form {
+
+    .col-xs-6 {
+      margin-bottom: 30px;
+    }
+
+    label {
+      font-size: 17px;
+      color: #78787C;
+    }
+
   }
 }
 
