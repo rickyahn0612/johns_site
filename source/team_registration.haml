@@ -7,8 +7,13 @@
     .about_content_wrapper
       .left_content.float_left
         .container
-          %h1 TEAM REGISTRATION FORM: Men's 5v5
+          %h1 TEAM REGISTRATION FORM
           %hr
+          %select.form-control{style: 'width: 90%;'}
+            %option Select a Tournament <span class='required'>*</span>
+            %option Men's 5v5
+            %option Coed 5v5
+          %br
           %h4 TEAM INFO
           %br
           %form#registration-form

@@ -252,7 +252,7 @@ body {
 
         p {
           color: #7A7A7A;
-          font: normal 14px/20px Montserrat, Arial, Tahoma, sans-serif;
+          font: normal 12px/20px Montserrat, Arial, Tahoma, sans-serif;
           -webkit-text-stroke: 0.001px transparent;
           -webkit-font-smoothing: antialiased;
         }
@@ -363,7 +363,7 @@ body {
     p {
       width: 620px;
       color: #7A7A7A;
-      font: normal 14px/20px Montserrat, Arial, Tahoma, sans-serif;
+      font: normal 12px/20px Montserrat, Arial, Tahoma, sans-serif;
       -webkit-text-stroke: 0.001px transparent;
       -webkit-font-smoothing: antialiased;
     }
@@ -394,11 +394,13 @@ body {
       color: white;
       margin: 0;
       margin-bottom: 5px;
+      font-size: 18px;
     }
 
     p {
       font-weight: bold;
       margin: 0;
+      font-size: 12px;
     }
 
     .footer_icon_circle {
@@ -533,7 +535,6 @@ body {
 .required {
   color: red;
 }
-
 
 // Team Registration Form 
 #team_registration_form {
