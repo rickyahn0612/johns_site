@@ -9,17 +9,6 @@ body {
   }
 }
 
-#owl-demo .item{
-  background: #42bdc2;
-  padding: 30px 0px;
-  margin: 10px;
-  color: #FFF;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-  text-align: center;
-}
-
 .container {
   width: 1200px !important;
   margin: 0 auto;
@@ -150,6 +139,7 @@ body {
       bottom: 0;
       font-size: 60px;
       opacity: 0;
+      color: black;
     }
 
     h2 {
@@ -158,6 +148,7 @@ body {
       bottom: 0;
       font-size: 27px;
       opacity: 0;
+      color: black;
     }
 
     #line {
@@ -181,6 +172,10 @@ body {
 #home_content_container {
   background: #E9E9E9;
   min-width: 1200px;
+
+  h3 {
+    font-size: 1.17em;
+  }
 
   .popular_classes_container {
     background: black;
@@ -287,7 +282,7 @@ body {
       width: 50px;
       height: 40px;
       padding: 20px;
-      top: 85px !important;
+      top: 160px !important;
       margin-left: 25px;
       color: black !important;
       font-weight: 100;
@@ -547,78 +542,6 @@ body {
       font-weight: bold;
       color: #4A4A4A;
     }
-
-    .site-name {
-      float: left;
-      margin-right: 160px;
-    }
-
-    .full-address {
-      float: left;
-      margin-right: 140px;
-    }
-
-    .top-caps {
-      float: left;
-      margin-right: 30px;
-    }
-
-    .installation-date {
-      float: left;
-    }
-
-  }
-
-
-  ol.replacement-form {
-    margin-left: 20px;
-    margin-top: 10px;
-
-    li {
-      height: 10px;
-      font-weight: bold;
-      font-size: 16px;
-      margin-bottom: 30px;  
-      color: #4A4A4A;
-
-      .replacement-form-container {
-        position: relative; 
-
-        .site_name {
-          position: absolute; 
-          left: 0; 
-          width: 220px;
-        }
-
-        .full_address {
-          position: absolute;
-          left: 235px;
-          width: 200px;
-        }
-
-        .top_caps {
-          position: absolute; 
-          left: 450px; 
-          width: 70px;
-        }
-
-        .installation_date {
-          float: right; 
-          width: 20%;
-        }
-      }
-
-      input {
-        position: relative;
-        top: -30px;
-        right: 140px;
-        padding: 3px;
-
-        &:focus {
-          border: 1px solid #4088B5;
-        }
-      }
-    }
   }
 
   h1 {
@@ -637,20 +560,21 @@ body {
       display: inline;
     }
 
-    ul {
-      list-style: none;
+  }
+}
+
+
+    ol {
       margin: 0;
+      margin-left: 20px;
+      font-weight: bold;
       padding: 0;
       margin-top: 20px;
 
       li {
-        padding-bottom: 100px;
+        padding-bottom: 35px;
       }
     }
-
-  }
-}
-
 
 
 
