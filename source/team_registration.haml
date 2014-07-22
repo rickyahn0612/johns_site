@@ -4,7 +4,7 @@
     %h1 TEAM REGISTRATION FORM: Men's 5v5
     %hr
     %br
-    %form
+    %form#registration-form
       .row
         .col-xs-6
           .form-sets
@@ -38,17 +38,109 @@
           .float-right
             %input.form-control
         %br
-        .col-xs-6
-          .form-sets
-            .float-left
-              %label Names of Players <span class='required'>*</span>
-        .col-xs-6
-          .float-right
-            %input.form-control
-        %br
-        .col-xs-6
-          %button.btn.btn-primary
-            SUBMIT
+        .col-xs-12
+          .replacement-form-header
+            .site-name{style: 'position: relative; right: 10px;'}
+              %p Site Name
+            .full-address
+              %p Full Address
+            .top-caps
+              %p Top Caps
+            .installation-date
+              %p Installation Date
+            .clear
+
+
+          / %fieldset#upgrade_inputs
+          /   %ol.replacement-form
+          /     %li
+          /       .replacement-form-container
+          /         .site_name_container
+          /           %input.form-control
+          /         .full_address_container
+          /           %input.form-control
+          /         .top_caps_container
+          /           %input.form-control
+          /         .installation_date_container
+          /           %input.form-control
+          /     %li
+          /       .replacement-form-container
+          /         .site_name_container
+          /           %input.form-control
+          /         .full_address_container
+          /           %input.form-control
+          /         .top_caps_container
+          /           %input.form-control
+          /         .installation_date_container
+          /           %input.form-control
+          /     %li
+          /       .replacement-form-container
+          /         .site_name_container
+          /           %input.form-control
+          /         .full_address_container
+          /           %input.form-control
+          /         .top_caps_container
+          /           %input.form-control
+          /         .installation_date_container
+          /           %input.form-control
+          /     %li
+          /       .replacement-form-container
+          /         .site_name_container
+          /           %input.form-control
+          /         .full_address_container
+          /           %input.form-control
+          /         .top_caps_container
+          /           %input.form-control
+          /         .installation_date_container
+          /           %input.form-control
+
+
+  /           %br
+  /           .add-field
+  /             .add-circle
+  /               %p +
+  /             .add-circle-text
+  /               ADD SITE
+  /         %fieldset#comment_field
+  /           = f.label "Comments/Questions"
+  /           %br
+  /           %textarea#comments
+  /         = f.hidden_field :description, class: "text_field width_100_percent", style: 'height: 100px;', id: 'top_cap_description'
+  /         = f.submit "Submit Top Cap Repair Form", id: 'submit-top-cap'
+  /         %br
+  /         %br
+
+
+
+
+  /         %h3 Player Info
+  /         .col-xs-12{style: 'border: solid #cfcfcf 1px; padding-bottom: 20px;'}
+  /           %ul
+  /             %li
+  /               .col-xs-2
+  /                 %label Player Name
+  /               .col-xs-7
+  /                 %input.form-control
+  /             %li
+  /               .col-xs-2
+  /                 %label Player Name
+  /               .col-xs-7
+  /                 %input.form-control
+  /             %li
+  /               .col-xs-2
+  /                 %label Player Name
+  /               .col-xs-7
+  /                 %input.form-control
+  /             %li
+  /               .col-xs-2
+  /                 %label Player Name
+  /               .col-xs-7
+  /                 %input.form-control
+
+  /           %br
+  /           .col-xs-6
+  /             %button.btn.btn-primary
+  /               SUBMIT
 
 
 
@@ -66,14 +158,14 @@
 
 
 
-  %br
-  %br
-  %br
-  %br
-  %br
-  %br
-  %br
-  %br
-  %br
-  %br
+  / %br
+  / %br
+  / %br
+  / %br
+  / %br
+  / %br
+  / %br
+  / %br
+  / %br
+  / %br
 

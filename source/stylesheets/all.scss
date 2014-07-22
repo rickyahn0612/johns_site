@@ -281,14 +281,14 @@ body {
     padding: 10px;
 
     .carousel-control {
-      border: solid #484848 2px;
+      border: solid #000000 2px;
       text-align: center;
       background-image: none !important;
       width: 50px;
       height: 40px;
       padding: 20px;
       top: 85px !important;
-      margin-left: 20px;
+      margin-left: 25px;
       color: black !important;
       font-weight: 100;
       font-size: 40px;
@@ -307,6 +307,12 @@ body {
 
     .carousel-control.left {
       position: absolute;
+
+      i {
+        position: absolute;
+        left: 13px;
+        top: -1px;
+      }
     }
 
     .arrow_box {
@@ -533,6 +539,88 @@ body {
 // Team Registration Form 
 #team_registration_form {
 
+  .replacement-form-header {
+    margin-left: 30px;
+    position: relative;
+    top: 15px;
+    p {
+      font-weight: bold;
+      color: #4A4A4A;
+    }
+
+    .site-name {
+      float: left;
+      margin-right: 160px;
+    }
+
+    .full-address {
+      float: left;
+      margin-right: 140px;
+    }
+
+    .top-caps {
+      float: left;
+      margin-right: 30px;
+    }
+
+    .installation-date {
+      float: left;
+    }
+
+  }
+
+
+  ol.replacement-form {
+    margin-left: 20px;
+    margin-top: 10px;
+
+    li {
+      height: 10px;
+      font-weight: bold;
+      font-size: 16px;
+      margin-bottom: 30px;  
+      color: #4A4A4A;
+
+      .replacement-form-container {
+        position: relative; 
+
+        .site_name {
+          position: absolute; 
+          left: 0; 
+          width: 220px;
+        }
+
+        .full_address {
+          position: absolute;
+          left: 235px;
+          width: 200px;
+        }
+
+        .top_caps {
+          position: absolute; 
+          left: 450px; 
+          width: 70px;
+        }
+
+        .installation_date {
+          float: right; 
+          width: 20%;
+        }
+      }
+
+      input {
+        position: relative;
+        top: -30px;
+        right: 140px;
+        padding: 3px;
+
+        &:focus {
+          border: 1px solid #4088B5;
+        }
+      }
+    }
+  }
+
   h1 {
     color: #787878;
   }
@@ -546,6 +634,18 @@ body {
     label {
       font-size: 17px;
       color: #78787C;
+      display: inline;
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      margin-top: 20px;
+
+      li {
+        padding-bottom: 100px;
+      }
     }
 
   }

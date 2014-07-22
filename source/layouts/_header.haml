@@ -29,7 +29,7 @@
             %li{class: "#{'actives' if current_page.url == '/about.html'}"}
               = link_to 'ABOUT', '/about.html'
             %li FREE AGENTS
-            %li{class: "#{'actives' if current_page.url == '/team_registration.html'}"}
+            %li.dropdown-toggle{class: "#{'actives' if current_page.url == '/team_registration.html'}"}
               = link_to 'TEAM REGISTRATION', '/team_registration.html'
             %li SCHEDULE
             %li STANDINGS
