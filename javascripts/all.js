@@ -24,11 +24,8 @@
     $('ul.main_nav li').mouseenter(function() {
       return $(this).addClass('active');
     });
-    $('ul.main_nav li').mouseleave(function() {
+    return $('ul.main_nav li').mouseleave(function() {
       return $(this).removeClass('active');
-    });
-    return $("#owl-demo").owlCarousel({
-      navigation: true
     });
   });
 
