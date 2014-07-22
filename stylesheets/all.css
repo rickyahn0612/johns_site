@@ -452,34 +452,38 @@ body {
           width: 175px;
           height: 150px; }
 
-/* line 537, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
+/* line 533, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
+.required {
+  color: red; }
+
+/* line 541, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
 #team_registration_form .replacement-form-header {
   margin-left: 30px;
   position: relative;
   top: 15px; }
-  /* line 541, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
+  /* line 545, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
   #team_registration_form .replacement-form-header p {
     font-weight: bold;
     color: #4A4A4A; }
-/* line 547, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
+/* line 551, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
 #team_registration_form h1 {
   color: #787878; }
-/* line 553, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
+/* line 557, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
 #team_registration_form form .col-xs-6 {
   margin-bottom: 30px; }
-/* line 557, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
+/* line 561, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
 #team_registration_form form label {
   font-size: 17px;
   color: #78787C;
   display: inline; }
 
-/* line 567, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
+/* line 571, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
 ol {
   margin: 0;
   margin-left: 20px;
   font-weight: bold;
   padding: 0;
   margin-top: 20px; }
-  /* line 574, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
+  /* line 578, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
   ol li {
     padding-bottom: 35px; }
