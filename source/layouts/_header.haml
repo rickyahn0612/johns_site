@@ -24,8 +24,6 @@
       .col-xs-9
         .nav_container.float_right
           %ul.main_nav
-            %li{class: "#{'actives' if current_page.url == '/'}"}
-              = link_to 'HOME', '/'
             %li{class: "#{'actives' if current_page.url == '/about.html'}"}
               = link_to 'ABOUT', '/about.html'
             %li FREE AGENTS
@@ -33,6 +31,8 @@
               = link_to 'TEAM REGISTRATION', '/team_registration.html'
             %li SCHEDULE
             %li STANDINGS
+            %li{class: "#{'actives' if current_page.url == '/rules.html'}"} 
+              = link_to 'RULES', '/rules.html'
             %li{class: "#{'actives' if current_page.url == '/contact.html'}"}
               = link_to 'CONTACT', '/contact.html'
 
