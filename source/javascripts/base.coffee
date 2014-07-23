@@ -14,3 +14,11 @@ $ ->
 
   $('ul.main_nav li').mouseleave ->
     $(@).removeClass('active')
+
+  $('.social_media li').mouseenter ->
+    $(@).find('.fa-facebook').animate({'color': '#4964A1'}, 500);
+    $(@).find('.fa-twitter').animate({'color': '#55ACEE'}, 500);
+    $(@).find('.fa-instagram').animate({'color': '#AA8167'}, 500);
+    $(@).find('.fa-youtube').animate({'color': '#DF2826'}, 500);
+  $('.social_media li').mouseleave ->
+    $(@).find('.fa').animate({'color': '#fffff'}, 500);

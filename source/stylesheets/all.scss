@@ -48,6 +48,10 @@ body {
     color: #818181; 
     padding-top: 0px;
 
+    &:hover {
+      cursor: pointer;
+    }
+
     ul {
       list-style: none;
       margin: 0;
