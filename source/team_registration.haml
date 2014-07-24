@@ -9,38 +9,39 @@
         .container
           %h1 TEAM REGISTRATION FORM
           %hr
-          %fieldset#registration_form.form-inline
+          %br
+          %fieldset#contact_form.form-inline
             %legend My Contact Form
             #result
             .form-group
-              %label
-                %span Team Name
+              %label{for: "name"}
+                %span Name
                 %br
-                %input#name{name: "team_name", placeholder: "Enter Your Name", type: "text", class: 'form-control', style: 'width: 280px; margin-right: 40px;'}
+                %input#name{name: "name", placeholder: "Enter Your Name", type: "text", class: 'form-control', style: 'width: 280px; margin-right: 40px;'}
             .form-group
-              %label
-                %span Team Manager Name
+              %label{for: "email"}
+                %span Email Address
                 %br
-                %input#email{name: "team_manager", placeholder: "Enter Your Email", type: "email", class: 'form-control', style: 'width: 280px;'}
+                %input#email{name: "email", placeholder: "Enter Your Email", type: "email", class: 'form-control', style: 'width: 280px;'}
             %br
             %br
-            %label
+            %label{for: "phone"}
               %span Phone
               %br
-              %input#phone{name: "team_manager_phone", placeholder: "Phone Number", type: "text", class: 'form-control', style: 'width: 280px;'}
+              %input#phone{name: "phone", placeholder: "Phone Number", type: "text", class: 'form-control', style: 'width: 280px;'}
             %br
             %br
             .form-group
-              %label
-                %span Team Manager Email
+              %label{for: "message"}
+                %span Message
                 %br
-                %input#phone{name: "team_manager_email", placeholder: "Phone Number", type: "text", class: 'form-control', style: 'width: 280px;'}
+                %textarea#message{name: "message", placeholder: "Enter Your Name", class: 'form-control', style: 'width: 650px; height: 200px;'}
             %br
             %br
             .form-group
               %label
                 %span  
-                %button#submit_btn_registration_form.submit_btn.btn.btn-primary Submit
+                %button#submit_btn.submit_btn.btn.btn-primary Submit
 
             / %br
             / %hr
