@@ -48,7 +48,7 @@
     });
     $("#submit_btn_registration_form").click(function() {
       var player1, player2, player3, player4, player5, post_data, proceed, team_manager, team_manager_email, team_manager_phone, team_name, tournament;
-      tournament = $("#tournament_type").val();
+      tournament = $("select[name=tournament_type]").val();
       team_name = $("input[name=team_name]").val();
       team_manager = $("input[name=team_manager]").val();
       team_manager_email = $("input[name=team_manager_email]").val();
@@ -59,8 +59,8 @@
       player4 = $("input[name=player4]").val();
       player5 = $("input[name=player5]").val();
       proceed = true;
-      if (tournament === "") {
-        $("#tournament_type").css("border-color", "red");
+      if (tournament === "Select a Tournament") {
+        $("select[name=tournament_type]").css("border-color", "red");
         proceed = false;
       }
       if (team_name === "") {
@@ -92,7 +92,7 @@
           player_4: player4,
           player_5: player5
         };
-        $.post("contact_me.php", post_data, (function(response) {
+        $.post("registration_form.php", post_data, (function(response) {
           var output;
           if (response.type === "error") {
             output = "<div class=\"error\">" + response.text + "</div>";
