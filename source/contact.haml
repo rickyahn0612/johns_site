@@ -9,27 +9,60 @@
       %hr
       %p Have a question about our facility, rules, or futsal?  Please feel free to contact us with the below form and one of our representatives will get back to you as soon as possible.  We look forward to hearing from you.
       %br
-      %form.form-inline{action:"send.php", method: "post", id:"test"}
+      %fieldset#contact_form.form-inline
+        %legend My Contact Form
+        #result
         .form-group
-          %b Name:
-          %br
-          %input{type: 'text', class: 'form-control', placeholder: 'Please Enter Name', style: 'width: 280px;'}
-        .form-group.pull-right
-          %b Email:
-          %br
-          %input{type: 'email', class: 'form-control', placeholder: 'Please Enter Email', style: 'width: 280px;'}
-        .form-group.pull-left{style: 'margin-top: 40px;'}
-          %b Phone:
-          %br
-          %input{type: 'text', class: 'form-control', placeholder: 'Please Enter Phone', style: 'width: 270px;'}
-        .clear
-        .form-group{style: 'margin-top: 40px;'}
-          %b Message:
-          %textarea.form-control{rows: '8', style: 'width: 650px;'}
+          %label{for: "name"}
+            %span Name
+            %br
+            %input#name{name: "name", placeholder: "Enter Your Name", type: "text", class: 'form-control', style: 'width: 280px; margin-right: 40px;'}
+        .form-group
+          %label{for: "email"}
+            %span Email Address
+            %br
+            %input#email{name: "email", placeholder: "Enter Your Email", type: "email", class: 'form-control', style: 'width: 280px;'}
         %br
         %br
-        %button.btn.btn-info{style: 'padding: 7px 60px 7px 60px; border: none;'}
-          SEND
+        %label{for: "phone"}
+          %span Phone
+          %br
+          %input#phone{name: "phone", placeholder: "Phone Number", type: "text", class: 'form-control', style: 'width: 280px;'}
+        %br
+        %br
+        .form-group
+          %label{for: "message"}
+            %span Message
+            %br
+            %textarea#message{name: "message", placeholder: "Enter Your Name", class: 'form-control', style: 'width: 650px; height: 200px;'}
+        %br
+        %br
+        .form-group
+          %label
+            %span  
+            %button#submit_btn.submit_btn.btn.btn-primary Submit
+
+
+        / .form-group
+        /   %b Name:
+        /   %br
+        /   %input{type: 'text', class: 'form-control', placeholder: 'Please Enter Name', style: 'width: 280px;'}
+        / .form-group.pull-right
+        /   %b Email:
+        /   %br
+        /   %input{type: 'email', class: 'form-control', placeholder: 'Please Enter Email', style: 'width: 280px;'}
+        / .form-group.pull-left{style: 'margin-top: 40px;'}
+        /   %b Phone:
+        /   %br
+        /   %input{type: 'text', class: 'form-control', placeholder: 'Please Enter Phone', style: 'width: 270px;'}
+        / .clear
+        / .form-group{style: 'margin-top: 40px;'}
+        /   %b Message:
+        /   %textarea.form-control{rows: '8', style: 'width: 650px;'}
+        / %br
+        / %br
+        / %button.btn.btn-info{style: 'padding: 7px 60px 7px 60px; border: none;'}
+        /   SEND
         %br
         %br
         %br

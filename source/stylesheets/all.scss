@@ -636,8 +636,22 @@ body {
   }
 }
 
-
-
+.success{
+  background: #CFFFF5;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #B9ECCE;
+  border-radius: 5px;
+  font-weight: normal;
+}
+.error{
+  background: #FFDFDF;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #FFCACA;
+  border-radius: 5px;
+  font-weight: normal;
+}
 
 
 
