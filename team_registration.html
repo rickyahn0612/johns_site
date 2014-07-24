@@ -95,60 +95,45 @@
           <h1>TEAM REGISTRATION FORM</h1>
           <hr>
           <fieldset class='form-inline' id='registration_form'>
-            <legend>TEAM INFO</legend>
+            <legend>My Contact Form</legend>
             <div id='result'></div>
-            <div class='row'>
-              <div class='col-xs-12'>
-                <select class='form-control' id='tournament_type' name='tournament_type' style='width: 94%;'>
-                  <option>Select a Tournament</option>
-                  <option>Men's 5v5</option>
-                  <option>Coed 5v5</option>
-                </select>
-              </div>
+            <div class='form-group'>
+              <label for='name'>
+                <span>Name</span>
+                <br>
+                <input class='form-control' id='name' name='name' placeholder='Enter Your Name' style='width: 280px; margin-right: 40px;' type='text'>
+              </label>
+            </div>
+            <div class='form-group'>
+              <label for='email'>
+                <span>Email Address</span>
+                <br>
+                <input class='form-control' id='email' name='email' placeholder='Enter Your Email' style='width: 280px;' type='email'>
+              </label>
             </div>
             <br>
             <br>
-            <div class='row'>
-              <div class='col-xs-6'>
-                <div class='form-group'>
-                  <label for='team name'>
-                    <span>Team Name <span class='required'>*</span></span>
-                    <br>
-                    <input class='form-control' id='name' name='team_name' placeholder='Enter Your Name' style='width: 500px;' type='text'>
-                  </label>
-                </div>
-              </div>
-              <div class='col-xs-6'>
-                <div class='form-group'>
-                  <label for='team manager'>
-                    <span>Team Manager <span class='required'>*</span></span>
-                    <br>
-                    <input class='form-control' id='name' name='team_manager' placeholder='Enter Your Name' style='width: 500px;' type='text'>
-                  </label>
-                </div>
-              </div>
+            <label for='phone'>
+              <span>Phone</span>
+              <br>
+              <input class='form-control' id='phone' name='phone' placeholder='Phone Number' style='width: 280px;' type='text'>
+            </label>
+            <br>
+            <br>
+            <div class='form-group'>
+              <label for='message'>
+                <span>Message</span>
+                <br>
+                <textarea class='form-control' id='message' name='message' placeholder='Enter Your Name' style='width: 650px; height: 200px;'></textarea>
+              </label>
             </div>
             <br>
             <br>
-            <div class='row'>
-              <div class='col-xs-6'>
-                <div class='form-group'>
-                  <label for='manager email'>
-                    <span>Team Manager Email <span class='required'>*</span></span>
-                    <br>
-                    <input class='form-control' id='name' name='team_manager_email' placeholder='Enter Your Name' style='width: 500px;' type='text'>
-                  </label>
-                </div>
-              </div>
-              <div class='col-xs-6'>
-                <div class='form-group'>
-                  <label for='manager phone'>
-                    <span>Team Manager Phone <span class='required'>*</span></span>
-                    <br>
-                    <input class='form-control' id='name' name='team_manager_phone' placeholder='Enter Your Name' style='width: 500px;' type='text'>
-                  </label>
-                </div>
-              </div>
+            <div class='form-group'>
+              <label>
+                <span> </span>
+                <button class='submit_btn btn btn-primary' id='submit_btn_registration_form'>Submit</button>
+              </label>
             </div>
             <!-- %br -->
             <!-- %hr -->
@@ -183,12 +168,10 @@
             <!-- .float-right -->
             <!-- %input.form-control{name: 'player5', style: 'margin-bottom: 25px; width: 400px;'} -->
           </fieldset>
-          <div class='form-group'>
-            <label>
-              <span> </span>
-              <button class='submit_btn btn btn-primary' id='submit_btn_registration_form' style='padding: 10px 70px 10px 70px; margin-left: -14px;'>Submit</button>
-            </label>
-          </div>
+          <!-- .form-group -->
+          <!-- %label -->
+          <!-- %span   -->
+          <!-- %button#submit_btn.submit_btn.btn.btn-primary#submit_btn_registration_form{style: 'padding: 10px 70px 10px 70px; margin-left: -14px;'} Submit -->
         </div>
         <p style='margin-top: 40px; margin-left: 20px;'>Privacy: Urban Futsal LA is completely respects our member's privacy and therefore is committed to keeping your information secure and confidential.</p>
       </div>
