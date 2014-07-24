@@ -94,16 +94,17 @@
         <div class='container'>
           <h1>TEAM REGISTRATION FORM</h1>
           <hr>
-          <select class='form-control' style='width: 90%;'>
-            <option>Select a Tournament <span class='required'>*</span></option>
-            <option>Men's 5v5</option>
-            <option>Coed 5v5</option>
-          </select>
-          <br>
-          <h4>TEAM INFO</h4>
-          <br>
-          <form id='registration-form'>
+          <form id='contact_form'>
+            <br>
+            <h4>TEAM INFO</h4>
+            <br>
             <div class='row'>
+              <select class='form-control' style='width: 90%;'>
+                <option>Select a Tournament <span class='required'>*</span></option>
+                <option>Men's 5v5</option>
+                <option>Coed 5v5</option>
+              </select>
+              <br>
               <div class='team-registration' style='margin-left: 0px;'>
                 <div class='col-xs-4'>
                   <div class='form-sets'>
@@ -114,7 +115,7 @@
                 </div>
                 <div class='col-xs-6'>
                   <div class='float-right'>
-                    <input class='form-control'>
+                    <input class='form-control' id='team_name' name='team_name'>
                   </div>
                 </div>
                 <br>
@@ -129,7 +130,7 @@
                 </div>
                 <div class='col-xs-6'>
                   <div class='float-right'>
-                    <input class='form-control'>
+                    <input class='form-control' id='team_manager' name='team_manager'>
                   </div>
                 </div>
                 <br>
@@ -144,7 +145,7 @@
                 </div>
                 <div class='col-xs-6'>
                   <div class='float-right'>
-                    <input class='form-control'>
+                    <input class='form-control' id='team_manager_email' name='team_manager_email'>
                   </div>
                 </div>
                 <br>
@@ -159,7 +160,7 @@
                 </div>
                 <div class='col-xs-6'>
                   <div class='float-right'>
-                    <input class='form-control'>
+                    <input class='form-control' id='team_manager_phone' name='team_manager_phone'>
                   </div>
                 </div>
               </div>
@@ -193,16 +194,16 @@
               </div>
               <div class='col-xs-6'>
                 <div class='float-right'>
-                  <input class='form-control' style='margin-bottom: 25px;'>
+                  <input class='form-control' id='player1' name='player1' style='margin-bottom: 25px;'>
                 </div>
                 <div class='float-right'>
-                  <input class='form-control' style='margin-bottom: 25px;'>
+                  <input class='form-control' id='player2' name='player2' style='margin-bottom: 25px;'>
                 </div>
                 <div class='float-right'>
-                  <input class='form-control' style='margin-bottom: 25px;'>
+                  <input class='form-control' id='player3' name='player3' style='margin-bottom: 25px;'>
                 </div>
                 <div class='float-right'>
-                  <input class='form-control' style='margin-bottom: 25px;'>
+                  <input class='form-control' id='player4' name='player4' style='margin-bottom: 25px;'>
                 </div>
                 <div class='float-right'>
                   <input class='form-control'>
@@ -212,7 +213,7 @@
           </form>
           <hr>
           <div class='col-xs-12'>
-            <button class='btn btn-primary' style='padding: 10px 70px 10px 70px; margin-left: -14px;'>
+            <button class='btn btn-primary' id='submit_btn_registration_form' style='padding: 10px 70px 10px 70px; margin-left: -14px;'>
               SUBMIT
             </button>
           </div>
