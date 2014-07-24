@@ -94,129 +94,131 @@
         <div class='container'>
           <h1>TEAM REGISTRATION FORM</h1>
           <hr>
-          <form id='contact_form'>
-            <br>
-            <h4>TEAM INFO</h4>
-            <br>
-            <div class='row'>
-              <select class='form-control' style='width: 90%;'>
-                <option>Select a Tournament <span class='required'>*</span></option>
-                <option>Men's 5v5</option>
-                <option>Coed 5v5</option>
-              </select>
+          <form id='registration-form'>
+            <fieldset id='contact_form'>
               <br>
-              <div class='team-registration' style='margin-left: 0px;'>
+              <h4>TEAM INFO</h4>
+              <br>
+              <div class='row'>
+                <select class='form-control' style='width: 90%;'>
+                  <option>Select a Tournament <span class='required'>*</span></option>
+                  <option>Men's 5v5</option>
+                  <option>Coed 5v5</option>
+                </select>
+                <br>
+                <div class='team-registration' style='margin-left: 0px;'>
+                  <div class='col-xs-4'>
+                    <div class='form-sets'>
+                      <div class='float-left'>
+                        <label>Team Name <span class='required'>*</span></label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class='col-xs-6'>
+                    <div class='float-right'>
+                      <input class='form-control' id='team_name' name='team_name'>
+                    </div>
+                  </div>
+                  <br>
+                  <br>
+                  <br>
+                  <div class='col-xs-4'>
+                    <div class='form-sets'>
+                      <div class='float-left'>
+                        <label>Team Manager <span class='required'>*</span></label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class='col-xs-6'>
+                    <div class='float-right'>
+                      <input class='form-control' id='team_manager' name='team_manager'>
+                    </div>
+                  </div>
+                  <br>
+                  <br>
+                  <br>
+                  <div class='col-xs-4'>
+                    <div class='form-sets'>
+                      <div class='float-left'>
+                        <label>Team Manager Email <span class='required'>*</span></label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class='col-xs-6'>
+                    <div class='float-right'>
+                      <input class='form-control' id='team_manager_email' name='team_manager_email'>
+                    </div>
+                  </div>
+                  <br>
+                  <br>
+                  <br>
+                  <div class='col-xs-4'>
+                    <div class='form-sets'>
+                      <div class='float-left'>
+                        <label>Team Manager Phone<span class='required'>*</span></label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class='col-xs-6'>
+                    <div class='float-right'>
+                      <input class='form-control' id='team_manager_phone' name='team_manager_phone'>
+                    </div>
+                  </div>
+                </div>
+                <br>
+                <br>
+                <hr>
+                <h4>PLAYERS INFO</h4>
+                <br>
                 <div class='col-xs-4'>
                   <div class='form-sets'>
                     <div class='float-left'>
-                      <label>Team Name <span class='required'>*</span></label>
+                      <ol>
+                        <li>
+                          <label>Player Name <span class='required'>*</span></label>
+                        </li>
+                        <li>
+                          <label>Player Name <span class='required'>*</span></label>
+                        </li>
+                        <li>
+                          <label>Player Name <span class='required'>*</span></label>
+                        </li>
+                        <li>
+                          <label>Player Name <span class='required'>*</span></label>
+                        </li>
+                        <li>
+                          <label>Player Name <span class='required'>*</span></label>
+                        </li>
+                      </ol>
                     </div>
                   </div>
                 </div>
                 <div class='col-xs-6'>
                   <div class='float-right'>
-                    <input class='form-control' id='team_name' name='team_name'>
+                    <input class='form-control' id='player1' name='player1' style='margin-bottom: 25px;'>
                   </div>
-                </div>
-                <br>
-                <br>
-                <br>
-                <div class='col-xs-4'>
-                  <div class='form-sets'>
-                    <div class='float-left'>
-                      <label>Team Manager <span class='required'>*</span></label>
-                    </div>
-                  </div>
-                </div>
-                <div class='col-xs-6'>
                   <div class='float-right'>
-                    <input class='form-control' id='team_manager' name='team_manager'>
+                    <input class='form-control' id='player2' name='player2' style='margin-bottom: 25px;'>
                   </div>
-                </div>
-                <br>
-                <br>
-                <br>
-                <div class='col-xs-4'>
-                  <div class='form-sets'>
-                    <div class='float-left'>
-                      <label>Team Manager Email <span class='required'>*</span></label>
-                    </div>
-                  </div>
-                </div>
-                <div class='col-xs-6'>
                   <div class='float-right'>
-                    <input class='form-control' id='team_manager_email' name='team_manager_email'>
+                    <input class='form-control' id='player3' name='player3' style='margin-bottom: 25px;'>
                   </div>
-                </div>
-                <br>
-                <br>
-                <br>
-                <div class='col-xs-4'>
-                  <div class='form-sets'>
-                    <div class='float-left'>
-                      <label>Team Manager Phone<span class='required'>*</span></label>
-                    </div>
-                  </div>
-                </div>
-                <div class='col-xs-6'>
                   <div class='float-right'>
-                    <input class='form-control' id='team_manager_phone' name='team_manager_phone'>
+                    <input class='form-control' id='player4' name='player4' style='margin-bottom: 25px;'>
+                  </div>
+                  <div class='float-right'>
+                    <input class='form-control' name='player5'>
                   </div>
                 </div>
               </div>
-              <br>
-              <br>
-              <hr>
-              <h4>PLAYERS INFO</h4>
-              <br>
-              <div class='col-xs-4'>
-                <div class='form-sets'>
-                  <div class='float-left'>
-                    <ol>
-                      <li>
-                        <label>Player Name <span class='required'>*</span></label>
-                      </li>
-                      <li>
-                        <label>Player Name <span class='required'>*</span></label>
-                      </li>
-                      <li>
-                        <label>Player Name <span class='required'>*</span></label>
-                      </li>
-                      <li>
-                        <label>Player Name <span class='required'>*</span></label>
-                      </li>
-                      <li>
-                        <label>Player Name <span class='required'>*</span></label>
-                      </li>
-                    </ol>
-                  </div>
-                </div>
-              </div>
-              <div class='col-xs-6'>
-                <div class='float-right'>
-                  <input class='form-control' id='player1' name='player1' style='margin-bottom: 25px;'>
-                </div>
-                <div class='float-right'>
-                  <input class='form-control' id='player2' name='player2' style='margin-bottom: 25px;'>
-                </div>
-                <div class='float-right'>
-                  <input class='form-control' id='player3' name='player3' style='margin-bottom: 25px;'>
-                </div>
-                <div class='float-right'>
-                  <input class='form-control' id='player4' name='player4' style='margin-bottom: 25px;'>
-                </div>
-                <div class='float-right'>
-                  <input class='form-control'>
-                </div>
-              </div>
+            </fieldset>
+            <hr>
+            <div class='col-xs-12'>
+              <button class='btn btn-primary' id='submit_btn_registration_form' style='padding: 10px 70px 10px 70px; margin-left: -14px;'>
+                SUBMIT
+              </button>
             </div>
           </form>
-          <hr>
-          <div class='col-xs-12'>
-            <button class='btn btn-primary' id='submit_btn_registration_form' style='padding: 10px 70px 10px 70px; margin-left: -14px;'>
-              SUBMIT
-            </button>
-          </div>
         </div>
         <p style='margin-top: 40px; margin-left: 20px;'>Privacy: Urban Futsal LA is completely respects our member's privacy and therefore is committed to keeping your information secure and confidential.</p>
       </div>

@@ -522,3 +522,21 @@ ol {
   /* line 633, /Users/Ricky/Sites/johns_site/source/stylesheets/all.scss */
   .rules_page #rules_nav a {
     color: white; }
+
+/* line 639, /Users/Ricky/Sites/johns_site/source/stylesheets/all.scss */
+.success {
+  background: #CFFFF5;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #B9ECCE;
+  border-radius: 5px;
+  font-weight: normal; }
+
+/* line 647, /Users/Ricky/Sites/johns_site/source/stylesheets/all.scss */
+.error {
+  background: #FFDFDF;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #FFCACA;
+  border-radius: 5px;
+  font-weight: normal; }

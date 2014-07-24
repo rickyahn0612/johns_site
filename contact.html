@@ -95,39 +95,74 @@
       <hr>
       <p>Have a question about our facility, rules, or futsal?  Please feel free to contact us with the below form and one of our representatives will get back to you as soon as possible.  We look forward to hearing from you.</p>
       <br>
-      <form action='send.php' class='form-inline' id='test' method='post'>
+      <fieldset class='form-inline' id='contact_form'>
+        <legend>My Contact Form</legend>
+        <div id='result'></div>
         <div class='form-group'>
-          <b>Name:</b>
+          <label for='name'>
+            <span>Name</span>
+            <br>
+            <input class='form-control' id='name' name='name' placeholder='Enter Your Name' style='width: 280px; margin-right: 40px;' type='text'>
+          </label>
+        </div>
+        <div class='form-group'>
+          <label for='email'>
+            <span>Email Address</span>
+            <br>
+            <input class='form-control' id='email' name='email' placeholder='Enter Your Email' style='width: 280px;' type='email'>
+          </label>
+        </div>
+        <br>
+        <br>
+        <label for='phone'>
+          <span>Phone</span>
           <br>
-          <input class='form-control' placeholder='Please Enter Name' style='width: 280px;' type='text'>
-        </div>
-        <div class='form-group pull-right'>
-          <b>Email:</b>
-          <br>
-          <input class='form-control' placeholder='Please Enter Email' style='width: 280px;' type='email'>
-        </div>
-        <div class='form-group pull-left' style='margin-top: 40px;'>
-          <b>Phone:</b>
-          <br>
-          <input class='form-control' placeholder='Please Enter Phone' style='width: 270px;' type='text'>
-        </div>
-        <div class='clear'></div>
-        <div class='form-group' style='margin-top: 40px;'>
-          <b>Message:</b>
-          <textarea class='form-control' rows='8' style='width: 650px;'></textarea>
+          <input class='form-control' id='phone' name='phone' placeholder='Phone Number' style='width: 280px;' type='text'>
+        </label>
+        <br>
+        <br>
+        <div class='form-group'>
+          <label for='message'>
+            <span>Message</span>
+            <br>
+            <textarea class='form-control' id='message' name='message' placeholder='Enter Your Name' style='width: 650px; height: 200px;'></textarea>
+          </label>
         </div>
         <br>
         <br>
-        <button class='btn btn-info' style='padding: 7px 60px 7px 60px; border: none;'>
-          SEND
-        </button>
+        <div class='form-group'>
+          <label>
+            <span> </span>
+            <button class='submit_btn btn btn-primary' id='submit_btn'>Submit</button>
+          </label>
+        </div>
+        <!-- .form-group -->
+        <!-- %b Name: -->
+        <!-- %br -->
+        <!-- %input{type: 'text', class: 'form-control', placeholder: 'Please Enter Name', style: 'width: 280px;'} -->
+        <!-- .form-group.pull-right -->
+        <!-- %b Email: -->
+        <!-- %br -->
+        <!-- %input{type: 'email', class: 'form-control', placeholder: 'Please Enter Email', style: 'width: 280px;'} -->
+        <!-- .form-group.pull-left{style: 'margin-top: 40px;'} -->
+        <!-- %b Phone: -->
+        <!-- %br -->
+        <!-- %input{type: 'text', class: 'form-control', placeholder: 'Please Enter Phone', style: 'width: 270px;'} -->
+        <!-- .clear -->
+        <!-- .form-group{style: 'margin-top: 40px;'} -->
+        <!-- %b Message: -->
+        <!-- %textarea.form-control{rows: '8', style: 'width: 650px;'} -->
+        <!-- %br -->
+        <!-- %br -->
+        <!-- %button.btn.btn-info{style: 'padding: 7px 60px 7px 60px; border: none;'} -->
+        <!-- SEND -->
         <br>
         <br>
         <br>
         <br>
         <br>
         <br>
-      </form>
+      </fieldset>
     </div>
     <div class='col-xs-4 pull-right'>
       <h4>Contact Info</h4>
