@@ -514,6 +514,7 @@ body {
         h3 {
           position: relative;
           top: -5px;
+          font-size: 20px;
         }
       }
 
@@ -613,6 +614,25 @@ body {
   .styled-list {
     list-style: circle;
     margin-top: -25px;
+  }
+
+  #rules_nav {
+    background: #000;
+    width: 350px;
+    color: white;
+    padding-left: 20px;
+    padding-top: 20px;
+
+    ol {
+
+      li {
+        margin-top: -30px;
+      }
+    }
+
+    a {
+      color: white;
+    }
   }
 }
 

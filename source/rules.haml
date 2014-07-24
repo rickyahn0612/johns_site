@@ -1,5 +1,5 @@
 .about_top_header_image_container
-.about_content_container.rules_page
+.about_content_container.rules_page{style: 'position: relative;'}
   .container
     %br
     %br
@@ -9,11 +9,11 @@
         %h1 RULES
         %hr
         %ol
-          %li 
+          %li#rule1 
             %h5 LAWS OF THE GAME:
             %p
               All matches will be played in accordance with current FIFA "Futsal Laws of the Game"http://www.fifa.com/mm/document/affederation/generic/51/44/50/futsallawsofthegameen.pdf", except where noted below. The following items will further interpret those rules for purposes of this league and/or will provide the administrative framework for the operation of the league.
-          %li
+          %li#rule2
             %h5 The Players
             %p
               Each team will field 5 players at any one time. Urban Futsal rules will allow a team to play with 4 people. Anything less is up to the opposing captain and/or staff member as to what will be allowable. There is no maximum limit to the number of females, which must be on the field at once. All teams will be issued players cards. Players that do not present player cards to the referee before or during the match will not be eligible to play. Referees must collect each individual player card and make sure the picture matches the player.
@@ -22,13 +22,13 @@
                 %br
                 %h5 Substitution During Play and Stoppages
                 %p Players may substitute at any time on an unlimited basis, provided the substituted player must be within one yard of the Defensive Goal and does not interfere with the play at the time the replacing player enters the field of play. Players and substitutes must request the permission of the referee to enter or exit the field of play.
-              %li
+              %li{style: 'margin-top: -25px;'}
                 %h5 Substitution Violations
                 %br
                 %ul
                   %li.styled-list A team fielding too many players during play will be penalized with a two-minute penalty not designated to any one specific player.
                   %li.styled-list A team that Substitute a player from the sidelines or offensive side will be penalized with a two- minute penalty not designated to any one specific player.
-              %li
+              %li{style: 'margin-top: -35px;'}
                 %h5 Mandatory Uniform
                 %br
                 %ul
@@ -38,14 +38,14 @@
                   %li.styled-list Socks
                   %li.styled-list Age appropriate shin guards
                   %li.styled-list Indoor soccer footwear / Tennis shoes / No studded shoes
-              %li 
+              %li{style: 'margin-top: -35px;'}
                 %h5 Dangerous Equipment
                 %ul
                   %li Casts, splints, or body braces made of hard materials must be padded to the satisfaction and the permission of the referee or an administrator.
               %li 
                 %h5 Head Gear
                 %p Players are not allowed to wear baseball hats or any other headgear that has a hard surface attached to it. This includes recreation sunglasses. Beanies and sport glasses are the recommended headgear.
-          %li 
+          %li#rule3 
             %h5 The Referee
             %br
             %ul
@@ -58,24 +58,24 @@
               %li.styled-list The referee has the discretion to start the game clock if teams are not ready to play due to jersey conflicts, players arriving late, etc.
               %li.styled-list Submit the game record to facility administrator at end of game, including any pertinent information (i.e. penalties, injuries).
               %li.styled-list All decisions make by the Referee shall be final.
-          %li 
+          %li#rule4
             %h5 Time
             %p Play will be divided into (2) 25- minute halves separated by a brief halftime. A running clock will be maintained by a referee. Clock will not stop during injury time.
-          %li 
+          %li#rule5
             %h5 The Game
             %br
             %ul
               %li.styled-list All Games will start at their scheduled time. If a team is not ready to play after 5 minutes from the scheduled time, then that team will start a goal down. If a team is not ready to play after 10 minutes, then the game is an automatic forfeit.
               %li.styled-list The team listed first on the schedule is the home team.
               %li.styled-list Home team (White team) will always kick off in the first half.
-          %li 
+          %li#rule6
             %h5 Scoring
             %br
             %ul
               %li.styled-list Regular season games ending in a tie score will be recorded as tie games.
               %li.styled-list Goals may be scored on Kickoffs and corner kicks.
               %li.styled-list If there is a suspension attributed to one specific team, that team shall forfeit the game with the score of 3-0. If both teams are deemed by the referee to be at fault to a serious degree, a double forfeit will be the result, and neither team will receive any points.
-            %li 
+            %li#rule7
               %h5 Penalty Kick:
               %p If the defense or offensive player is clearly in the goal box area before any shot on goal takes place, then the following will occur:
               %br
@@ -85,16 +85,16 @@
                 %li.styled-list Players cannot run pass the penalty mark until the ball is kicked.
                 %li.styled-list 
                   %strong An offensive penalty will result in a free kick for the defensive team.
-            %li 
+            %li#rule8 
               %h5 Referee Time Stoppage
               %p The restart of the match shall go to the team in possession at the time of the stoppage with a Direct Free Kick. If there was no clear possession, the game will resume with a drop ball at the location where the ball was, when play was stopped by the referee.
-            %li 
+            %li#rule9 
               %h5 Off-side
               %p There is no offside.
-            %li 
+            %li#rule10
               %h5 Corner Kicks
               %p All players on the defense must be at least 5 paces/yards from the corner
-            %li 
+            %li#rule11 
               %h5 Encroachment
               %p Players of the opposing side must compliance with the 5 yards radius for the following restarts:
               %br
@@ -114,24 +114,26 @@
                 %li.styled-list If a foul has been committed in the penalty area or within 5 yards of the penalty area, a Penalty Kick will be awarded.
                 %li.styled-list No Slide Tackling / Playing the ball on the Ground - Penalized as Direct Free Kick - these shall be defined by the referee as any part of the body, other than the feet, that makes contact with the ground during a challenge or play for the ball.
                 %li.styled-list Verbal abuse: taunting of players, referees, or spectators by players, coaches, or spectators are cause for immediate suspension.
-          %li 
+          %li#rule12 
             %h5 Penal Time Penalties
+            %br
+            %br
             %ul
-              %li These penalties shall be administered by a Caution or a Sending-off by the referee, depending on the nature and severity of the offense.
-              %li All Cautionable offenses (Yellow Card) will be punished by a 2- minute penalty.
-              %li If a 2- minute penalty is given when a Caution has been issued the penalized player must sit out, and a sub will not be allowed to replace him/her.
-              %li The penalized team receiving a Caution will play one person short for 2 minutes, or until a goal is scored, whichever occurs first.
-              %li If a player receives 2nd Cautions in the same match, that player will be Send-off and ejected from the game. Plus that person will receive a minimum suspension of one additional game.
-              %li Sending-Off offenses (Red Card) will be punished by ejection of the specific player(s) for the remainder of the game and a 5-minute team penalty.
-              %li Ejection of any coach, player, substitute, non-playing personnel, or spectator will result in a 5 minute penalty to the offending team.
-          %li 
+              %li.styled-list These penalties shall be administered by a Caution or a Sending-off by the referee, depending on the nature and severity of the offense.
+              %li.styled-list All Cautionable offenses (Yellow Card) will be punished by a 2- minute penalty.
+              %li.styled-list If a 2- minute penalty is given when a Caution has been issued the penalized player must sit out, and a sub will not be allowed to replace him/her.
+              %li.styled-list The penalized team receiving a Caution will play one person short for 2 minutes, or until a goal is scored, whichever occurs first.
+              %li.styled-list If a player receives 2nd Cautions in the same match, that player will be Send-off and ejected from the game. Plus that person will receive a minimum suspension of one additional game.
+              %li.styled-list Sending-Off offenses (Red Card) will be punished by ejection of the specific player(s) for the remainder of the game and a 5-minute team penalty.
+              %li.styled-list Ejection of any coach, player, substitute, non-playing personnel, or spectator will result in a 5 minute penalty to the offending team.
+          %li#rule13 
             %h5 Additional Penalties
             %p If the same player accumulates the following during regular season or playoffs, then that player will be suspended from the league for the remainder of that current season. Additional penal time penalties can be assessed:
             %ul
               %li 5 - Cautionable offenses (Yellow Card)
               %li 3- Sending-Off offenses (Red Card)
             %p These will be assessed to both players and bench personnel, whether or not they are on the field of play. The time penalty may be assessed on a specific offending player or on the team if the offense is committed: by the coach, bench personnel, or an unidentified individual on the team. Should any player or non-playing team personnel exhibit misconduct at the conclusion of the game, the referee shall display the appropriate card and inform the facility administration for further action. Should the card issued be a red (ejection), that player or team personnel member must serve an automatic 1-game suspension. Players who participate in multiple leagues will be required to sit out for a minimum of 1 game per team.
-          %li 
+          %li#rule14 
             %h5 Ejections
             %ul
               %li An ejected player, coach, non-playing personnel or spectator must exit the facility immediately and will not be allowed to return to the facility for a minimum of 1-game.
@@ -146,7 +148,7 @@
               %li Ejection from facility in one league will jeopardize eligibility in other leagues (i.e. if player is ejected from any league, player suspension will include participation in any league).
               %li An ejected player is also subject to fines and possible multiple game suspensions or banishment from facility.
               %li That player must exit the facility prior to commencing game, and may not return prior to management approval. Additional penalties may be incurred by the team if problems persist.
-          %li 
+          %li#rule15
             %h5 POINTS SYSTEM
             %p To determine league or tournament standings, the following point system will be used: 
             %br
@@ -154,7 +156,7 @@
               %li.styled-list WIN: 3
               %li.styled-list TIE:1
               %li.styled-list LOSS: 0
-          %li 
+          %li#rule16 
             %h5 TIE BREAKERS
             %ul
               %li The following tie breaking procedures will be used to determine league or bracket winners for play-off seeding:
@@ -169,7 +171,7 @@
                 %li.styled-list Goals Forward Minus Goals Against
                 %li.styled-list Total points scored in the league
                 %li.styled-list Coin toss
-            %li 
+            %li#rule17 
               %h5 Overtime Rules:
               %ul
                 %li 2 - 5 minutes SUDDEN DEATH
@@ -183,4 +185,47 @@
                   %li.styled-list Reduce to equal amount of kickers for each team.
                   %li.styled-list If the first team misses their shot, the 2nd team will have a chance to win the game by scoring a goal.
                   %li.styled-list If neither team scores, then round 2 will begin until a winner is determined.
+      .right_content.float_right
+        .header
+          %h3 Quick Menu
+        #rules_nav
+          %br
+          %ol
+            %li 
+              = link_to 'Laws Of The Game', '#rule1'
+            %li 
+              = link_to 'The Players', '#rule2'
+            %li 
+              = link_to 'The Referee', '#rule3'
+            %li 
+              = link_to 'Time', '#rule4'
+            %li 
+              = link_to 'The Game', '#rule5'
+            %li 
+              = link_to 'Scoring', '#rule6'
+            %li 
+              = link_to 'Penalty Kick', '#rule7'
+            %li 
+              = link_to 'Referee Time Stoppage', '#rule8'
+            %li 
+              = link_to 'Off-side', '#rule9'
+            %li 
+              = link_to 'Corner Kicks', '#rule10'
+            %li 
+              = link_to 'Encroachment', '#rule11'
+            %li 
+              = link_to 'Penal Time Penalties', '#rule12'
+            %li 
+              = link_to 'Additional Penalties', '#rule13'
+            %li 
+              = link_to 'Ejections', '#rule14'
+            %li 
+              = link_to 'Points System', '#rule15'
+            %li 
+              = link_to 'Tie Breakers', '#rule16'
+            %li 
+              = link_to 'Overtime Rules', '#rule17'
+
+        .clear
+        %br
       .clear
