@@ -11,75 +11,141 @@
           %hr
           %br
           %fieldset#contact_form.form-inline
-            %legend My Contact Form
+            %legend Team Info
             #result
             .form-group
               %label{for: "name"}
-                %span Name
+                %span Team Name
                 %br
-                %input#name{name: "name", placeholder: "Enter Your Name", type: "text", class: 'form-control', style: 'width: 280px; margin-right: 40px;'}
+                %input#name{name: "team_name", placeholder: "Enter Your Team Name", type: "text", class: 'form-control', style: 'width: 400px; margin-right: 40px;'}
+              %label{for: "name"}
+                %span Manager Name
+                %br
+                %input#name{name: "manager_name", placeholder: "Enter Manager Name", type: "text", class: 'form-control', style: 'width: 400px; margin-right: 40px;'}
+            %br
+            %br
             .form-group
               %label{for: "email"}
-                %span Email Address
+                %span Manager Email
                 %br
-                %input#email{name: "email", placeholder: "Enter Your Email", type: "email", class: 'form-control', style: 'width: 280px;'}
-            %br
-            %br
-            %label{for: "phone"}
-              %span Phone
-              %br
-              %input#phone{name: "phone", placeholder: "Phone Number", type: "text", class: 'form-control', style: 'width: 280px;'}
+                %input#email{name: "email", placeholder: "Enter Your Email", type: "email", class: 'form-control', style: 'width: 400px; margin-right: 40px;'}
+              %label{for: "phone"}
+                %span Manager Phone
+                %br
+                %input#phone{name: "phone", placeholder: "Phone Number", type: "text", class: 'form-control', style: 'width: 400px;'}
             %br
             %br
             .form-group
               %label{for: "message"}
-                %span Message
                 %br
-                %textarea#message{name: "message", placeholder: "Enter Your Name", class: 'form-control', style: 'width: 650px; height: 200px;'}
+                %textarea#message{name: "message", placeholder: "Enter Your Name", class: 'form-control', style: 'height: 0px; visibility: hidden'}
+            %legend Team Info
             %br
             %br
-            .form-group
-              %label
-                %span  
-                %button#submit_btn.submit_btn.btn.btn-primary Submit
-
-            / %br
-            / %hr
-
-            / %br
-            / %br
-            / %hr
-            / %h4 PLAYERS INFO
-            / %br
-            / .col-xs-4
-            /   .form-sets
-            /     .float-left
-            /       %ol
-            /         %li
-            /           %label Player Name <span class='required'>*</span>
-            /         %li
-            /           %label Player Name <span class='required'>*</span>
-            /         %li
-            /           %label Player Name <span class='required'>*</span>
-            /         %li
-            /           %label Player Name <span class='required'>*</span>
-            /         %li
-            /           %label Player Name <span class='required'>*</span>
-            / .col-xs-6
-            /   .float-right
-            /     %input.form-control#player1{style: 'margin-bottom: 25px; width: 400px;', name: 'player1'}
-            /   .float-right
-            /     %input.form-control#player2{name: 'player2', style: 'margin-bottom: 25px; width: 400px;'}
-            /   .float-right
-            /     %input.form-control#player3{name: 'player3', style: 'margin-bottom: 25px; width: 400px;'}
-            /   .float-right
-            /     %input.form-control#player4{name: 'player4', style: 'margin-bottom: 25px; width: 400px;'}
-            /   .float-right
-            /     %input.form-control{name: 'player5', style: 'margin-bottom: 25px; width: 400px;'}
-          / .form-group
-          /   %label
-          /     %span  
-          /     %button#submit_btn.submit_btn.btn.btn-primary#submit_btn_registration_form{style: 'padding: 10px 70px 10px 70px; margin-left: -14px;'} Submit
+            %h4 PLAYERS INFO 
+            %br 
+            .col-xs-4 
+              .form-sets 
+                .float-left 
+                  %ol 
+                    %li
+                      %label Player Name <span class='required'>*</span> 
+                    %li 
+                      %label Player Name <span class='required'>*</span> 
+                    %li 
+                      %label Player Name <span class='required'>*</span> 
+                    %li 
+                      %label Player Name <span class='required'>*</span> 
+                    %li 
+                      %label Player Name <span class='required'>*</span> 
+            .col-xs-6
+              .form-sets
+                .float-right
+                  %input.form-control#player1{style: 'margin-bottom: 25px; width: 400px;', name: 'player1'}
+                  %input.form-control#player2{style: 'margin-bottom: 25px; width: 400px;', name: 'player2'}
+                  %input.form-control#player3{style: 'margin-bottom: 25px; width: 400px;', name: 'player3'}
+                  %input.form-control#player4{style: 'margin-bottom: 25px; width: 400px;', name: 'player4'}
+                  %input.form-control#player5{style: 'margin-bottom: 25px; width: 400px;', name: 'player5'}
+              .clear
+          .form-group
+            %label
+              %span  
+              %button#registration_submit_btn.btn.btn-primary Submit
 
         %p{style: 'margin-top: 40px; margin-left: 20px;'} Privacy: Urban Futsal LA is completely respects our member's privacy and therefore is committed to keeping your information secure and confidential.
       .clear
+:javascript
+  $(document).ready(function() {
+      $("#registration_submit_btn").click(function() { 
+          //get input field values
+          var team_name       = $('input[name=team_name]').val(); 
+          var manager_name    = $('input[name=manager_name]').val(); 
+          var user_email      = $('input[name=email]').val();
+          var user_phone      = $('input[name=phone]').val();
+          var user_message    = $('textarea[name=message]').val();
+          var player1         = $('input[name=player1]').val();
+          var player2         = $('input[name=player2]').val();
+          var player3         = $('input[name=player3]').val();
+          var player4         = $('input[name=player4]').val();
+          var player5         = $('input[name=player5]').val();
+          
+          //simple validation at client's end
+          //we simply change border color to red if empty field using .css()
+          var proceed = true;
+          var content = 'Team Name:' + ' ' + team_name + "\n \n" + "------------------------------------------" + "\n \n" + 'Manager Name:' + manager_name + "\n \n" + "------------------------------------------" + "\n \n" + 'Manager Email:' + user_email + "\n \n" + "------------------------------------------" + "\n \n" + 'Manager Phone:' + user_phone + "\n \n" + "------------------------------------------" + "\n \n" + 'PLAYERS:' + "\n \n" + '1. ' + player1 + "\n \n" + '2. ' + player2 + "\n \n" + '3. ' + player3 + "\n \n" + '4. ' + player4 + "\n \n" + '5. '+ player5
+          var textArea = $('textarea[name=message]').val(content);
+          if(team_name==""){ 
+              $('input[name=team_name]').css('border-color','red'); 
+              proceed = false;
+          }
+          if(manager_name==""){ 
+              $('input[name=manager_name]').css('border-color','red'); 
+              proceed = false;
+          }
+          if(user_email==""){ 
+              $('input[name=email]').css('border-color','red'); 
+              proceed = false;
+          }
+          if(user_phone=="") {    
+              $('input[name=phone]').css('border-color','red'); 
+              proceed = false;
+          }
+          if(user_message=="") {  
+              $('textarea[name=message]').css('border-color','red'); 
+              proceed = false;
+          }
+  
+          //everything looks good! proceed...
+          if(proceed) 
+          {
+              //data to be sent to server
+              post_data = {'userName':team_name, 'managerName':manager_name, 'userEmail':user_email, 'userMessage':user_message};
+              
+              //Ajax post data to server
+              $.post('registration_form.php', post_data, function(response){  
+  
+                  //load json data from server and output message     
+          if(response.type == 'error')
+          {
+            output = '<div class="error">'+response.text+'</div>';
+          }else{
+              output = '<div class="success">'+response.text+'</div>';
+            
+            //reset values in all input fields
+            $('#contact_form input').val(''); 
+            $('#contact_form textarea').val(''); 
+          }
+          
+          $("#result").hide().html(output).slideDown();
+              }, 'json');
+        
+          }
+      });
+      
+      //reset previously set border colors and hide all message on .keyup()
+      $("#contact_form input, #contact_form textarea").keyup(function() { 
+          $("#contact_form input, #contact_form textarea").css('border-color',''); 
+          $("#result").slideUp();
+      });
+      
+  });
