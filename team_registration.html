@@ -96,83 +96,89 @@
           <hr>
           <br>
           <fieldset class='form-inline' id='contact_form'>
-            <legend>My Contact Form</legend>
+            <legend>Team Info</legend>
             <div id='result'></div>
             <div class='form-group'>
               <label for='name'>
-                <span>Name</span>
+                <span>Team Name</span>
                 <br>
-                <input class='form-control' id='name' name='name' placeholder='Enter Your Name' style='width: 280px; margin-right: 40px;' type='text'>
+                <input class='form-control' id='name' name='team_name' placeholder='Enter Your Team Name' style='width: 400px; margin-right: 40px;' type='text'>
+              </label>
+              <label for='name'>
+                <span>Manager Name</span>
+                <br>
+                <input class='form-control' id='name' name='manager_name' placeholder='Enter Manager Name' style='width: 400px; margin-right: 40px;' type='text'>
               </label>
             </div>
+            <br>
+            <br>
             <div class='form-group'>
               <label for='email'>
-                <span>Email Address</span>
+                <span>Manager Email</span>
                 <br>
-                <input class='form-control' id='email' name='email' placeholder='Enter Your Email' style='width: 280px;' type='email'>
+                <input class='form-control' id='email' name='email' placeholder='Enter Your Email' style='width: 400px; margin-right: 40px;' type='email'>
+              </label>
+              <label for='phone'>
+                <span>Manager Phone</span>
+                <br>
+                <input class='form-control' id='phone' name='phone' placeholder='Phone Number' style='width: 400px;' type='text'>
               </label>
             </div>
-            <br>
-            <br>
-            <label for='phone'>
-              <span>Phone</span>
-              <br>
-              <input class='form-control' id='phone' name='phone' placeholder='Phone Number' style='width: 280px;' type='text'>
-            </label>
             <br>
             <br>
             <div class='form-group'>
               <label for='message'>
-                <span>Message</span>
                 <br>
-                <textarea class='form-control' id='message' name='message' placeholder='Enter Your Name' style='width: 650px; height: 200px;'></textarea>
+                <textarea class='form-control' id='message' name='message' placeholder='Enter Your Name' style='height: 0px; visibility: hidden'></textarea>
               </label>
             </div>
+            <legend>Team Info</legend>
             <br>
             <br>
-            <div class='form-group'>
-              <label>
-                <span> </span>
-                <button class='submit_btn btn btn-primary' id='submit_btn'>Submit</button>
-              </label>
+            <h4>PLAYERS INFO</h4>
+            <br>
+            <div class='col-xs-4'>
+              <div class='form-sets'>
+                <div class='float-left'>
+                  <ol>
+                    <li>
+                      <label>Player Name <span class='required'>*</span></label>
+                    </li>
+                    <li>
+                      <label>Player Name <span class='required'>*</span></label>
+                    </li>
+                    <li>
+                      <label>Player Name <span class='required'>*</span></label>
+                    </li>
+                    <li>
+                      <label>Player Name <span class='required'>*</span></label>
+                    </li>
+                    <li>
+                      <label>Player Name <span class='required'>*</span></label>
+                    </li>
+                  </ol>
+                </div>
+              </div>
             </div>
-            <!-- %br -->
-            <!-- %hr -->
-            <!-- %br -->
-            <!-- %br -->
-            <!-- %hr -->
-            <!-- %h4 PLAYERS INFO -->
-            <!-- %br -->
-            <!-- .col-xs-4 -->
-            <!-- .form-sets -->
-            <!-- .float-left -->
-            <!-- %ol -->
-            <!-- %li -->
-            <!-- %label Player Name <span class='required'>*</span> -->
-            <!-- %li -->
-            <!-- %label Player Name <span class='required'>*</span> -->
-            <!-- %li -->
-            <!-- %label Player Name <span class='required'>*</span> -->
-            <!-- %li -->
-            <!-- %label Player Name <span class='required'>*</span> -->
-            <!-- %li -->
-            <!-- %label Player Name <span class='required'>*</span> -->
-            <!-- .col-xs-6 -->
-            <!-- .float-right -->
-            <!-- %input.form-control#player1{style: 'margin-bottom: 25px; width: 400px;', name: 'player1'} -->
-            <!-- .float-right -->
-            <!-- %input.form-control#player2{name: 'player2', style: 'margin-bottom: 25px; width: 400px;'} -->
-            <!-- .float-right -->
-            <!-- %input.form-control#player3{name: 'player3', style: 'margin-bottom: 25px; width: 400px;'} -->
-            <!-- .float-right -->
-            <!-- %input.form-control#player4{name: 'player4', style: 'margin-bottom: 25px; width: 400px;'} -->
-            <!-- .float-right -->
-            <!-- %input.form-control{name: 'player5', style: 'margin-bottom: 25px; width: 400px;'} -->
+            <div class='col-xs-6'>
+              <div class='form-sets'>
+                <div class='float-right'>
+                  <input class='form-control' id='player1' name='player1' style='margin-bottom: 25px; width: 400px;'>
+                  <input class='form-control' id='player2' name='player2' style='margin-bottom: 25px; width: 400px;'>
+                  <input class='form-control' id='player3' name='player3' style='margin-bottom: 25px; width: 400px;'>
+                  <input class='form-control' id='player4' name='player4' style='margin-bottom: 25px; width: 400px;'>
+                  <input class='form-control' id='player5' name='player5' style='margin-bottom: 25px; width: 400px;'>
+                </div>
+              </div>
+              <div class='clear'></div>
+            </div>
           </fieldset>
-          <!-- .form-group -->
-          <!-- %label -->
-          <!-- %span   -->
-          <!-- %button#submit_btn.submit_btn.btn.btn-primary#submit_btn_registration_form{style: 'padding: 10px 70px 10px 70px; margin-left: -14px;'} Submit -->
+          <div class='form-group'>
+            <label>
+              <span> </span>
+              <button class='btn btn-primary' id='registration_submit_btn'>Submit</button>
+            </label>
+          </div>
         </div>
         <p style='margin-top: 40px; margin-left: 20px;'>Privacy: Urban Futsal LA is completely respects our member's privacy and therefore is committed to keeping your information secure and confidential.</p>
       </div>
@@ -180,6 +186,82 @@
     </div>
   </div>
 </div>
+<script>
+  $(document).ready(function() {
+      $("#registration_submit_btn").click(function() { 
+          //get input field values
+          var team_name       = $('input[name=team_name]').val(); 
+          var manager_name    = $('input[name=manager_name]').val(); 
+          var user_email      = $('input[name=email]').val();
+          var user_phone      = $('input[name=phone]').val();
+          var user_message    = $('textarea[name=message]').val();
+          var player1         = $('input[name=player1]').val();
+          var player2         = $('input[name=player2]').val();
+          var player3         = $('input[name=player3]').val();
+          var player4         = $('input[name=player4]').val();
+          var player5         = $('input[name=player5]').val();
+          
+          //simple validation at client's end
+          //we simply change border color to red if empty field using .css()
+          var proceed = true;
+          var content = 'Team Name:' + ' ' + team_name + "\n \n" + "------------------------------------------" + "\n \n" + 'Manager Name:' + manager_name + "\n \n" + "------------------------------------------" + "\n \n" + 'Manager Email:' + user_email + "\n \n" + "------------------------------------------" + "\n \n" + 'Manager Phone:' + user_phone + "\n \n" + "------------------------------------------" + "\n \n" + 'PLAYERS:' + "\n \n" + '1. ' + player1 + "\n \n" + '2. ' + player2 + "\n \n" + '3. ' + player3 + "\n \n" + '4. ' + player4 + "\n \n" + '5. '+ player5
+          var textArea = $('textarea[name=message]').val(content);
+          if(team_name==""){ 
+              $('input[name=team_name]').css('border-color','red'); 
+              proceed = false;
+          }
+          if(manager_name==""){ 
+              $('input[name=manager_name]').css('border-color','red'); 
+              proceed = false;
+          }
+          if(user_email==""){ 
+              $('input[name=email]').css('border-color','red'); 
+              proceed = false;
+          }
+          if(user_phone=="") {    
+              $('input[name=phone]').css('border-color','red'); 
+              proceed = false;
+          }
+          if(user_message=="") {  
+              $('textarea[name=message]').css('border-color','red'); 
+              proceed = false;
+          }
+  
+          //everything looks good! proceed...
+          if(proceed) 
+          {
+              //data to be sent to server
+              post_data = {'userName':team_name, 'managerName':manager_name, 'userEmail':user_email, 'userMessage':user_message};
+              
+              //Ajax post data to server
+              $.post('registration_form.php', post_data, function(response){  
+  
+                  //load json data from server and output message     
+          if(response.type == 'error')
+          {
+            output = '<div class="error">'+response.text+'</div>';
+          }else{
+              output = '<div class="success">'+response.text+'</div>';
+            
+            //reset values in all input fields
+            $('#contact_form input').val(''); 
+            $('#contact_form textarea').val(''); 
+          }
+          
+          $("#result").hide().html(output).slideDown();
+              }, 'json');
+        
+          }
+      });
+      
+      //reset previously set border colors and hide all message on .keyup()
+      $("#contact_form input, #contact_form textarea").keyup(function() { 
+          $("#contact_form input, #contact_form textarea").css('border-color',''); 
+          $("#result").slideUp();
+      });
+      
+  });
+</script>
 
     <div id='footer'>
   <div class='container'>

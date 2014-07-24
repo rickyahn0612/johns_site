@@ -46,59 +46,6 @@
         'color': '#fffff'
       }, 500);
     });
-    $("#submit_btn_registration_form").click(function() {
-      var post_data, proceed, team_manager, team_manager_email, team_manager_phone, team_name, tournament;
-      tournament = $("select[name=tournament_type]").val();
-      team_name = $("input[name=team_name]").val();
-      team_manager = $("input[name=team_manager]").val();
-      team_manager_email = $("input[name=team_manager_email]").val();
-      team_manager_phone = $("input[name=team_manager_phone]").val();
-      proceed = true;
-      if (tournament === "Select a Tournament") {
-        $("select[name=tournament_type]").css("border-color", "red");
-        proceed = false;
-      }
-      if (team_name === "") {
-        $("input[name=team_name]").css("border-color", "red");
-        proceed = false;
-      }
-      if (team_manager === "") {
-        $("input[name=team_manager]").css("border-color", "red");
-        proceed = false;
-      }
-      if (team_manager_email === "") {
-        $("input[name=team_manager_email]").css("border-color", "red");
-        proceed = false;
-      }
-      if (team_manager_phone === "") {
-        $("input[name=team_manager_phone]").css("border-color", "red");
-        proceed = false;
-      }
-      if (proceed) {
-        post_data = {
-          tournamentType: tournament,
-          teamName: team_name,
-          teamManager: team_manager,
-          teamManagerEmail: team_manager_email,
-          teamManagerPhone: team_manager_phone
-        };
-        $.post("registration_form.php", post_data, (function(response) {
-          var output;
-          if (response.type === "error") {
-            output = "<div class=\"error\">" + response.text + "</div>";
-          } else {
-            output = "<div class=\"success\">" + response.text + "</div>";
-            $("#registration_form input").val("");
-            $("#registration_form textarea").val("");
-          }
-          $("#result").hide().html(output).slideDown();
-        }), "json");
-      }
-    });
-    $("#registration_form input, #registration_form textarea").keyup(function() {
-      $("#registration_form input, #registration_form textarea").css("border-color", "");
-      $("#result").slideUp();
-    });
     $("#submit_btn").click(function() {
       var post_data, proceed, user_email, user_message, user_name, user_phone;
       user_name = $("input[name=name]").val();
