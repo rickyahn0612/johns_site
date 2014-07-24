@@ -94,37 +94,38 @@
         <div class='container'>
           <h1>TEAM REGISTRATION FORM</h1>
           <hr>
-          <fieldset class='form-inline' id='registration_form'>
+          <br>
+          <fieldset class='form-inline' id='contact_form'>
             <legend>My Contact Form</legend>
             <div id='result'></div>
             <div class='form-group'>
-              <label>
-                <span>Team Name</span>
+              <label for='name'>
+                <span>Name</span>
                 <br>
-                <input class='form-control' id='name' name='team_name' placeholder='Enter Your Name' style='width: 280px; margin-right: 40px;' type='text'>
+                <input class='form-control' id='name' name='name' placeholder='Enter Your Name' style='width: 280px; margin-right: 40px;' type='text'>
               </label>
             </div>
             <div class='form-group'>
-              <label>
-                <span>Team Manager Name</span>
+              <label for='email'>
+                <span>Email Address</span>
                 <br>
-                <input class='form-control' id='email' name='team_manager' placeholder='Enter Your Email' style='width: 280px;' type='email'>
+                <input class='form-control' id='email' name='email' placeholder='Enter Your Email' style='width: 280px;' type='email'>
               </label>
             </div>
             <br>
             <br>
-            <label>
+            <label for='phone'>
               <span>Phone</span>
               <br>
-              <input class='form-control' id='phone' name='team_manager_phone' placeholder='Phone Number' style='width: 280px;' type='text'>
+              <input class='form-control' id='phone' name='phone' placeholder='Phone Number' style='width: 280px;' type='text'>
             </label>
             <br>
             <br>
             <div class='form-group'>
-              <label>
-                <span>Team Manager Email</span>
+              <label for='message'>
+                <span>Message</span>
                 <br>
-                <input class='form-control' id='phone' name='team_manager_email' placeholder='Phone Number' style='width: 280px;' type='text'>
+                <textarea class='form-control' id='message' name='message' placeholder='Enter Your Name' style='width: 650px; height: 200px;'></textarea>
               </label>
             </div>
             <br>
@@ -132,7 +133,7 @@
             <div class='form-group'>
               <label>
                 <span> </span>
-                <button class='submit_btn btn btn-primary' id='submit_btn_registration_form'>Submit</button>
+                <button class='submit_btn btn btn-primary' id='submit_btn'>Submit</button>
               </label>
             </div>
             <!-- %br -->
