@@ -9,15 +9,16 @@
         .container
           %h1 TEAM REGISTRATION FORM
           %hr
-          %select.form-control{style: 'width: 90%;'}
-            %option Select a Tournament <span class='required'>*</span>
-            %option Men's 5v5
-            %option Coed 5v5
-          %br
-          %h4 TEAM INFO
-          %br
-          %form#registration-form
+          %form#registration-form#contact_form
+            %br
+            %h4 TEAM INFO
+            %br
             .row
+              %select.form-control{style: 'width: 90%;'}
+                %option Select a Tournament <span class='required'>*</span>
+                %option Men's 5v5
+                %option Coed 5v5
+              %br
               .team-registration{style: 'margin-left: 0px;'}
                 .col-xs-4
                   .form-sets
@@ -25,7 +26,7 @@
                       %label Team Name <span class='required'>*</span>
                 .col-xs-6
                   .float-right
-                    %input.form-control
+                    %input.form-control#team_name{name: 'team_name'}
                 %br
                 %br
                 %br
@@ -35,7 +36,7 @@
                       %label Team Manager <span class='required'>*</span>
                 .col-xs-6
                   .float-right
-                    %input.form-control
+                    %input.form-control#team_manager{name: 'team_manager'}
                 %br
                 %br
                 %br
@@ -45,7 +46,7 @@
                       %label Team Manager Email <span class='required'>*</span>
                 .col-xs-6
                   .float-right
-                    %input.form-control
+                    %input.form-control#team_manager_email{name: 'team_manager_email'}
                 %br
                 %br
                 %br
@@ -55,7 +56,7 @@
                       %label Team Manager Phone<span class='required'>*</span>
                 .col-xs-6
                   .float-right
-                    %input.form-control
+                    %input.form-control#team_manager_phone{name: 'team_manager_phone'}
               %br
               %br
               %hr
@@ -77,19 +78,19 @@
                         %label Player Name <span class='required'>*</span>
               .col-xs-6
                 .float-right
-                  %input.form-control{style: 'margin-bottom: 25px;'}
+                  %input.form-control#player1{style: 'margin-bottom: 25px;', name: 'player1'}
                 .float-right
-                  %input.form-control{style: 'margin-bottom: 25px;'}
+                  %input.form-control#player2{name: 'player2', style: 'margin-bottom: 25px;'}
                 .float-right
-                  %input.form-control{style: 'margin-bottom: 25px;'}
+                  %input.form-control#player3{name: 'player3', style: 'margin-bottom: 25px;'}
                 .float-right
-                  %input.form-control{style: 'margin-bottom: 25px;'}
+                  %input.form-control#player4{name: 'player4', style: 'margin-bottom: 25px;'}
                 .float-right
                   %input.form-control
 
           %hr
           .col-xs-12
-            %button.btn.btn-primary{style: 'padding: 10px 70px 10px 70px; margin-left: -14px;'}
+            %button.btn.btn-primary#submit_btn_registration_form{style: 'padding: 10px 70px 10px 70px; margin-left: -14px;'}
               SUBMIT
         %p{style: 'margin-top: 40px; margin-left: 20px;'} Privacy: Urban Futsal LA is completely respects our member's privacy and therefore is committed to keeping your information secure and confidential.
       .clear
