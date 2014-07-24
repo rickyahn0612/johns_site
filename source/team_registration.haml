@@ -10,44 +10,38 @@
           %h1 TEAM REGISTRATION FORM
           %hr
           %fieldset#registration_form.form-inline
-            %legend TEAM INFO
+            %legend My Contact Form
             #result
-            .row
-              .col-xs-12
-                %select.form-control#tournament_type{style: 'width: 94%;', name: 'tournament_type'}
-                  %option Select a Tournament
-                  %option Men's 5v5
-                  %option Coed 5v5
+            .form-group
+              %label{for: "name"}
+                %span Name
+                %br
+                %input#name{name: "name", placeholder: "Enter Your Name", type: "text", class: 'form-control', style: 'width: 280px; margin-right: 40px;'}
+            .form-group
+              %label{for: "email"}
+                %span Email Address
+                %br
+                %input#email{name: "email", placeholder: "Enter Your Email", type: "email", class: 'form-control', style: 'width: 280px;'}
             %br
             %br
-            .row
-              .col-xs-6
-                .form-group
-                  %label{for: "team name"}
-                    %span Team Name <span class='required'>*</span>
-                    %br
-                    %input#name{name: "team_name", placeholder: "Enter Your Name", type: "text", class: 'form-control', style: 'width: 500px;'}
-              .col-xs-6
-                .form-group
-                  %label{for: "team manager"}
-                    %span Team Manager <span class='required'>*</span>
-                    %br
-                    %input#name{name: "team_manager", placeholder: "Enter Your Name", type: "text", class: 'form-control', style: 'width: 500px;'}
+            %label{for: "phone"}
+              %span Phone
+              %br
+              %input#phone{name: "phone", placeholder: "Phone Number", type: "text", class: 'form-control', style: 'width: 280px;'}
             %br
             %br
-            .row
-              .col-xs-6
-                .form-group
-                  %label{for: "manager email"}
-                    %span Team Manager Email <span class='required'>*</span>
-                    %br
-                    %input#name{name: "team_manager_email", placeholder: "Enter Your Name", type: "text", class: 'form-control', style: 'width: 500px;'}
-              .col-xs-6
-                .form-group
-                  %label{for: "manager phone"}
-                    %span Team Manager Phone <span class='required'>*</span>
-                    %br
-                    %input#name{name: "team_manager_phone", placeholder: "Enter Your Name", type: "text", class: 'form-control', style: 'width: 500px;'}
+            .form-group
+              %label{for: "message"}
+                %span Message
+                %br
+                %textarea#message{name: "message", placeholder: "Enter Your Name", class: 'form-control', style: 'width: 650px; height: 200px;'}
+            %br
+            %br
+            .form-group
+              %label
+                %span  
+                %button#submit_btn_registration_form.submit_btn.btn.btn-primary Submit
+
             / %br
             / %hr
 
@@ -81,10 +75,10 @@
             /     %input.form-control#player4{name: 'player4', style: 'margin-bottom: 25px; width: 400px;'}
             /   .float-right
             /     %input.form-control{name: 'player5', style: 'margin-bottom: 25px; width: 400px;'}
-          .form-group
-            %label
-              %span  
-              %button#submit_btn.submit_btn.btn.btn-primary#submit_btn_registration_form{style: 'padding: 10px 70px 10px 70px; margin-left: -14px;'} Submit
+          / .form-group
+          /   %label
+          /     %span  
+          /     %button#submit_btn.submit_btn.btn.btn-primary#submit_btn_registration_form{style: 'padding: 10px 70px 10px 70px; margin-left: -14px;'} Submit
 
         %p{style: 'margin-top: 40px; margin-left: 20px;'} Privacy: Urban Futsal LA is completely respects our member's privacy and therefore is committed to keeping your information secure and confidential.
       .clear

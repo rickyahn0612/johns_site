@@ -24,7 +24,7 @@ $ ->
     $(@).find('.fa').animate({'color': '#fffff'}, 500);
 
   $("#submit_btn_registration_form").click ->
-
+    
     #get input field values
     tournament = $("select[name=tournament_type]").val()
     team_name = $("input[name=team_name]").val()
