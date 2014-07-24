@@ -23,82 +23,78 @@ $ ->
   $('.social_media li').mouseleave ->
     $(@).find('.fa').animate({'color': '#fffff'}, 500);
 
-  # $("#submit_btn_registration_form").click ->
-    
-  #   #get input field values
-  #   team_name = $("input[name=team_name]").val()
-  #   team_manager = $("input[name=team_manager]").val()
-  #   team_manager_email = $("input[name=team_manager_email]").val()
-  #   team_manager_phone = $("input[name=team_manager_phone]").val()
-  #   player1 = $("input[name=player1]").val()
-  #   player2 = $("input[name=player2]").val()
-  #   player3 = $("input[name=player3]").val()
-  #   player4 = $("input[name=player4]").val()
-  #   player5 = $("input[name=player5]").val()
-    
-  #   #simple validation at client's end
-  #   #we simply change border color to red if empty field using .css()
-  #   proceed = true
-  #   if team_name is ""
-  #     $("input[name=team_name]").css "border-color", "red"
-  #     proceed = false
-  #   if team_manager is ""
-  #     $("input[name=team_manager]").css "border-color", "red"
-  #     proceed = false
-  #   if team_manager_email is ""
-  #     $("input[name=team_manager_email]").css "border-color", "red"
-  #     proceed = false
-  #   if team_manager_phone is ""
-  #     $("input[name=team_manager_phone]").css "border-color", "red"
-  #     proceed = false
-    
-  #   #everything looks good! proceed...
-  #   if proceed
-      
-  #     #data to be sent to server
-  #     post_data =
-  #       teamName: team_name
-  #       teamManager: team_manager
-  #       teamManagerEmail: team_manager_email
-  #       teamManagerPhone: team_manager_phone
-  #       player_1: player1
-  #       player_2: player2
-  #       player_3: player3
-  #       player_4: player4
-  #       player_5: player5
-  #       # userEmail: user_email
-  #       # userPhone: user_phone
-  #       # userMessage: user_message
+  $("#submit_btn_registration_form").click ->
 
+    #get input field values
+    tournament = $("#tournament_type").val()
+    team_name = $("input[name=team_name]").val()
+    team_manager = $("input[name=team_manager]").val()
+    team_manager_email = $("input[name=team_manager_email]").val()
+    team_manager_phone = $("input[name=team_manager_phone]").val()
+    player1 = $("input[name=player1]").val()
+    player2 = $("input[name=player2]").val()
+    player3 = $("input[name=player3]").val()
+    player4 = $("input[name=player4]").val()
+    player5 = $("input[name=player5]").val()
+    
+    #simple validation at client's end
+    #we simply change border color to red if empty field using .css()
+    proceed = true
+    if tournament is ""
+      $("#tournament_type").css "border-color", "red"
+      proceed = false
+    if team_name is ""
+      $("input[name=team_name]").css "border-color", "red"
+      proceed = false
+    if team_manager is ""
+      $("input[name=team_manager]").css "border-color", "red"
+      proceed = false
+    if team_manager_email is ""
+      $("input[name=team_manager_email]").css "border-color", "red"
+      proceed = false
+    if team_manager_phone is ""
+      $("input[name=team_manager_phone]").css "border-color", "red"
+      proceed = false
+    
+    #everything looks good! proceed...
+    if proceed
       
-  #     #Ajax post data to server
-  #     $.post "contact_me.php", post_data, ((response) ->
+      #data to be sent to server
+      post_data =
+        tournamentType: tournament
+        teamName: team_name
+        teamManager: team_manager
+        teamManagerEmail: team_manager_email
+        teamManagerPhone: team_manager_phone
+        player_1: player1
+        player_2: player2
+        player_3: player3
+        player_4: player4
+        player_5: player5
+      
+      #Ajax post data to server
+      $.post "contact_me.php", post_data, ((response) ->
         
-  #       #load json data from server and output message     
-  #       if response.type is "error"
-  #         output = "<div class=\"error\">" + response.text + "</div>"
-  #       else
-  #         output = "<div class=\"success\">" + response.text + "</div>"
+        #load json data from server and output message     
+        if response.type is "error"
+          output = "<div class=\"error\">" + response.text + "</div>"
+        else
+          output = "<div class=\"success\">" + response.text + "</div>"
           
-  #         #reset values in all input fields
-  #         $("#contact_form input").val ""
-  #         $("#contact_form textarea").val ""
-  #       $("#result").hide().html(output).slideDown()
-  #       return
-  #     ), "json"
-  #   return
+          #reset values in all input fields
+          $("#contact_form input").val ""
+          $("#contact_form textarea").val ""
+        $("#result").hide().html(output).slideDown()
+        return
+      ), "json"
+    return
 
 
-  # #reset previously set border colors and hide all message on .keyup()
-  # $("#contact_form input, #contact_form textarea").keyup ->
-  #   $("#contact_form input, #contact_form textarea").css "border-color", ""
-  #   $("#result").slideUp()
-  #   return
-
-
-
-
-
+  #reset previously set border colors and hide all message on .keyup()
+  $("#contact_form input, #contact_form textarea").keyup ->
+    $("#contact_form input, #contact_form textarea").css "border-color", ""
+    $("#result").slideUp()
+    return
 
 
   $("#submit_btn").click ->
