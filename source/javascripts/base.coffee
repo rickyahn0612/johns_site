@@ -31,11 +31,11 @@ $ ->
     team_manager = $("input[name=team_manager]").val()
     team_manager_email = $("input[name=team_manager_email]").val()
     team_manager_phone = $("input[name=team_manager_phone]").val()
-    player1 = $("input[name=player1]").val()
-    player2 = $("input[name=player2]").val()
-    player3 = $("input[name=player3]").val()
-    player4 = $("input[name=player4]").val()
-    player5 = $("input[name=player5]").val()
+    # player1 = $("input[name=player1]").val()
+    # player2 = $("input[name=player2]").val()
+    # player3 = $("input[name=player3]").val()
+    # player4 = $("input[name=player4]").val()
+    # player5 = $("input[name=player5]").val()
     
     #simple validation at client's end
     #we simply change border color to red if empty field using .css()
@@ -66,11 +66,11 @@ $ ->
         teamManager: team_manager
         teamManagerEmail: team_manager_email
         teamManagerPhone: team_manager_phone
-        player_1: player1
-        player_2: player2
-        player_3: player3
-        player_4: player4
-        player_5: player5
+        # player_1: player1
+        # player_2: player2
+        # player_3: player3
+        # player_4: player4
+        # player_5: player5
       
       #Ajax post data to server
       $.post "registration_form.php", post_data, ((response) ->
@@ -82,8 +82,8 @@ $ ->
           output = "<div class=\"success\">" + response.text + "</div>"
           
           #reset values in all input fields
-          $("#contact_form input").val ""
-          $("#contact_form textarea").val ""
+          $("#registration_form input").val ""
+          $("#registration_form textarea").val ""
         $("#result").hide().html(output).slideDown()
         return
       ), "json"
@@ -91,8 +91,8 @@ $ ->
 
 
   #reset previously set border colors and hide all message on .keyup()
-  $("#contact_form input, #contact_form textarea").keyup ->
-    $("#contact_form input, #contact_form textarea").css "border-color", ""
+  $("#registration_form input, #registration_form textarea").keyup ->
+    $("#registration_form input, #registration_form textarea").css "border-color", ""
     $("#result").slideUp()
     return
 
