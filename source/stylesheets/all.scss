@@ -95,7 +95,6 @@ body {
 
         li {
           display: inline; 
-          margin-right: 4px; 
           padding: 11px 17px 11px 17px;
 
           a {
@@ -477,7 +476,6 @@ body {
 
   .about_content_wrapper {
     background: white;
-    height: 1100px;
     padding: 20px;
     padding-left: 30px;
     padding-right: 30px;
@@ -512,6 +510,11 @@ body {
         height: 55px;
         padding-left: 20px;
         padding-top: 1px;
+
+        h3 {
+          position: relative;
+          top: -5px;
+        }
       }
 
       .content {
@@ -587,7 +590,31 @@ body {
 
 
 
+.rules_page {
+  ol {
+    li {
+      font-weight: 400;
 
+      ul {
+        li {
+          list-style: none;
+
+          ul {
+
+            li {
+              list-style: circle;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .styled-list {
+    list-style: circle;
+    margin-top: -25px;
+  }
+}
 
 
 
