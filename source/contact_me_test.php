@@ -42,11 +42,6 @@ if($_POST)
 		$output = json_encode(array('type'=>'error', 'text' => 'Please enter a valid email!'));
 		die($output);
 	}
-	if(!is_numeric($user_Phone)) //check entered data is numbers
-	{
-		$output = json_encode(array('type'=>'error', 'text' => 'Only numbers allowed in phone field'));
-		die($output);
-	}
 	if(strlen($user_Message)<5) //check emtpy message
 	{
 		$output = json_encode(array('type'=>'error', 'text' => 'Too short message! Please enter something.'));
