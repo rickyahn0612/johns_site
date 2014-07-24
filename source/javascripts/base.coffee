@@ -26,7 +26,7 @@ $ ->
   $("#submit_btn_registration_form").click ->
 
     #get input field values
-    tournament = $("#tournament_type").val()
+    tournament = $("select[name=tournament_type]").val()
     team_name = $("input[name=team_name]").val()
     team_manager = $("input[name=team_manager]").val()
     team_manager_email = $("input[name=team_manager_email]").val()
@@ -40,8 +40,8 @@ $ ->
     #simple validation at client's end
     #we simply change border color to red if empty field using .css()
     proceed = true
-    if tournament is ""
-      $("#tournament_type").css "border-color", "red"
+    if tournament is "Select a Tournament"
+      $("select[name=tournament_type]").css "border-color", "red"
       proceed = false
     if team_name is ""
       $("input[name=team_name]").css "border-color", "red"
@@ -73,7 +73,7 @@ $ ->
         player_5: player5
       
       #Ajax post data to server
-      $.post "contact_me.php", post_data, ((response) ->
+      $.post "registration_form.php", post_data, ((response) ->
         
         #load json data from server and output message     
         if response.type is "error"
