@@ -441,70 +441,84 @@ body {
         /* line 514, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
         .about_content_container .about_content_wrapper .right_content .header h3 {
           position: relative;
-          top: -5px; }
-      /* line 520, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
+          top: -5px;
+          font-size: 20px; }
+      /* line 521, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
       .about_content_container .about_content_wrapper .right_content .content {
         padding-left: 20px;
         padding-top: 1px;
         background: black;
         height: 140px;
         color: white; }
-      /* line 528, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
+      /* line 529, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
       .about_content_container .about_content_wrapper .right_content .content_images {
         background: black;
         height: 140px;
         color: white; }
-        /* line 532, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
+        /* line 533, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
         .about_content_container .about_content_wrapper .right_content .content_images .image_box {
           width: 175px;
           height: 150px; }
 
-/* line 542, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
+/* line 543, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
 .required {
   color: red; }
 
-/* line 549, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
+/* line 550, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
 #team_registration_form .replacement-form-header {
   margin-left: 30px;
   position: relative;
   top: 15px; }
-  /* line 553, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
+  /* line 554, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
   #team_registration_form .replacement-form-header p {
     font-weight: bold;
     color: #4A4A4A; }
-/* line 559, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
+/* line 560, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
 #team_registration_form h1 {
   color: #787878; }
-/* line 565, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
+/* line 566, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
 #team_registration_form form .col-xs-6 {
   margin-bottom: 30px; }
-/* line 569, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
+/* line 570, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
 #team_registration_form form label {
   font-size: 17px;
   color: #78787C;
   display: inline; }
 
-/* line 579, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
+/* line 580, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
 ol {
   margin: 0;
   margin-left: 20px;
   font-weight: bold;
   padding: 0;
   margin-top: 20px; }
-  /* line 586, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
+  /* line 587, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
   ol li {
     padding-bottom: 35px; }
 
-/* line 595, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
+/* line 596, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
 .rules_page ol li {
   font-weight: 400; }
-  /* line 599, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
+  /* line 600, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
   .rules_page ol li ul li {
     list-style: none; }
-    /* line 604, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
+    /* line 605, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
     .rules_page ol li ul li ul li {
       list-style: circle; }
-/* line 613, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
+/* line 614, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
 .rules_page .styled-list {
   list-style: circle;
   margin-top: -25px; }
+/* line 619, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
+.rules_page #rules_nav {
+  background: #000;
+  width: 350px;
+  color: white;
+  padding-left: 20px;
+  padding-top: 20px; }
+  /* line 628, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
+  .rules_page #rules_nav ol li {
+    margin-top: -30px; }
+  /* line 633, /Users/rickyahn/Sites/johns_site/source/stylesheets/all.scss */
+  .rules_page #rules_nav a {
+    color: white; }
