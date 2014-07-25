@@ -169,3 +169,76 @@ $ ->
     $("#result").slideUp()
     return
 
+
+
+
+
+
+
+
+
+
+
+
+  $("#free_agent_btn").click ->
+    
+    #get input field values
+    tournament_type = $('select#tournament').val();
+    user_name = $("input[name=name]").val()
+    user_email = $("input[name=email]").val()
+    user_phone = $("input[name=phone]").val()
+    user_message = $("textarea[name=message]").val()
+    
+    #simple validation at client's end
+    #we simply change border color to red if empty field using .css()
+    proceed = true
+    if tournament_type is "Select"
+      $("select#tournament").css "border-color", "red"
+      proceed = false
+    if user_name is ""
+      $("input[name=name]").css "border-color", "red"
+      proceed = false
+    if user_email is ""
+      $("input[name=email]").css "border-color", "red"
+      proceed = false
+    if user_phone is ""
+      $("input[name=phone]").css "border-color", "red"
+      proceed = false
+    if user_message is ""
+      $("textarea[name=message]").css "border-color", "red"
+      proceed = false
+    
+    #everything looks good! proceed...
+    if proceed
+      
+      #data to be sent to server
+      post_data =
+        userName: user_name
+        userEmail: user_email
+        userMessage: user_message
+
+      
+      #Ajax post data to server
+      $.post "free_agent_form.php", post_data, ((response) ->
+        
+        #load json data from server and output message     
+        if response.type is "error"
+          output = "<div class=\"error\">" + response.text + "</div>"
+        else
+          output = "<div class=\"success\">" + response.text + "</div>"
+          
+          #reset values in all input fields
+          $("#freeagent_form input").val ""
+          $("#freeagent_form textarea").val ""
+        $("#result").hide().html(output).slideDown()
+        return
+      ), "json"
+    return
+
+
+  #reset previously set border colors and hide all message on .keyup()
+  $("#contact_form input, #contact_form textarea").keyup ->
+    $("#contact_form input, #contact_form textarea").css "border-color", ""
+    $("#result").slideUp()
+    return
+
