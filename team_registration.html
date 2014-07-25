@@ -7,7 +7,7 @@
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     
     <!-- Use title if it's in the page YAML frontmatter -->
-    <title>John's Website</title>
+    <title>Urban Futsal</title>
     
     <link href="stylesheets/all.css" rel="stylesheet" type="text/css" />
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -29,12 +29,20 @@
               var player3         = $('input[name=player3]').val();
               var player4         = $('input[name=player4]').val();
               var player5         = $('input[name=player5]').val();
+              var player6         = $('input[name=player6]').val();
+              var player7         = $('input[name=player7]').val();
+              var player8         = $('input[name=player8]').val();
               
               //simple validation at client's end
               //we simply change border color to red if empty field using .css()
               var proceed = true;
-              var content = 'Tournament Type:' + ' ' + tournament_type + "\n \n" + "------------------------------------------" + "\n \n"  + 'Manager Name:' + ' ' + manager_name + "\n \n" + "------------------------------------------" + "\n \n" + 'Team Name:' + ' ' + team_name + "\n \n" + "------------------------------------------" + "\n \n" + 'Manager Email:' + ' ' + user_email + "\n \n" + "------------------------------------------" + "\n \n" + 'Manager Phone:' + ' ' + user_phone + "\n \n" + "------------------------------------------" + "\n \n" + 'PLAYERS:' + "\n \n" + '1. ' + player1 + "\n \n" + '2. ' + player2 + "\n \n" + '3. ' + player3 + "\n \n" + '4. ' + player4 + "\n \n" + '5. '+ player5
+              var content = 'Tournament Type:' + ' ' + tournament_type + "\n \n" + "------------------------------------------" + "\n \n"  + 'Manager Name:' + ' ' + manager_name + "\n \n" + "------------------------------------------" + "\n \n" + 'Team Name:' + ' ' + team_name + "\n \n" + "------------------------------------------" + "\n \n" + 'Manager Email:' + ' ' + user_email + "\n \n" + "------------------------------------------" + "\n \n" + 'Manager Phone:' + ' ' + user_phone + "\n \n" + "------------------------------------------" + "\n \n" + 'PLAYERS:' + "\n \n" + '1. ' + player1 + "\n \n" + '2. ' + player2 + "\n \n" + '3. ' + player3 + "\n \n" + '4. ' + player4 + "\n \n" + '5. '+ player5 + "\n \n" + '6. ' + player6 + "\n \n" + '7. ' + player7 + "\n \n" + '8. ' + player8 + "\n \n" 
+              console.log(content);
               var textArea = $('textarea[name=message]').val(content);
+              if(tournament_type=="Select"){ 
+                  $('select#tournament').css('border-color','red'); 
+                  proceed = false;
+              }
               if(team_name==""){ 
                   $('input[name=team_name]').css('border-color','red'); 
                   proceed = false;
@@ -53,6 +61,26 @@
               }
               if(user_message=="") {  
                   $('textarea[name=message]').css('border-color','red'); 
+                  proceed = false;
+              }
+              if(player1=="") {    
+                  $('input[name=player1]').css('border-color','red'); 
+                  proceed = false;
+              }
+              if(player2=="") {    
+                  $('input[name=player2]').css('border-color','red'); 
+                  proceed = false;
+              }
+              if(player3=="") {    
+                  $('input[name=player3]').css('border-color','red'); 
+                  proceed = false;
+              }
+              if(player4=="") {    
+                  $('input[name=player4]').css('border-color','red'); 
+                  proceed = false;
+              }
+              if(player5=="") {    
+                  $('input[name=player5]').css('border-color','red'); 
                   proceed = false;
               }
       
@@ -88,7 +116,6 @@
               $("#contact_form input, #contact_form textarea").css('border-color',''); 
               $("#result").slideUp();
           });
-          
       });
     </script>
     <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.css", rel="stylesheet">
@@ -131,7 +158,7 @@
     <div class='row'>
       <div class='col-xs-3'>
         <h2 class='float_left logo'>
-          <a href="./">URBANFUTSAL.LA</a>
+          <a href="./">URBAN FUTSAL</a>
         </h2>
       </div>
       <div class='col-xs-9'>
@@ -179,8 +206,8 @@
           <fieldset class='form-inline' id='contact_form'>
             <legend>Team Info</legend>
             <div id='result'></div>
-            <select class='form-control' id='tournament' style='width: 90%;'>
-              <option>Choose a Tournament Type</option>
+            <select class='form-control' id='tournament' style='width: 90%; font-weight: bold; color: #777777;'>
+              <option style='color: red !important;'><strong>Select</strong></option>
               <option>Men 5v5</option>
               <option>Coed 5v5</option>
             </select>
@@ -188,12 +215,12 @@
             <br>
             <div class='form-group'>
               <label for='name'>
-                <span>Team Name</span>
+                <span>Team Name <span class='required'>*</span></span>
                 <br>
                 <input class='form-control' id='name' name='team_name' placeholder='Enter Your Team Name' style='width: 400px; margin-right: 40px;' type='text'>
               </label>
               <label for='name'>
-                <span>Manager Name</span>
+                <span>Manager Name <span class='required'>*</span></span>
                 <br>
                 <input class='form-control' id='name' name='manager_name' placeholder='Enter Manager Name' style='width: 400px; margin-right: 40px;' type='text'>
               </label>
@@ -203,12 +230,12 @@
             <br>
             <div class='form-group'>
               <label for='email'>
-                <span>Manager Email</span>
+                <span>Manager Email <span class='required'>*</span></span>
                 <br>
                 <input class='form-control' id='email' name='email' placeholder='Enter Manager Email' style='width: 400px; margin-right: 40px;' type='email'>
               </label>
               <label for='phone'>
-                <span>Manager Phone</span>
+                <span>Manager Phone <span class='required'>*</span></span>
                 <br>
                 <input class='form-control' id='phone' name='phone' placeholder='Enter Manager Phone Number' style='width: 400px;' type='text'>
               </label>
@@ -222,9 +249,8 @@
               </label>
             </div>
             <legend>Team Info</legend>
-            <br>
-            <br>
             <h4>PLAYERS INFO</h4>
+            <p style='font-style: italic; font-size: 13px;'>*** Up to 5 players is required to complete your team registration.</p>
             <br>
             <div class='col-xs-4'>
               <div class='form-sets'>
@@ -245,6 +271,15 @@
                     <li>
                       <label>Player Name <span class='required'>*</span></label>
                     </li>
+                    <li>
+                      <label>Player Name</label>
+                    </li>
+                    <li>
+                      <label>Player Name</label>
+                    </li>
+                    <li>
+                      <label>Player Name</label>
+                    </li>
                   </ol>
                 </div>
               </div>
@@ -257,6 +292,9 @@
                   <input class='form-control' id='player3' name='player3' style='margin-bottom: 25px; width: 400px;'>
                   <input class='form-control' id='player4' name='player4' style='margin-bottom: 25px; width: 400px;'>
                   <input class='form-control' id='player5' name='player5' style='margin-bottom: 25px; width: 400px;'>
+                  <input class='form-control' id='player6' name='player6' style='margin-bottom: 25px; width: 400px;'>
+                  <input class='form-control' id='player7' name='player7' style='margin-bottom: 25px; width: 400px;'>
+                  <input class='form-control' id='player8' name='player8' style='margin-bottom: 25px; width: 400px;'>
                 </div>
               </div>
               <div class='clear'></div>
