@@ -55,10 +55,10 @@
             if(proceed) 
             {
                 //data to be sent to server
-                post_data = {'userName':user_name, 'userEmail':user_email, 'userPhone':user_phone, 'userMessage':user_message};
+                post_data = {'userName':user_name, 'userEmail':user_email, 'userMessage':user_message};
                 
                 //Ajax post data to server
-                $.post('contact_me_test.php', post_data, function(response){  
+                $.post('free_agent_form.php', post_data, function(response){  
 
                     //load json data from server and output message     
             if(response.type == 'error')
