@@ -38,6 +38,10 @@
             %br
             %br
             .form-group
+              %label{for: "message"}
+                %br
+                %textarea#message{name: "message", placeholder: "Enter Your Name", class: 'form-control', style: 'height: 0px; visibility: hidden'}
+            .form-group
               %label
                 %span  
                 %button#free_agent_btn.submit_btn.btn.btn-primary{style: 'position: relative; right: 7px;'} Submit   
