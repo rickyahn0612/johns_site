@@ -13,19 +13,19 @@
           %fieldset#contact_form.form-inline
             %legend Team Info
             #result
-            %select#tournament.form-control{style: 'width: 90%;'}
-              %option Choose a Tournament Type
+            %select#tournament.form-control{style: 'width: 90%; font-weight: bold; color: #777777;'}
+              %option{style: 'color: red !important;'} <strong>Select</strong>
               %option Men 5v5
               %option Coed 5v5
             %br
             %br
             .form-group
               %label{for: "name"}
-                %span Team Name
-                %br
+                %span Team Name <span class='required'>*</span> 
+                %br 
                 %input#name{name: "team_name", placeholder: "Enter Your Team Name", type: "text", class: 'form-control', style: 'width: 400px; margin-right: 40px;'}
               %label{for: "name"}
-                %span Manager Name
+                %span Manager Name <span class='required'>*</span> 
                 %br
                 %input#name{name: "manager_name", placeholder: "Enter Manager Name", type: "text", class: 'form-control', style: 'width: 400px; margin-right: 40px;'}
             %br
@@ -33,11 +33,11 @@
             %br
             .form-group
               %label{for: "email"}
-                %span Manager Email
+                %span Manager Email <span class='required'>*</span> 
                 %br
                 %input#email{name: "email", placeholder: "Enter Manager Email", type: "email", class: 'form-control', style: 'width: 400px; margin-right: 40px;'}
               %label{for: "phone"}
-                %span Manager Phone
+                %span Manager Phone <span class='required'>*</span> 
                 %br
                 %input#phone{name: "phone", placeholder: "Enter Manager Phone Number", type: "text", class: 'form-control', style: 'width: 400px;'}
             %br
@@ -47,10 +47,10 @@
                 %br
                 %textarea#message{name: "message", placeholder: "Enter Your Name", class: 'form-control', style: 'height: 0px; visibility: hidden'}
             %legend Team Info
-            %br
-            %br
+
             %h4 PLAYERS INFO 
-            %br 
+            %p{style: 'font-style: italic; font-size: 13px;'} *** Up to 5 players is required to complete your team registration.
+            %br
             .col-xs-4 
               .form-sets 
                 .float-left 
@@ -65,6 +65,12 @@
                       %label Player Name <span class='required'>*</span> 
                     %li 
                       %label Player Name <span class='required'>*</span> 
+                    %li 
+                      %label Player Name  
+                    %li 
+                      %label Player Name 
+                    %li 
+                      %label Player Name 
             .col-xs-6
               .form-sets
                 .float-right
@@ -73,6 +79,9 @@
                   %input.form-control#player3{style: 'margin-bottom: 25px; width: 400px;', name: 'player3'}
                   %input.form-control#player4{style: 'margin-bottom: 25px; width: 400px;', name: 'player4'}
                   %input.form-control#player5{style: 'margin-bottom: 25px; width: 400px;', name: 'player5'}
+                  %input.form-control#player6{style: 'margin-bottom: 25px; width: 400px;', name: 'player6'}
+                  %input.form-control#player7{style: 'margin-bottom: 25px; width: 400px;', name: 'player7'}
+                  %input.form-control#player8{style: 'margin-bottom: 25px; width: 400px;', name: 'player8'}
               .clear
           .form-group
             %label
