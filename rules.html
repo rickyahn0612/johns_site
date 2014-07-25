@@ -14,6 +14,82 @@
     <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/jquery-ui.min.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <script src="javascripts/all.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+          $("#registration_submit_btn").click(function() { 
+              //get input field values
+              var team_name       = $('input[name=team_name]').val(); 
+              var manager_name    = $('input[name=manager_name]').val(); 
+              var user_email      = $('input[name=email]').val();
+              var user_phone      = $('input[name=phone]').val();
+              var user_message    = $('textarea[name=message]').val();
+              var player1         = $('input[name=player1]').val();
+              var player2         = $('input[name=player2]').val();
+              var player3         = $('input[name=player3]').val();
+              var player4         = $('input[name=player4]').val();
+              var player5         = $('input[name=player5]').val();
+              
+              //simple validation at client's end
+              //we simply change border color to red if empty field using .css()
+              var proceed = true;
+              var content = 'Team Name:' + ' ' + team_name + "\n \n" + "------------------------------------------" + "\n \n" + 'Manager Name:' + manager_name + "\n \n" + "------------------------------------------" + "\n \n" + 'Manager Email:' + user_email + "\n \n" + "------------------------------------------" + "\n \n" + 'Manager Phone:' + user_phone + "\n \n" + "------------------------------------------" + "\n \n" + 'PLAYERS:' + "\n \n" + '1. ' + player1 + "\n \n" + '2. ' + player2 + "\n \n" + '3. ' + player3 + "\n \n" + '4. ' + player4 + "\n \n" + '5. '+ player5
+              var textArea = $('textarea[name=message]').val(content);
+              if(team_name==""){ 
+                  $('input[name=team_name]').css('border-color','red'); 
+                  proceed = false;
+              }
+              if(manager_name==""){ 
+                  $('input[name=manager_name]').css('border-color','red'); 
+                  proceed = false;
+              }
+              if(user_email==""){ 
+                  $('input[name=email]').css('border-color','red'); 
+                  proceed = false;
+              }
+              if(user_phone=="") {    
+                  $('input[name=phone]').css('border-color','red'); 
+                  proceed = false;
+              }
+              if(user_message=="") {  
+                  $('textarea[name=message]').css('border-color','red'); 
+                  proceed = false;
+              }
+      
+              //everything looks good! proceed...
+              if(proceed) 
+              {
+                  //data to be sent to server
+                  post_data = {'userName':team_name, 'managerName':manager_name, 'userEmail':user_email, 'userMessage':user_message};
+                  
+                  //Ajax post data to server
+                  $.post('registration_form.php', post_data, function(response){  
+      
+                      //load json data from server and output message     
+              if(response.type == 'error')
+              {
+                output = '<div class="error">'+response.text+'</div>';
+              }else{
+                  output = '<div class="success">'+response.text+'</div>';
+                
+                //reset values in all input fields
+                $('#contact_form input').val(''); 
+                $('#contact_form textarea').val(''); 
+              }
+              
+              $("#result").hide().html(output).slideDown();
+                  }, 'json');
+            
+              }
+          });
+          
+          //reset previously set border colors and hide all message on .keyup()
+          $("#contact_form input, #contact_form textarea").keyup(function() { 
+              $("#contact_form input, #contact_form textarea").css('border-color',''); 
+              $("#result").slideUp();
+          });
+          
+      });
+    </script>
     <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.css", rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
