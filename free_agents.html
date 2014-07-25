@@ -107,7 +107,7 @@
               
               $("#result").hide().html(output).slideDown();
                   }, 'json');
-            
+                $("html, body").animate({ scrollTop: 0 }, "slow");
               }
           });
           
@@ -200,8 +200,63 @@
     <div class='about_content_wrapper' style='height: 800px;'>
       <div class='left_content float_left'>
         <div class='container'>
-          <h1>Coming Soon....</h1>
+          <h1>Free Agent Registration Form</h1>
+          <p>This is a chance for those individuals who do not have a team to play for.  Sign up by yourself or with a <br /> whole team and have a real "kick" this season.</p>
+          <hr>
+          <br>
+          <fieldset class='form-inline' id='freeagent_form'>
+            <div id='result'></div>
+            <select class='form-control' id='tournament' style='width: 52%; font-weight: bold; color: #777777;'>
+              <option style='color: red !important;'><strong>Select</strong></option>
+              <option>Men 5v5</option>
+              <option>Coed 5v5</option>
+            </select>
+            <br>
+            <br>
+            <div class='form-group'>
+              <label for='name'>
+                <span>Name</span>
+                <br>
+                <input class='form-control' id='name' name='name' placeholder='Enter Your Name' style='width: 280px; margin-right: 40px;' type='text'>
+              </label>
+            </div>
+            <div class='form-group'>
+              <label for='email'>
+                <span>Email Address</span>
+                <br>
+                <input class='form-control' id='email' name='email' placeholder='Enter Your Email' style='width: 280px;' type='email'>
+              </label>
+            </div>
+            <br>
+            <br>
+            <label for='phone'>
+              <span>Phone</span>
+              <br>
+              <input class='form-control' id='phone' name='phone' placeholder='Phone Number' style='width: 280px;' type='text'>
+            </label>
+            <br>
+            <br>
+            <div class='form-group'>
+              <label>
+                <span> </span>
+                <button class='submit_btn btn btn-primary' id='free_agent_btn' style='position: relative; right: 7px;'>Submit</button>
+              </label>
+            </div>
+          </fieldset>
         </div>
+      </div>
+      <div class='right_content float_right' style='border-left: solid 1px #cfcfcf; margin-top: 150px; padding-left: 30px; height: 450px; margin-right: 40px;'>
+        <h3 style='width: 400px; margin: 0;'>How our Free Agent Registration Works.</h3>
+        <br>
+        <ul style='padding: 0; padding-left: 14px;'>
+          <li>Fill out the Free Agent Registration Form and we will either put together a team, or you may be drafted by another team.</li>
+          <br>
+          <li>Your profile will be posted to the designated sport you select for Team Managers to view.</li>
+          <br>
+          <li>If you are drafted, the Team Manager will contact you and will let you know when you can play next. The Team Manager is responsible for notifying us, that he or she has drafted a free agent.</li>
+          <br>
+          <li>If there are not enough free agents drafted, then we will attempt to form a team with the remaining agents.</li>
+        </ul>
       </div>
       <div class='clear'></div>
     </div>
