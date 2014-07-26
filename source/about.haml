@@ -6,26 +6,48 @@
     %br
     .about_content_wrapper
       .left_content.float_left
-        %h3 WHO WE ARE
-        %p We are an indoor futsal facility located near Silverlake / Downtown LA.  We strive to promote sports activities at a variety of recreational and competitive levels for the surrounding area.  Our goal is to foster a sense of community through sports and fun activities.
+        .row
+          .col-xs-5
+            .image_container{style: 'border: solid #cfcfcf 1px; height: 200px;'}
+              = image_tag 'aboutus_image.png'
+
+          .col-xs-7
+            %h4 WHO WE ARE
+            %p We are an indoor futsal facility located near Silverlake / Downtown LA.  We strive to promote sports activities at a variety of recreational and competitive levels for the surrounding area.
+            %p Our goal is to foster a sense of community through sports and fun activities.
         %br
         %hr
         %br
-        %h3 OUR FACILITY
+        %h4 OUR FACILITY
         %p
           Our facility is an impressive classic industrial warehouse event aesthetics with modern artistic sensibilities. The arena is unique with over 10,000+ square feet that provides ample room for the best possible indoor futsal experience. 
         %br
+        .row
+          .col-xs-3
+            = image_tag 'images/soccer1.png', style: 'width: 130px;'
+          .col-xs-3
+            = image_tag 'images/soccer2.png', style: 'width: 130px;'
+          .col-xs-3
+            = image_tag 'images/soccer3.png', style: 'width: 130px;'
+          .col-xs-3
+            = image_tag 'images/soccer4.png', style: 'width: 130px;'
+        %br
         %hr
         %br
-        %h3 WHAT IS FUTSAL?
-        %p
-          Futsal is a variant of association football that is played on a smaller field and mainly played indoors. It can be considered a version of five-a-side football.  
-        %p
-          Futsal is a game played between two teams of five players each, one of whom is the goalkeeper. Unlimited substitutions are permitted. Unlike some other forms of indoor football, the game is played on a hard court surface delimited by lines; walls or boards are not used. Futsal is also played with a smaller ball with less bounce than a regular football due to the surface of the pitch. The surface, ball and rules create an emphasis on improvisation, creativity and technique as well as ball control and passing in small spaces.
+        %h4 WHAT IS FUTSAL?
+        .row
+          .col-xs-7
+            %p
+              Futsal is a variant of association football that is played on a smaller field and mainly played indoors. It can be considered a version of five-a-side football.  
+            %p
+              Futsal is a game played between two teams of five players each, one of whom is the goalkeeper. Unlimited substitutions are permitted. Unlike some other forms of indoor football, the game is played on a hard court surface delimited by lines; walls or boards are not used. Futsal is also played with a smaller ball with less bounce than a regular football due to the surface of the pitch. The surface, ball and rules create an emphasis on improvisation, creativity and technique as well as ball control and passing in small spaces.
+          .col-xs-5
+            .image_container{style: 'height: 300px; border: solid #cfcfcf 1px;'}
+              = image_tag 'aboutus_image2.png'
         %br
         %hr
         %br
-        %h3 QUESTIONS?
+        %h4 QUESTIONS?
         %p Please feel free to call us at (213) 533-9828 with any questions you might have about us, our facility, or to just talk futsal.  You can also click this button to shoot us an email with any inquires you might have.  We look forward to speaking with you!
         %br
         %button.btn.btn-info{style: 'padding: 13px 70px 13px 70px;'}

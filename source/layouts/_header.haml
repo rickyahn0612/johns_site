@@ -1,3 +1,26 @@
+#fixed_header
+  .container
+    .row
+      .col-xs-3
+        %h2.float_left.logo
+          = link_to 'UrbanFutsal L.A.', 'index.html'
+      .col-xs-9
+        .nav_container.float_right
+          %ul.main_nav
+            %li{class: "#{'actives' if current_page.url == '/about.html'}"}
+              = link_to 'ABOUT', '/about.html'
+            %li{class: "#{'actives' if current_page.url == '/free_agents.html'}"}
+              = link_to 'FREE AGENTS', '/free_agents.html'
+            %li.dropdown-toggle{class: "#{'actives' if current_page.url == '/team_registration.html'}"}
+              = link_to 'TEAM REGISTRATION', '/team_registration.html'
+            %li SCHEDULE
+            %li{class: "#{'actives' if current_page.url == '/standings.html'}"}
+              = link_to 'STANDINGS', '/standings.html'
+            %li{class: "#{'actives' if current_page.url == '/rules.html'}"} 
+              = link_to 'RULES', '/rules.html'
+            %li{class: "#{'actives' if current_page.url == '/contact.html'}"}
+              = link_to 'CONTACT', '/contact.html'
+
 #top_header
   .container 
     .row

@@ -23,6 +23,17 @@ $ ->
   $('.social_media li').mouseleave ->
     $(@).find('.fa').animate({'color': '#fffff'}, 500);
 
+  $(".anchor_link").click ->
+    if location.pathname.replace(/^\//, "") is @pathname.replace(/^\//, "") and location.hostname is @hostname
+      target = $(@hash)
+      target = (if target.length then target else $("[name=" + @hash.slice(1) + "]"))
+      if target.length
+        $("html,body").animate
+          scrollTop: target.offset().top
+        , 1000
+        false
+  return
+
   # $("#submit_btn_registration_form").click ->
 
   #   #get input field values
@@ -240,5 +251,80 @@ $ ->
   # $("#contact_form input, #contact_form textarea").keyup ->
   #   $("#contact_form input, #contact_form textarea").css "border-color", ""
   #   $("#result").slideUp()
-  #   return
+  #   return  
+  # IE detect
+  iedetect = (v) ->
+    r = RegExp("msie" + ((if not isNaN(v) then ("\\s" + v) else "")), "i")
+    r.test navigator.userAgent
+  
+  # For mobile screens, just show an image called 'poster.jpg'. Mobile
+  # screens don't support autoplaying videos, or for IE.
+  if screen.width < 800 or iedetect(8) or iedetect(7) or "ontouchstart" of window
+    (adjSize = -> # Create function called adjSize
+      $width = $(window).width() # Width of the screen
+      $height = $(window).height() # Height of the screen
+      
+      # Resize image accordingly
+      $("#container").css
+        "background-image": "url(poster.jpg)"
+        "background-size": "cover"
+        width: $width + "px"
+        height: $height + "px"
 
+      
+      # Hide video
+      $("video").hide()
+      return
+    )() # Run instantly
+    
+    # Run on resize too
+    $(window).resize adjSize
+  else
+    
+    # Wait until the video meta data has loaded
+    $(".banner_content iframe").on "loadedmetadata", ->
+      $width = undefined # Width and height of screen
+      $height = undefined
+      $vidwidth = @videoWidth # Width of video (actual width)
+      $vidheight = @videoHeight # Height of video (actual height)
+      $aspectRatio = $vidwidth / $vidheight # The ratio the video's height and width are in
+      (adjSize = -> # Create function called adjSize
+        $width = $(window).width() # Width of the screen
+        $height = $(window).height() # Height of the screen
+        $boxRatio = $width / $height # The ratio the screen is in
+        $adjRatio = $aspectRatio / $boxRatio # The ratio of the video divided by the screen size
+        
+        # Set the container to be the width and height of the screen
+        $("#container").css
+          width: $width + "px"
+          height: $height + "px"
+
+        if $boxRatio < $aspectRatio # If the screen ratio is less than the aspect ratio..
+          # Set the width of the video to the screen size multiplied by $adjRatio
+          $vid = $("#container video").css(width: $width * $adjRatio + "px")
+        else
+          
+          # Else just set the video to the width of the screen/container
+          $vid = $("#container video").css(width: $width + "px")
+        return
+      )() # Run function immediately
+      
+      # Run function also on window resize.
+      $(window).resize adjSize
+      return
+
+  return
+
+
+$(window).scroll ->
+  winScroll = $(window).scrollTop()
+  if winScroll > 90 
+    $('#fixed_header').slideDown()
+    $('#fixed_header .logo').animate({'font-size': '19px'}, 500)
+  if winScroll < 90 
+    $('#fixed_header').slideUp()
+    state = false
+  if winScroll > 800
+    $('#uparrow').fadeIn(1000);
+  else
+    $('#uparrow').fadeOut(1000);    

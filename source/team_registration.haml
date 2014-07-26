@@ -5,7 +5,7 @@
     %br
     %br
     .about_content_wrapper
-      .left_content.float_left
+      .left_content
         .container
           %h1 TEAM REGISTRATION FORM
           %hr
@@ -83,10 +83,14 @@
                   %input.form-control#player7{style: 'margin-bottom: 25px; width: 400px;', name: 'player7'}
                   %input.form-control#player8{style: 'margin-bottom: 25px; width: 400px;', name: 'player8'}
               .clear
+          %hr
           .form-group
             %label
               %span  
-              %button#registration_submit_btn.btn.btn-primary Submit
+              %button#registration_submit_btn.btn.btn-info{style: 'position: relative; right: 7px; padding: 13px 70px 13px 70px;'} Submit
 
-        %p{style: 'margin-top: 40px; margin-left: 20px;'} Privacy: Urban Futsal LA is completely respects our member's privacy and therefore is committed to keeping your information secure and confidential.
+        %p{style: 'margin-bottom: 40px; margin-left: 20px;'} Privacy: Urban Futsal LA is completely respects our member's privacy and therefore is committed to keeping your information secure and confidential.
       .clear
+%a{href: '#', id: 'uparrow'}
+  %i.glyphicon.glyphicon-arrow-up
+  %p back to top

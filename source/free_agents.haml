@@ -10,9 +10,11 @@
           %h1 Free Agent Registration Form
           %p This is a chance for those individuals who do not have a team to play for.  Sign up by yourself or with a <br /> whole team and have a real "kick" this season.
           %hr
-          %br
           %fieldset#freeagent_form.form-inline
+            %h3 Player Information
+            %p Choose 5v5 Men's 5v5 or Coed's 5v5 then provide us with your name an email address and <br />phone number for us to contact you at and we will get you drafted and let you know when <br />you can play next.
             #result{style: 'width: 610px;'}
+            %br
             %select#tournament.form-control{style: 'width: 52%; font-weight: bold; color: #777777;'}
               %option{style: 'color: red !important;'} <strong>Select</strong>
               %option Men 5v5
@@ -21,18 +23,18 @@
             %br
             .form-group
               %label{for: "name"}
-                %span Name
+                %span Name <span class='required'>*</span> 
                 %br
                 %input#name{name: "name", placeholder: "Enter Your Name", type: "text", class: 'form-control', style: 'width: 280px; margin-right: 40px;'}
             .form-group
               %label{for: "email"}
-                %span Email Address
+                %span Email Address <span class='required'>*</span> 
                 %br
                 %input#email{name: "email", placeholder: "Enter Your Email", type: "email", class: 'form-control', style: 'width: 280px;'}
             %br
             %br
             %label{for: "phone"}
-              %span Phone
+              %span Phone <span class='required'>*</span> 
               %br
               %input#phone{name: "phone", placeholder: "Phone Number", type: "text", class: 'form-control', style: 'width: 280px;'}
             %br
@@ -44,7 +46,8 @@
             .form-group
               %label
                 %span  
-                %button#free_agent_btn.submit_btn.btn.btn-primary{style: 'position: relative; right: 7px;'} Submit   
+                %button#free_agent_btn.submit_btn.btn.btn-info{style: 'position: relative; right: 7px; padding: 13px 70px 13px 70px;'} Submit 
+          %p Questions?  Feel free to call us at (213) 533-9828 or send us an email at info@urbanfutsal.la
       .right_content.float_right{style: 'border-left: solid 1px #cfcfcf; margin-top: 150px; padding-left: 30px; height: 450px; margin-right: 40px;'}
         %h3{style: 'width: 400px; margin: 0;'} How our Free Agent Registration Works.
         %br
@@ -58,3 +61,6 @@
           %li If there are not enough free agents drafted, then we will attempt to form a team with the remaining agents.
 
       .clear
+%a{href: '#', id: 'uparrow'}
+  %i.glyphicon.glyphicon-arrow-up
+  %p back to top
