@@ -3,7 +3,7 @@
     .row
       .col-xs-3
         %h2.float_left.logo
-          = link_to 'UrbanFutsal L.A.', 'index.html'
+          = link_to 'UrbanFutsal LA', 'index.html'
       .col-xs-9
         .nav_container.float_right
           %ul.main_nav
@@ -33,7 +33,8 @@
             %li{style: 'border-left: solid #292929 1px;'}
               %i.fa.fa-facebook
             %li
-              %i.fa.fa-twitter
+              %a{href: 'https://twitter.com/UrbanFutsal'}
+                %i.fa.fa-twitter
             %li
               %i.fa.fa-instagram
             %li
@@ -43,7 +44,7 @@
     .row
       .col-xs-3
         %h2.float_left.logo
-          = link_to 'UrbanFutsal L.A.', 'index.html'
+          = link_to 'UrbanFutsal LA', 'index.html'
       .col-xs-9
         .nav_container.float_right
           %ul.main_nav
@@ -53,7 +54,8 @@
               = link_to 'FREE AGENTS', '/free_agents.html'
             %li.dropdown-toggle{class: "#{'actives' if current_page.url == '/team_registration.html'}"}
               = link_to 'TEAM REGISTRATION', '/team_registration.html'
-            %li SCHEDULE
+            %li{class: "#{'actives' if current_page.url == '/team_registration.html'}"}
+              = link_to 'SCHEDULE', '/schedule.html'
             %li{class: "#{'actives' if current_page.url == '/standings.html'}"}
               = link_to 'STANDINGS', '/standings.html'
             %li{class: "#{'actives' if current_page.url == '/rules.html'}"} 
