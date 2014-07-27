@@ -206,46 +206,17 @@
       });
     </script>
     <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.css", rel="stylesheet">
-    <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
   </head>
   
   <body class="rules">
-    <div id='top_header'>
-  <div class='container'>
-    <div class='row'>
-      <div class='col-xs-6'>
-        <div class='opening_hours' style='padding-top: 14px;'>
-          <p>OPENING HOURS : MON - FRI <span class="light_grey"> 7pm - 10pm</span>, WEEKENDS <span class="light_grey">COMING SOON</span></p>
-        </div>
-      </div>
-      <div class='col-xs-6'>
-        <div class='social_media float_right'>
-          <ul>
-            <li style='border-left: solid #292929 1px;'>
-              <i class='fa fa-facebook'></i>
-            </li>
-            <li>
-              <i class='fa fa-twitter'></i>
-            </li>
-            <li>
-              <i class='fa fa-instagram'></i>
-            </li>
-            <li>
-              <i class='fa fa-youtube'></i>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<div id='main_nav'>
+    <div id='fixed_header'>
   <div class='container'>
     <div class='row'>
       <div class='col-xs-3'>
         <h2 class='float_left logo'>
-          <a href="./">UrbanFutsal L.A.</a>
+          <a href="./">UrbanFutsal LA</a>
         </h2>
       </div>
       <div class='col-xs-9'>
@@ -274,6 +245,75 @@
         </div>
       </div>
     </div>
+  </div>
+</div>
+<div id='top_header'>
+  <div class='container'>
+    <div class='row'>
+      <div class='col-xs-6'>
+        <div class='opening_hours' style='padding-top: 14px;'>
+          <p>OPENING HOURS : MON - FRI <span class="light_grey"> 7pm - 10pm</span>, WEEKENDS <span class="light_grey">COMING SOON</span></p>
+        </div>
+      </div>
+      <div class='col-xs-6'>
+        <div class='social_media float_right'>
+          <ul>
+            <li style='border-left: solid #292929 1px;'>
+              <i class='fa fa-facebook'></i>
+            </li>
+            <li>
+              <a href='https://twitter.com/UrbanFutsal'>
+                <i class='fa fa-twitter'></i>
+              </a>
+            </li>
+            <li>
+              <i class='fa fa-instagram'></i>
+            </li>
+            <li>
+              <i class='fa fa-youtube'></i>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id='main_nav'>
+  <div class='container'>
+    <div class='row'>
+      <div class='col-xs-3'>
+        <h2 class='float_left logo'>
+          <a href="./">UrbanFutsal LA</a>
+        </h2>
+      </div>
+      <div class='col-xs-9'>
+        <div class='nav_container float_right'>
+          <ul class='main_nav'>
+            <li class=''>
+              <a href="about.html">ABOUT</a>
+            </li>
+            <li class=''>
+              <a href="free_agents.html">FREE AGENTS</a>
+            </li>
+            <li class='dropdown-toggle'>
+              <a href="team_registration.html">TEAM REGISTRATION</a>
+            </li>
+            <li class=''>
+              <a href="schedule.html">SCHEDULE</a>
+            </li>
+            <li class=''>
+              <a href="standings.html">STANDINGS</a>
+            </li>
+            <li class='actives'>
+              <a href="rules.html">RULES</a>
+            </li>
+            <li class=''>
+              <a href="contact.html">CONTACT</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
     <div class='clear'></div>
   </div>
 </div>
@@ -288,14 +328,16 @@
       <div class='left_content float_left'>
         <h1>RULES</h1>
         <hr>
-        <ol>
-          <li id='rule1'>
+        <ol id='rules-list'>
+          <li>
+            <div class='rule_anchor' id='rule1'></div>
             <h5>LAWS OF THE GAME:</h5>
             <p>
               All matches will be played in accordance with current FIFA "Futsal Laws of the Game"http://www.fifa.com/mm/document/affederation/generic/51/44/50/futsallawsofthegameen.pdf", except where noted below. The following items will further interpret those rules for purposes of this league and/or will provide the administrative framework for the operation of the league.
             </p>
           </li>
-          <li id='rule2'>
+          <li>
+            <div class='rule_anchor' id='rule2'></div>
             <h5>The Players</h5>
             <p>
               Each team will field 5 players at any one time. Urban Futsal rules will allow a team to play with 4 people. Anything less is up to the opposing captain and/or staff member as to what will be allowable. There is no maximum limit to the number of females, which must be on the field at once. All teams will be issued players cards. Players that do not present player cards to the referee before or during the match will not be eligible to play. Referees must collect each individual player card and make sure the picture matches the player.
@@ -338,7 +380,8 @@
               </li>
             </ul>
           </li>
-          <li id='rule3'>
+          <li>
+            <div class='rule_anchor' id='rule3'></div>
             <h5>The Referee</h5>
             <br>
             <ul>
@@ -353,11 +396,13 @@
               <li class='styled-list'>All decisions make by the Referee shall be final.</li>
             </ul>
           </li>
-          <li id='rule4'>
+          <li>
+            <div class='rule_anchor' id='rule4'></div>
             <h5>Time</h5>
             <p>Play will be divided into (2) 25- minute halves separated by a brief halftime. A running clock will be maintained by a referee. Clock will not stop during injury time.</p>
           </li>
-          <li id='rule5'>
+          <li>
+            <div class='rule_anchor' id='rule5'></div>
             <h5>The Game</h5>
             <br>
             <ul>
@@ -366,7 +411,8 @@
               <li class='styled-list'>Home team (White team) will always kick off in the first half.</li>
             </ul>
           </li>
-          <li id='rule6'>
+          <li>
+            <div class='rule_anchor' id='rule6'></div>
             <h5>Scoring</h5>
             <br>
             <ul>
@@ -374,7 +420,8 @@
               <li class='styled-list'>Goals may be scored on Kickoffs and corner kicks.</li>
               <li class='styled-list'>If there is a suspension attributed to one specific team, that team shall forfeit the game with the score of 3-0. If both teams are deemed by the referee to be at fault to a serious degree, a double forfeit will be the result, and neither team will receive any points.</li>
             </ul>
-            <li id='rule7'>
+            <li>
+              <div class='rule_anchor' id='rule7'></div>
               <h5>Penalty Kick:</h5>
               <p>If the defense or offensive player is clearly in the goal box area before any shot on goal takes place, then the following will occur:</p>
               <br>
@@ -387,19 +434,23 @@
                 </li>
               </ul>
             </li>
-            <li id='rule8'>
+            <li>
+              <div class='rule_anchor' id='rule8'></div>
               <h5>Referee Time Stoppage</h5>
               <p>The restart of the match shall go to the team in possession at the time of the stoppage with a Direct Free Kick. If there was no clear possession, the game will resume with a drop ball at the location where the ball was, when play was stopped by the referee.</p>
             </li>
-            <li id='rule9'>
+            <li>
+              <div class='rule_anchor' id='rule9'></div>
               <h5>Off-side</h5>
               <p>There is no offside.</p>
             </li>
-            <li id='rule10'>
+            <li>
+              <div class='rule_anchor' id='rule10'></div>
               <h5>Corner Kicks</h5>
               <p>All players on the defense must be at least 5 paces/yards from the corner</p>
             </li>
-            <li id='rule11'>
+            <li>
+              <div class='rule_anchor' id='rule11'></div>
               <h5>Encroachment</h5>
               <p>Players of the opposing side must compliance with the 5 yards radius for the following restarts:</p>
               <br>
@@ -423,7 +474,8 @@
               </ul>
             </li>
           </li>
-          <li id='rule12'>
+          <li>
+            <div class='rule_anchor' id='rule12'></div>
             <h5>Penal Time Penalties</h5>
             <br>
             <br>
@@ -437,16 +489,19 @@
               <li class='styled-list'>Ejection of any coach, player, substitute, non-playing personnel, or spectator will result in a 5 minute penalty to the offending team.</li>
             </ul>
           </li>
-          <li id='rule13'>
+          <li>
+            <div class='rule_anchor' id='rule13'></div>
             <h5>Additional Penalties</h5>
             <p>If the same player accumulates the following during regular season or playoffs, then that player will be suspended from the league for the remainder of that current season. Additional penal time penalties can be assessed:</p>
+            <br>
             <ul>
               <li>5 - Cautionable offenses (Yellow Card)</li>
               <li>3- Sending-Off offenses (Red Card)</li>
             </ul>
             <p>These will be assessed to both players and bench personnel, whether or not they are on the field of play. The time penalty may be assessed on a specific offending player or on the team if the offense is committed: by the coach, bench personnel, or an unidentified individual on the team. Should any player or non-playing team personnel exhibit misconduct at the conclusion of the game, the referee shall display the appropriate card and inform the facility administration for further action. Should the card issued be a red (ejection), that player or team personnel member must serve an automatic 1-game suspension. Players who participate in multiple leagues will be required to sit out for a minimum of 1 game per team.</p>
           </li>
-          <li id='rule14'>
+          <li>
+            <div class='rule_anchor' id='rule14'></div>
             <h5>Ejections</h5>
             <ul>
               <li>An ejected player, coach, non-playing personnel or spectator must exit the facility immediately and will not be allowed to return to the facility for a minimum of 1-game.</li>
@@ -464,9 +519,11 @@
               <li>That player must exit the facility prior to commencing game, and may not return prior to management approval. Additional penalties may be incurred by the team if problems persist.</li>
             </ul>
           </li>
-          <li id='rule15'>
+          <li>
+            <div class='rule_anchor' id='rule15'></div>
             <h5>POINTS SYSTEM</h5>
             <p>To determine league or tournament standings, the following point system will be used:</p>
+            <br>
             <br>
             <ul>
               <li class='styled-list'>WIN: 3</li>
@@ -474,7 +531,8 @@
               <li class='styled-list'>LOSS: 0</li>
             </ul>
           </li>
-          <li id='rule16'>
+          <li>
+            <div class='rule_anchor' id='rule16'></div>
             <h5>TIE BREAKERS</h5>
             <ul>
               <li>The following tie breaking procedures will be used to determine league or bracket winners for play-off seeding:</li>
@@ -492,7 +550,8 @@
                 <li class='styled-list'>Coin toss</li>
               </ul>
             </ul>
-            <li id='rule17'>
+            <li>
+              <div class='rule_anchor' id='rule17'></div>
               <h5>Overtime Rules:</h5>
               <ul>
                 <li>2 - 5 minutes SUDDEN DEATH</li>
@@ -525,55 +584,55 @@
           <br>
           <ol>
             <li>
-              <a href="#rule1">Laws Of The Game</a>
+              <a class="anchor_link" href="#rule1">Laws Of The Game</a>
             </li>
             <li>
-              <a href="#rule2">The Players</a>
+              <a class="anchor_link" href="#rule2">The Players</a>
             </li>
             <li>
-              <a href="#rule3">The Referee</a>
+              <a class="anchor_link" href="#rule3">The Referee</a>
             </li>
             <li>
-              <a href="#rule4">Time</a>
+              <a class="anchor_link" href="#rule4">Time</a>
             </li>
             <li>
-              <a href="#rule5">The Game</a>
+              <a class="anchor_link" href="#rule5">The Game</a>
             </li>
             <li>
-              <a href="#rule6">Scoring</a>
+              <a class="anchor_link" href="#rule6">Scoring</a>
             </li>
             <li>
-              <a href="#rule7">Penalty Kick</a>
+              <a class="anchor_link" href="#rule7">Penalty Kick</a>
             </li>
             <li>
-              <a href="#rule8">Referee Time Stoppage</a>
+              <a class="anchor_link" href="#rule8">Referee Time Stoppage</a>
             </li>
             <li>
-              <a href="#rule9">Off-side</a>
+              <a class="anchor_link" href="#rule9">Off-side</a>
             </li>
             <li>
-              <a href="#rule10">Corner Kicks</a>
+              <a class="anchor_link" href="#rule10">Corner Kicks</a>
             </li>
             <li>
-              <a href="#rule11">Encroachment</a>
+              <a class="anchor_link" href="#rule11">Encroachment</a>
             </li>
             <li>
-              <a href="#rule12">Penal Time Penalties</a>
+              <a class="anchor_link" href="#rule12">Penal Time Penalties</a>
             </li>
             <li>
-              <a href="#rule13">Additional Penalties</a>
+              <a class="anchor_link" href="#rule13">Additional Penalties</a>
             </li>
             <li>
-              <a href="#rule14">Ejections</a>
+              <a class="anchor_link" href="#rule14">Ejections</a>
             </li>
             <li>
-              <a href="#rule15">Points System</a>
+              <a class="anchor_link" href="#rule15">Points System</a>
             </li>
             <li>
-              <a href="#rule16">Tie Breakers</a>
+              <a class="anchor_link" href="#rule16">Tie Breakers</a>
             </li>
             <li>
-              <a href="#rule17">Overtime Rules</a>
+              <a class="anchor_link" href="#rule17">Overtime Rules</a>
             </li>
           </ol>
         </div>
@@ -584,6 +643,10 @@
     </div>
   </div>
 </div>
+<a href='#' id='uparrow'>
+  <i class='glyphicon glyphicon-arrow-up'></i>
+  <p>back to top</p>
+</a>
 
     <div id='footer'>
   <div class='container'>
