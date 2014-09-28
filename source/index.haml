@@ -1,12 +1,28 @@
 #banner
-  .container{style: 'position: relative; overflow: hidden'}
-    .banner_content.float_right
-      %h2
-        URBAN
-      %h1
-        FUTSAL L.A.
-      #line
-      %p{style: 'width: 600px;'} We are an indoor futsal facility located near Silverlake / Downtown LA.  We strive to promote sports activities at a variety of recreational and competitive levels for the surrounding area.  Our goal is to foster a sense of community through sports and fun activities.
+  .container
+    .col-xs-12.pull-right
+      .banner-content-container.pull-right
+        #banner-main-header
+          %h1 Free Play Throughout October 
+        %br
+        %p Register as a Free Agent or a team just click on the button below to get started.
+        .button-container
+          %a.btn.btn-success.btn-lg{href: '/free_agents.html', style: 'margin-right: 20px;'}
+            Free Agent
+          %a.btn.btn-primary.btn-lg{href: '/team_registration.html'}
+            Team Registration
+
+#winter-registraion-bar
+  .container
+    .col-xs-8
+      %h1 Sign Up For Winter Registration 
+      %p Starts November 3rd
+    .col-xs-4{style: 'padding-top: 30px;'}
+      %a.pull-right.btn.btn-primary.btn-lg{href: '/team_registration.html'}
+        Team Registration
+      %a.pull-right.btn.btn-success.btn-lg{href: '/free_agents.html', style:'margin-right: 20px;'}
+        Free Agent
+
 #home_content_container
   %br
   %br

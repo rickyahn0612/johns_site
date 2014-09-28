@@ -1,7 +1,10 @@
+@import 'compass';
+
 body {
   margin: 0;
   font-family: 'Open Sans', sans-serif;
   display: none;
+  text-rendering: optimizelegibility;
 
   p {
     -webkit-text-stroke: 0.001px transparent;
@@ -49,6 +52,8 @@ body {
   .opening_hours {
     width: 400px;
     font-size: 11px !important;
+    color: white;
+    font-weight: bold;
   }
 
   .social_media.float_right {
@@ -198,14 +203,59 @@ body {
 
 #banner {
   min-width: 1200px;
-  height: 550px;
+  height: 700px;
   background: url('../images/soccer.jpg');
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  opacity: 0.7;
   position: relative;
+
+  #banner-main-header {
+    opacity: 0; 
+    position: relative;
+    top: -20px;
+    width: 570px;
+    padding: 10px 0 10px 0;
+    text-align: center;
+    margin-top: 100px;
+    background: rgba(rgb(49, 59, 61), 0.8);
+
+    h1 {
+      color: white;
+      margin: 0;
+      padding: 0;
+      letter-spacing: 1px;
+    }
+  }
+
+  p {
+    opacity: 0; 
+    position: relative;
+    top: -20px;
+    margin-top: -10px;
+    padding: 0;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: 2px 2px #636363;
+  }
+
+  .button-container {
+    margin-top: 20px;
+
+    a.btn-success {
+      opacity: 0; 
+      position: relative;
+      right: 20px;
+    }
+
+    a.btn-primary {
+      opacity: 0; 
+      position: relative;
+      left: 20px;
+    }
+  }
 
   .banner_content {
     margin-top: 80px; 
@@ -245,6 +295,20 @@ body {
       color: white;
       opacity: 0;
     }
+  }
+}
+
+#winter-registraion-bar {
+  background: rgb(0,0,0);
+  padding: 3px 0 20px 0;
+
+  h1 {
+    color: white;
+  }
+
+  p {
+    color: white;
+    font-weight: bold;
   }
 }
 
