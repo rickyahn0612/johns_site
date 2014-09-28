@@ -2,20 +2,20 @@
   $(function() {
     var adjSize, iedetect;
     $('body').fadeIn(1000, function() {
-      return $('.banner_content h2').animate({
-        'bottom': 480,
+      return $('.banner-content-container #banner-main-header').animate({
+        'top': 0,
         'opacity': 1
       }, function() {
-        return $('.banner_content h1').animate({
-          'bottom': 420,
+        return $('.banner-content-container p').animate({
+          'top': 0,
           'opacity': 1
         }, function() {
-          return $('.banner_content #line').animate({
-            'top': 50,
+          return $('.banner-content-container .button-container a.btn-success').animate({
+            'right': 0,
             'opacity': 1
           }, function() {
-            return $('.banner_content p').animate({
-              'bottom': 340,
+            return $('.banner-content-container .button-container a.btn-primary').animate({
+              'left': 0,
               'opacity': 1
             });
           });

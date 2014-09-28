@@ -25,12 +25,14 @@
             var user_name       = $('input[name=name]').val(); 
             var user_email      = $('input[name=email]').val();
             var user_phone      = $('input[name=phone]').val();
+            var choice1         = $('select#choice1').val();
+            var choice2         = $('select#choice1').val();
             var user_message    = $('textarea[name=message]').val();
             
             //simple validation at client's end
             //we simply change border color to red if empty field using .css()
             var proceed = true;
-            var content = 'Tournament Type:' + ' ' + tournament_type + "\n \n" + "------------------------------------------" + "\n \n"  + 'Name:' + ' ' + user_name + "\n \n" + "------------------------------------------" + "\n \n" + 'Email:' + ' ' + user_email + "\n \n" + "------------------------------------------" + "\n \n" + 'Phone:' + ' ' + user_phone
+            var content = 'Tournament Type:' + ' ' + tournament_type + "\n \n" + "------------------------------------------" + "\n \n"  + 'Name:' + ' ' + user_name + "\n \n" + "------------------------------------------" + "\n \n" + 'Email:' + ' ' + user_email + "\n \n" + "------------------------------------------" + "\n \n" + 'Phone:' + ' ' + user_phone + "\n \n" + "------------------------------------------" + "\n \n" + 'Choice 1:' + ' ' + choice1 + "\n \n" + "------------------------------------------" + "\n \n" + 'Choice 2:' + ' ' + choice2
             console.log(content);
             var textArea = $('textarea[name=message]').val(content);
             if(tournament_type=="Select"){ 
@@ -47,6 +49,14 @@
             }
             if(user_phone=="") {    
                 $('input[name=phone]').css('border-color','red'); 
+                proceed = false;
+            }
+            if(choice1=="Choose") {    
+                $('select#choice1').css('border-color','red'); 
+                proceed = false;
+            }
+            if(choice1=="Choose") {    
+                $('select#choice2').css('border-color','red'); 
                 proceed = false;
             }
             if(user_message=="") {  
@@ -89,16 +99,6 @@
         
     });
     </script>
-
-
-
-
-
-
-
-
-
-
 
 
     <script type="text/javascript">
@@ -330,17 +330,29 @@
       <div class='left_content float_left'>
         <div class='container'>
           <h1>Free Agent Registration Form</h1>
-          <p>This is a chance for those individuals who do not have a team to play for.  Sign up by yourself or with a <br /> whole team and have a real "kick" this season.</p>
+          <p>
+            This is a chance for those individuals who do not have
+            a team to play for.  Sign up by yourself or with a <br />
+            whole team and have a real "kick" this season.
+          </p>
           <hr>
           <fieldset class='form-inline' id='freeagent_form'>
             <h3>Player Information</h3>
-            <p>Choose 5v5 Men's 5v5 or Coed's 5v5 then provide us with your name an email address and <br />phone number for us to contact you at and we will get you drafted and let you know when <br />you can play next.</p>
+            <p>
+              Choose 5v5 Men's 5v5 or Coed's 5v5 then provide us
+              with your name an email address and <br />phone
+              number for us to contact you at and we will get
+              you drafted and let you know when <br />you can
+              play next.
+            </p>
             <div id='result' style='width: 610px;'></div>
+            <br>
+            <label>Select Your Registration Type  <span class='required'>*</span></label>
             <br>
             <select class='form-control' id='tournament' style='width: 52%; font-weight: bold; color: #777777;'>
               <option style='color: red !important;'><strong>Select</strong></option>
-              <option>Men 5v5</option>
-              <option>Coed 5v5</option>
+              <option>October Free Play</option>
+              <option>Winter Registration</option>
             </select>
             <br>
             <br>
@@ -367,6 +379,32 @@
             </label>
             <br>
             <br>
+            <h5>
+              <strong>Prefered Date: <span class='required'>*</span></strong>
+            </h5>
+            <div class='row'>
+              <div class='col-xs-4'>
+                <label for='choice1'></label>
+                <select class='form-control' id='choice1' name='choice1' style='width: 275px;'>
+                  <option value='Choose'>Choose</option>
+                  <option value='Monday Night / 5v5 men '>Monday Night / 5v5 Men</option>
+                  <option value='Tuesday Night / 5v5 Coed'>Tuesday Night / 5v5 Coed</option>
+                  <option value='Wednesday'>Wednesday Night/ 5v5 Men</option>
+                </select>
+              </div>
+              <!-- .col-xs-4 -->
+              <!-- %label{for: 'choice2'} -->
+              <!-- %span -->
+              <!-- %strong Choice 2 -->
+              <!-- %br -->
+              <!-- %select#choice2{class: 'form-control', name: 'choice2', style: 'width: 275px;'} -->
+              <!-- %option{value: 'Choose'} Choose -->
+              <!-- %option{value: 'Monday'} Monday -->
+              <!-- %option{value: 'Tuesday'} Tuesday -->
+              <!-- %option{value: 'Wednesday'} Wednesday -->
+              <!-- %option{value: 'Thursday'} Thursday -->
+              <!-- %option{value: 'Friday'} Friday -->
+            </div>
           </fieldset>
           <div class='form-group'>
             <label for='message'>

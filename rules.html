@@ -25,12 +25,14 @@
             var user_name       = $('input[name=name]').val(); 
             var user_email      = $('input[name=email]').val();
             var user_phone      = $('input[name=phone]').val();
+            var choice1         = $('select#choice1').val();
+            var choice2         = $('select#choice1').val();
             var user_message    = $('textarea[name=message]').val();
             
             //simple validation at client's end
             //we simply change border color to red if empty field using .css()
             var proceed = true;
-            var content = 'Tournament Type:' + ' ' + tournament_type + "\n \n" + "------------------------------------------" + "\n \n"  + 'Name:' + ' ' + user_name + "\n \n" + "------------------------------------------" + "\n \n" + 'Email:' + ' ' + user_email + "\n \n" + "------------------------------------------" + "\n \n" + 'Phone:' + ' ' + user_phone
+            var content = 'Tournament Type:' + ' ' + tournament_type + "\n \n" + "------------------------------------------" + "\n \n"  + 'Name:' + ' ' + user_name + "\n \n" + "------------------------------------------" + "\n \n" + 'Email:' + ' ' + user_email + "\n \n" + "------------------------------------------" + "\n \n" + 'Phone:' + ' ' + user_phone + "\n \n" + "------------------------------------------" + "\n \n" + 'Choice 1:' + ' ' + choice1 + "\n \n" + "------------------------------------------" + "\n \n" + 'Choice 2:' + ' ' + choice2
             console.log(content);
             var textArea = $('textarea[name=message]').val(content);
             if(tournament_type=="Select"){ 
@@ -47,6 +49,14 @@
             }
             if(user_phone=="") {    
                 $('input[name=phone]').css('border-color','red'); 
+                proceed = false;
+            }
+            if(choice1=="Choose") {    
+                $('select#choice1').css('border-color','red'); 
+                proceed = false;
+            }
+            if(choice1=="Choose") {    
+                $('select#choice2').css('border-color','red'); 
                 proceed = false;
             }
             if(user_message=="") {  
@@ -89,16 +99,6 @@
         
     });
     </script>
-
-
-
-
-
-
-
-
-
-
 
 
     <script type="text/javascript">
