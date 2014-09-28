@@ -15,8 +15,8 @@
             #result
             %select#tournament.form-control{style: 'width: 90%; font-weight: bold; color: #777777;'}
               %option{style: 'color: red !important;'} <strong>Select</strong>
-              %option Men 5v5
-              %option Coed 5v5
+              %option October Free Play
+              %option Winter Registration
             %br
             %br
             .form-group
@@ -46,9 +46,7 @@
               %label{for: "message"}
                 %br
                 %textarea#message{name: "message", placeholder: "Enter Your Name", class: 'form-control', style: 'height: 0px; visibility: hidden'}
-            %legend Team Info
-
-            %h4 PLAYERS INFO 
+            %legend Player Info
             %p{style: 'font-style: italic; font-size: 13px;'} *** Up to 5 players is required to complete your team registration.
             %br
             .col-xs-4 
@@ -83,8 +81,35 @@
                   %input.form-control#player7{style: 'margin-bottom: 25px; width: 400px;', name: 'player7'}
                   %input.form-control#player8{style: 'margin-bottom: 25px; width: 400px;', name: 'player8'}
               .clear
-          %hr
+          #form-container-last
+            %legend Payment Information
+            .col-xs-5
+              %label Credit Card Number
+              <span class='required'>*</span> 
+              %input.form-control#ccnumber{name: 'form1'}
+
+            .col-xs-2
+              %label Expiration
+              <span class='required'>*</span> 
+              %input.form-control#exp{name: 'form2'}
+
+            .col-xs-1
+              %label CCV
+              <span class='required'>*</span> 
+              %input.form-control#ccc{name: 'form3'}
+            .row
+              .col-xs-3{style: 'border-left: solid 1px #cfcfcf;'}
+                %h3 $400 Team Reigistration for an 8 week season 
+                %p Privacy: Urban Futsal LA completely respects our member's privacy and therefore is committed to keeping your information secure and confidential.
+                %br
+                %p For More Information: 
+                %p Please <a href="/contact.html">Contact Us</a> and a representative will get back with you shortly. 
           .form-group
+            %br
+            %br
+            %br
+            %br
+            %br
             %label
               %span  
               %button#registration_submit_btn.btn.btn-info{style: 'position: relative; right: 7px; padding: 13px 70px 13px 70px;'} Submit

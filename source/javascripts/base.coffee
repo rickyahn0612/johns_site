@@ -32,7 +32,23 @@ $ ->
           scrollTop: target.offset().top
         , 1000
         false
+
+
+  $('#tournament').change ->
+    registrationType = $('select#tournament').find(":selected").text()
+    formContainer = $('#form-container-last')
+    
+    if registrationType == "Winter Registration"
+      formContainer.show()
+    else
+      formContainer.hide()
+
+
   return
+
+
+
+
 
   # $("#submit_btn_registration_form").click ->
 
