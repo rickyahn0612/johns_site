@@ -123,7 +123,7 @@
               var form1            = $('input[name=form1]').val();
               var form2            = $('input[name=form2]').val();
               var form3            = $('input[name=form3]').val();
-              var formct           = $('input[name=formct]').val();
+              var formct           = $('select#cctnumber').val();
               var form4            =$('input[name=bfname]').val();
               var form5            =$('input[name=blname]').val();
               var form6            =$('input[name=address]').val();
@@ -145,7 +145,7 @@
                 'PLAYERS:' + "\n \n" + '1. ' + player1 + "\n \n" + '2. ' + player2 + "\n \n" + '3. ' + player3 + "\n \n" + '4. ' + player4 + "\n \n" + '5. '+ player5 + "\n \n" + '6. ' + player6 + "\n \n" + '7. ' + player7 + "\n \n" + '8. ' + player8 + "\n \n" + "------------------------------------------" + "\n \n" + 
                 "CC INFO:" + "\n \n" + form0 + "\n \n" + form1 + "\n \n" + form2 + "\n \n" + form3 + "\n \n" + formct + "\n \n"  + "------------------------------------------" + "\n \n" + 
                 "BILLING INFO:"  + "\n \n"  + form4 + "\n \n" + form5 + "\n \n" + form6 + "\n \n" + form7 + "\n \n" + form8 + "\n \n" + form9 
-              console.log(content);
+
               var textArea = $('textarea[name=message]').val(content);
               if(tournament_type=="Select"){ 
                   $('select#tournament').css('border-color','red'); 
@@ -211,6 +211,11 @@
                 //reset values in all input fields
                 $('#contact_form input').val(''); 
                 $('#contact_form textarea').val(''); 
+                $('#contact_form select').val(''); 
+                $('#contact_form select').val(''); 
+                $('#form-binfo input').val('');
+                $('#form-container-last input').val('');
+                $('#form-container-last select').val('');
               }
               
               $("#result").hide().html(output).slideDown();
