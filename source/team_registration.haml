@@ -135,50 +135,54 @@
 
             #form-container-last
               %legend Payment Information
-              .col-xs-8{style: 'position: relative; right: 10px;'}
-                %div
-                  %label Name on Card
-                  <span class='required'>*</span> 
-                  %input.form-control#nameoncname{ name: 'formnameon', placeholder: ""}
-                  %br
-                  %br
-              .col-xs-5{style: 'position: relative; right: 10px;'}
-                %label Credit Card Number
-                <span class='required'>*</span> 
-                %input.form-control#ccnumber{name: 'form1'}
+              .col-xs-7
+                .row
+                  .col-xs-12{style: 'position: relative; right: 10px;'}
+                    %div
+                      %label Name on Card
+                      <span class='required'>*</span> 
+                      %input.form-control#nameoncname{ name: 'formnameon', placeholder: ""}
+                      %br
+                      %br
+                .row
+                  .col-xs-6{style: 'position: relative; right: 10px;'}
+                    %label Credit Card Number
+                    <span class='required'>*</span> 
+                    %input.form-control#ccnumber{name: 'form1'}
+
+
+                  .col-xs-5
+                    .col-xs-6
+                      %label Expiration
+                      <span class='required'>*</span> 
+                      %input.form-control#exp{name: 'form2'}
+
                 %br
                 %br
-                
-                %label Card Type
-                <span class='required'>*</span> 
-                %select.form-control#cctnumber{name: 'formct'}
-                  %option{value: 'Select'} Select
-                  %option{value: 'Visa'} Visa
-                  %option{value: 'Mastercard'} Mastercard
-                  %option{value: 'Amex'} Amex
-
-              .col-xs-2
-                %label Expiration
-                <span class='required'>*</span> 
-                %input.form-control#exp{name: 'form2'}
-
-              .col-xs-1
-                %label CCV
-                <span class='required'>*</span> 
-                %input.form-control#ccc{name: 'form3'}
-              .row
-                .col-xs-3{style: 'border-left: solid 1px #cfcfcf;'}
+                .row  
+                  .col-xs-5{style: 'position: relative; right: 10px;'}
+                    %label Card Type
+                    <span class='required'>*</span> 
+                    %select.form-control#cctnumber{name: 'formct'}
+                      %option{value: 'Select'} Select
+                      %option{value: 'Visa'} Visa
+                      %option{value: 'Mastercard'} Mastercard
+                      %option{value: 'Amex'} Amex
+                  .col-xs-4
+                    %label CVV 
+                    <span class='required'>*</span> 
+                    %input.form-control#ccc{name: 'form3'} 
+                    <span style="font-size: 10px;">(Front Side Amex, Back side Visa/MC)</span>
+              .col-xs-5
+                .col-xs-9{style: 'border-left: solid 1px #cfcfcf;'}
                   %h3 Team Registration: $500 for an 8 week season 
                   %p Privacy: Urban Futsal LA completely respects our member's privacy and therefore is committed to keeping your information secure and confidential.
                   %br
                   %p For More Information: 
                   %p Please <a href="/contact.html">Contact Us</a> and a representative will get back with you shortly. 
+                .clear
+              .clear
             .form-group
-              %br
-              %br
-              %br
-              %br
-              %br
               %label
                 %span  
                 %button#registration_submit_btn.btn.btn-info{style: 'position: relative; right: 7px; padding: 13px 70px 13px 70px;'} Submit
