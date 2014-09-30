@@ -2,8 +2,9 @@
   .container
     .row
       .col-xs-3
-        %h2.float_left.logo
-          = link_to 'UrbanFutsal LA', 'index.html'
+        .logo-container
+          %h2.float_left.logo
+            = link_to((image_tag 'futsal_logo.png', style: 'width: 180px;'), 'index.html')
       .col-xs-9
         .nav_container.float_right
           %ul.main_nav
@@ -44,8 +45,9 @@
   .container
     .row
       .col-xs-3
-        %h2.float_left.logo
-          = link_to 'UrbanFutsal LA', 'index.html'
+        .logo-container
+          %h2.float_left.logo
+            = link_to((image_tag 'futsal_logo.png', style: 'width: 300px;'), 'index.html')
       .col-xs-9
         .nav_container.float_right
           %ul.main_nav
