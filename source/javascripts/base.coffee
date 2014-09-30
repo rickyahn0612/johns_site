@@ -37,11 +37,14 @@ $ ->
   $('#tournament').change ->
     registrationType = $('select#tournament').find(":selected").text()
     formContainer = $('#form-container-last')
+    bformContainer = $('#form-binfo ')
     
     if registrationType == "Winter Registration"
       formContainer.show()
+      bformContainer.show()
     else
       formContainer.hide()
+      bformContainer.hide()
 
 
   return

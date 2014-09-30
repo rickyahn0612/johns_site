@@ -13,7 +13,10 @@
           %fieldset#contact_form.form-inline
             %legend Team Info
             #result
+            %br
+            %label Select Your Registration Type  <span class='required'>*</span> 
             %select#tournament.form-control{style: 'width: 90%; font-weight: bold; color: #777777;'}
+
               %option{style: 'color: red !important;'} <strong>Select</strong>
               %option October Free Play
               %option Winter Registration
@@ -42,6 +45,16 @@
                 %input#phone{name: "phone", placeholder: "Enter Manager Phone Number", type: "text", class: 'form-control', style: 'width: 400px;'}
             %br
             %br
+            %h5
+              %strong Day: <span class='required'>*</span> 
+            .row
+              .col-xs-4
+                %label{for: 'choice1'}
+                %select#choice1{class: 'form-control', name: 'choice1', style: 'width: 275px;'}
+                  %option{value: 'Choose'} Choose
+                  %option{value: 'Monday Night / 5v5 men '} Monday Night / 5v5 Men 
+                  %option{value: 'Tuesday Night / 5v5 Coed'} Tuesday Night / 5v5 Coed
+                  %option{value: 'Wednesday'} Wednesday Night/ 5v5 Men
             .form-group
               %label{for: "message"}
                 %br
@@ -81,12 +94,59 @@
                   %input.form-control#player7{style: 'margin-bottom: 25px; width: 400px;', name: 'player7'}
                   %input.form-control#player8{style: 'margin-bottom: 25px; width: 400px;', name: 'player8'}
               .clear
+          #form-binfo{style: 'display: none;'}
+            %legend Billing Information
+            .form-group
+              %label{for: "fname"}
+                %span First Name <span class='required'>*</span> 
+                %br 
+                %input#bnname{name: "bfname", placeholder: "", type: "text", class: 'form-control', style: 'width: 400px; margin-right: 40px;'}
+              %label{for: "lname"}
+                %span Last Name <span class='required'>*</span> 
+                %br
+                %input#blname{name: "blname", placeholder: "", type: "text", class: 'form-control', style: 'width: 400px; margin-right: 40px;'}
+              %br
+              %br
+              %label{for: "address"}
+                %span Address <span class='required'>*</span> 
+                %br
+                %input#addressa{name: "address", placeholder: "", type: "text", class: 'form-control', style: 'width: 840px; margin-right: 40px;'}
+
+            %br
+            .form-group
+              %label{for: "city"}
+                %span City <span class='required'>*</span> 
+                %br
+                %input#city{name: "city", placeholder: "", type: "email", class: 'form-control', style: 'width: 400px; margin-right: 40px;'}
+              %label{for: "state"}
+                %span State <span class='required'>*</span> 
+                %br
+                %input#state{name: "state", placeholder: "", type: "text", class: 'form-control', style: 'width: 200px; margin-right: 40px;'}
+              %label{for: "zipcode"}
+                %span Zipcode <span class='required'>*</span> 
+                %br
+                %input#zip{name: "zip", placeholder: "", type: "text", class: 'form-control', style: 'width: 150px;'}
+
+
           #form-container-last
             %legend Payment Information
-            .col-xs-5
+            .col-xs-8{style: 'position: relative; right: 10px;'}
+              %div
+                %label Name on Card
+                <span class='required'>*</span> 
+                %input.form-control#nameoncname{ name: 'formnameon', placeholder: ""}
+                %br
+                %br
+            .col-xs-5{style: 'position: relative; right: 10px;'}
               %label Credit Card Number
               <span class='required'>*</span> 
               %input.form-control#ccnumber{name: 'form1'}
+              %br
+              %br
+              
+              %label Card Type
+              <span class='required'>*</span> 
+              %input.form-control#cctnumber{name: 'formct', placeholder: "Visa, MasterCard, Amex"}
 
             .col-xs-2
               %label Expiration
@@ -99,7 +159,7 @@
               %input.form-control#ccc{name: 'form3'}
             .row
               .col-xs-3{style: 'border-left: solid 1px #cfcfcf;'}
-                %h3 $400 Team Reigistration for an 8 week season 
+                %h3 Team Registration: $500 for an 8 week season 
                 %p Privacy: Urban Futsal LA completely respects our member's privacy and therefore is committed to keeping your information secure and confidential.
                 %br
                 %p For More Information: 
