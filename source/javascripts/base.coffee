@@ -187,6 +187,7 @@ $ ->
           #reset values in all input fields
           $("#contact_form input").val ""
           $("#contact_form textarea").val ""
+
         $("#result").hide().html(output).slideDown()
         return
       ), "json"

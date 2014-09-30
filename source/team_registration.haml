@@ -146,7 +146,11 @@
               
               %label Card Type
               <span class='required'>*</span> 
-              %input.form-control#cctnumber{name: 'formct', placeholder: "Visa, MasterCard, Amex"}
+              %select.form-control#cctnumber{name: 'formct'}
+                %option{value: 'Select'} Select
+                %option{value: 'Visa'} Visa
+                %option{value: 'Mastercard'} Mastercard
+                %option{value: 'Amex'} Amex
 
             .col-xs-2
               %label Expiration
