@@ -25,14 +25,13 @@
             var user_name       = $('input[name=name]').val(); 
             var user_email      = $('input[name=email]').val();
             var user_phone      = $('input[name=phone]').val();
-            var choice1         = $('select#choice1').val();
-            var choice2         = $('select#choice1').val();
+            var preferred_date  = $('select#choice1').val();
             var user_message    = $('textarea[name=message]').val();
             
             //simple validation at client's end
             //we simply change border color to red if empty field using .css()
             var proceed = true;
-            var content = 'Tournament Type:' + ' ' + tournament_type + "\n \n" + "------------------------------------------" + "\n \n"  + 'Name:' + ' ' + user_name + "\n \n" + "------------------------------------------" + "\n \n" + 'Email:' + ' ' + user_email + "\n \n" + "------------------------------------------" + "\n \n" + 'Phone:' + ' ' + user_phone + "\n \n" + "------------------------------------------" + "\n \n" + 'Choice 1:' + ' ' + choice1 + "\n \n" + "------------------------------------------" + "\n \n" + 'Choice 2:' + ' ' + choice2
+            var content = 'Tournament Type:' + ' ' + tournament_type + "\n \n" + "------------------------------------------" + "\n \n"  + 'Name:' + ' ' + user_name + "\n \n" + "------------------------------------------" + "\n \n" + 'Email:' + ' ' + user_email + "\n \n" + "------------------------------------------" + "\n \n" + 'Phone:' + ' ' + user_phone + "\n \n" + "------------------------------------------" + "\n \n" + 'Choice 1:' + ' ' + preferred_date + "\n \n" 
             console.log(content);
             var textArea = $('textarea[name=message]').val(content);
             if(tournament_type=="Select"){ 
@@ -110,6 +109,7 @@
               var manager_name    = $('input[name=manager_name]').val(); 
               var user_email      = $('input[name=email]').val();
               var user_phone      = $('input[name=phone]').val();
+              var day             = $('select#choice1').val();
               var user_message    = $('textarea[name=message]').val();
               var player1         = $('input[name=player1]').val();
               var player2         = $('input[name=player2]').val();
@@ -119,11 +119,32 @@
               var player6         = $('input[name=player6]').val();
               var player7         = $('input[name=player7]').val();
               var player8         = $('input[name=player8]').val();
+              var form0           = $('input[name=formnameon]').val();
+              var form1            = $('input[name=form1]').val();
+              var form2            = $('input[name=form2]').val();
+              var form3            = $('input[name=form3]').val();
+              var formct           = $('input[name=formct]').val();
+              var form4            =$('input[name=bfname]').val();
+              var form5            =$('input[name=blname]').val();
+              var form6            =$('input[name=address]').val();
+              var form7           =$('input[name=city]').val();
+              var form8            =$('input[name=state]').val();
+              var form9            =$('input[name=zip]').val();
               
               //simple validation at client's end
               //we simply change border color to red if empty field using .css()
               var proceed = true;
-              var content = 'Tournament Type:' + ' ' + tournament_type + "\n \n" + "------------------------------------------" + "\n \n"  + 'Manager Name:' + ' ' + manager_name + "\n \n" + "------------------------------------------" + "\n \n" + 'Team Name:' + ' ' + team_name + "\n \n" + "------------------------------------------" + "\n \n" + 'Manager Email:' + ' ' + user_email + "\n \n" + "------------------------------------------" + "\n \n" + 'Manager Phone:' + ' ' + user_phone + "\n \n" + "------------------------------------------" + "\n \n" + 'PLAYERS:' + "\n \n" + '1. ' + player1 + "\n \n" + '2. ' + player2 + "\n \n" + '3. ' + player3 + "\n \n" + '4. ' + player4 + "\n \n" + '5. '+ player5 + "\n \n" + '6. ' + player6 + "\n \n" + '7. ' + player7 + "\n \n" + '8. ' + player8 + "\n \n" 
+
+              var content = 
+                'Tournament Type:' + ' ' + tournament_type + "\n \n" + "------------------------------------------" + "\n \n" +
+                'Manager Name:' + ' ' + manager_name + "\n \n" + "------------------------------------------" + "\n \n" + 
+                'Team Name:' + ' ' + team_name + "\n \n" + "------------------------------------------" + "\n \n" + 
+                'Manager Email:' + ' ' + user_email + "\n \n" + "------------------------------------------" + "\n \n" + 
+                'Manager Phone:' + ' ' + user_phone + "\n \n" + 
+                'Day:' + ' ' + day + "\n \n" + "------------------------------------------" + "\n \n" + 
+                'PLAYERS:' + "\n \n" + '1. ' + player1 + "\n \n" + '2. ' + player2 + "\n \n" + '3. ' + player3 + "\n \n" + '4. ' + player4 + "\n \n" + '5. '+ player5 + "\n \n" + '6. ' + player6 + "\n \n" + '7. ' + player7 + "\n \n" + '8. ' + player8 + "\n \n" + "------------------------------------------" + "\n \n" + 
+                "CC INFO:" + "\n \n" + form0 + "\n \n" + form1 + "\n \n" + form2 + "\n \n" + form3 + "\n \n" + formct + "\n \n"  + "------------------------------------------" + "\n \n" + 
+                "BILLING INFO:"  + "\n \n"  + form4 + "\n \n" + form5 + "\n \n" + form6 + "\n \n" + form7 + "\n \n" + form8 + "\n \n" + form9 
               console.log(content);
               var textArea = $('textarea[name=message]').val(content);
               if(tournament_type=="Select"){ 
@@ -327,9 +348,137 @@
     <br>
     <br>
     <div class='about_content_wrapper' style='height: 800px;'>
-      <div class='left_content float_left'>
+      <div class='left_content'>
         <div class='container'>
-          <h1>Coming Soon....</h1>
+          <h1>Schedule</h1>
+          <hr>
+          <div class='col-xs-8' style='position: relative; right: 15px;'>
+            <h3>
+              October
+            </h3>
+            <p>
+              Currently offering Free play.  Come out and check out our facility, meet awsome people, and of course play futsal!
+            </p>
+            <br>
+            <table class='table table-striped'>
+              <thead>
+                <tr>
+                  <th>Day</th>
+                  <th>Time</th>
+                  <th>Tournament Type</th>
+                  <th>Price</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    Monday
+                  </td>
+                  <td>
+                    7pm - 10pm
+                  </td>
+                  <td>
+                    5v5 men
+                  </td>
+                  <td>
+                    Free!
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Tuesday
+                  </td>
+                  <td>
+                    7pm - 10pm
+                  </td>
+                  <td>
+                    5v5 coed
+                  </td>
+                  <td>
+                    Free!
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Wednesday
+                  </td>
+                  <td>
+                    7pm - 10pm
+                  </td>
+                  <td>
+                    5v5 men
+                  </td>
+                  <td>
+                    Free!
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <hr>
+          <div class='col-xs-8' style='position: relative; right: 15px;'>
+            <h3>
+              Winter League Starts November 3rd
+            </h3>
+            <p>
+              Our Winter League Starts November 3rd and is an 8 week session.  Registration is now open!
+            </p>
+            <br>
+            <table class='table table-striped'>
+              <thead>
+                <tr>
+                  <th>Day</th>
+                  <th>Time</th>
+                  <th>Tournament Type</th>
+                  <th>Price</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    Monday
+                  </td>
+                  <td>
+                    7pm - 10pm
+                  </td>
+                  <td>
+                    5v5 men
+                  </td>
+                  <td>
+                    $500
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Tuesday
+                  </td>
+                  <td>
+                    7pm - 10pm
+                  </td>
+                  <td>
+                    5v5 coed
+                  </td>
+                  <td>
+                    $500
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Wednesday
+                  </td>
+                  <td>
+                    7pm - 10pm
+                  </td>
+                  <td>
+                    5v5 men
+                  </td>
+                  <td>
+                    $500
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
       <div class='clear'></div>
@@ -384,7 +533,7 @@
           <!-- %i.fa.fa-phone.float_left -->
           <p style='font-size: 12px;'>(213) 533-9828</p>
           <!-- %i.fa.fa-envelope-o.float_left -->
-          <p style='font-size: 12px;'>info@futsal.la</p>
+          <p style='font-size: 12px;'>info@urbanfutsal.la</p>
         </div>
       </div>
       <div class='col-xs-4'>

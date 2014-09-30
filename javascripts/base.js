@@ -60,6 +60,19 @@
         }
       }
     });
+    $('#tournament').change(function() {
+      var bformContainer, formContainer, registrationType;
+      registrationType = $('select#tournament').find(":selected").text();
+      formContainer = $('#form-container-last');
+      bformContainer = $('#form-binfo ');
+      if (registrationType === "Winter Registration") {
+        formContainer.show();
+        return bformContainer.show();
+      } else {
+        formContainer.hide();
+        return bformContainer.hide();
+      }
+    });
     return;
     $("#submit_btn").click(function() {
       var post_data, proceed, user_email, user_message, user_name, user_phone;

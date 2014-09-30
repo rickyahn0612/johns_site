@@ -187,8 +187,8 @@ body {
     position: relative;
     top: -20px;
     width: 570px;
-    padding: 10px 0 10px 0;
-    text-align: center;
+    padding: 10px 0 10px 10px;
+    text-align: left;
     margin-top: 100px;
     background: rgba(49, 59, 61, 0.8); }
     /* line 224, /Users/Ricky/Sites/johns_site/source/stylesheets/all.scss */
@@ -695,3 +695,7 @@ ol {
 .rule_anchor {
   position: relative;
   top: -50px; }
+
+/* line 835, /Users/Ricky/Sites/johns_site/source/stylesheets/all.scss */
+#form-container-last {
+  display: none; }

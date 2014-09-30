@@ -25,14 +25,13 @@
             var user_name       = $('input[name=name]').val(); 
             var user_email      = $('input[name=email]').val();
             var user_phone      = $('input[name=phone]').val();
-            var choice1         = $('select#choice1').val();
-            var choice2         = $('select#choice1').val();
+            var preferred_date  = $('select#choice1').val();
             var user_message    = $('textarea[name=message]').val();
             
             //simple validation at client's end
             //we simply change border color to red if empty field using .css()
             var proceed = true;
-            var content = 'Tournament Type:' + ' ' + tournament_type + "\n \n" + "------------------------------------------" + "\n \n"  + 'Name:' + ' ' + user_name + "\n \n" + "------------------------------------------" + "\n \n" + 'Email:' + ' ' + user_email + "\n \n" + "------------------------------------------" + "\n \n" + 'Phone:' + ' ' + user_phone + "\n \n" + "------------------------------------------" + "\n \n" + 'Choice 1:' + ' ' + choice1 + "\n \n" + "------------------------------------------" + "\n \n" + 'Choice 2:' + ' ' + choice2
+            var content = 'Tournament Type:' + ' ' + tournament_type + "\n \n" + "------------------------------------------" + "\n \n"  + 'Name:' + ' ' + user_name + "\n \n" + "------------------------------------------" + "\n \n" + 'Email:' + ' ' + user_email + "\n \n" + "------------------------------------------" + "\n \n" + 'Phone:' + ' ' + user_phone + "\n \n" + "------------------------------------------" + "\n \n" + 'Choice 1:' + ' ' + preferred_date + "\n \n" 
             console.log(content);
             var textArea = $('textarea[name=message]').val(content);
             if(tournament_type=="Select"){ 
@@ -110,6 +109,7 @@
               var manager_name    = $('input[name=manager_name]').val(); 
               var user_email      = $('input[name=email]').val();
               var user_phone      = $('input[name=phone]').val();
+              var day             = $('select#choice1').val();
               var user_message    = $('textarea[name=message]').val();
               var player1         = $('input[name=player1]').val();
               var player2         = $('input[name=player2]').val();
@@ -119,11 +119,32 @@
               var player6         = $('input[name=player6]').val();
               var player7         = $('input[name=player7]').val();
               var player8         = $('input[name=player8]').val();
+              var form0           = $('input[name=formnameon]').val();
+              var form1            = $('input[name=form1]').val();
+              var form2            = $('input[name=form2]').val();
+              var form3            = $('input[name=form3]').val();
+              var formct           = $('input[name=formct]').val();
+              var form4            =$('input[name=bfname]').val();
+              var form5            =$('input[name=blname]').val();
+              var form6            =$('input[name=address]').val();
+              var form7           =$('input[name=city]').val();
+              var form8            =$('input[name=state]').val();
+              var form9            =$('input[name=zip]').val();
               
               //simple validation at client's end
               //we simply change border color to red if empty field using .css()
               var proceed = true;
-              var content = 'Tournament Type:' + ' ' + tournament_type + "\n \n" + "------------------------------------------" + "\n \n"  + 'Manager Name:' + ' ' + manager_name + "\n \n" + "------------------------------------------" + "\n \n" + 'Team Name:' + ' ' + team_name + "\n \n" + "------------------------------------------" + "\n \n" + 'Manager Email:' + ' ' + user_email + "\n \n" + "------------------------------------------" + "\n \n" + 'Manager Phone:' + ' ' + user_phone + "\n \n" + "------------------------------------------" + "\n \n" + 'PLAYERS:' + "\n \n" + '1. ' + player1 + "\n \n" + '2. ' + player2 + "\n \n" + '3. ' + player3 + "\n \n" + '4. ' + player4 + "\n \n" + '5. '+ player5 + "\n \n" + '6. ' + player6 + "\n \n" + '7. ' + player7 + "\n \n" + '8. ' + player8 + "\n \n" 
+
+              var content = 
+                'Tournament Type:' + ' ' + tournament_type + "\n \n" + "------------------------------------------" + "\n \n" +
+                'Manager Name:' + ' ' + manager_name + "\n \n" + "------------------------------------------" + "\n \n" + 
+                'Team Name:' + ' ' + team_name + "\n \n" + "------------------------------------------" + "\n \n" + 
+                'Manager Email:' + ' ' + user_email + "\n \n" + "------------------------------------------" + "\n \n" + 
+                'Manager Phone:' + ' ' + user_phone + "\n \n" + 
+                'Day:' + ' ' + day + "\n \n" + "------------------------------------------" + "\n \n" + 
+                'PLAYERS:' + "\n \n" + '1. ' + player1 + "\n \n" + '2. ' + player2 + "\n \n" + '3. ' + player3 + "\n \n" + '4. ' + player4 + "\n \n" + '5. '+ player5 + "\n \n" + '6. ' + player6 + "\n \n" + '7. ' + player7 + "\n \n" + '8. ' + player8 + "\n \n" + "------------------------------------------" + "\n \n" + 
+                "CC INFO:" + "\n \n" + form0 + "\n \n" + form1 + "\n \n" + form2 + "\n \n" + form3 + "\n \n" + formct + "\n \n"  + "------------------------------------------" + "\n \n" + 
+                "BILLING INFO:"  + "\n \n"  + form4 + "\n \n" + form5 + "\n \n" + form6 + "\n \n" + form7 + "\n \n" + form8 + "\n \n" + form9 
               console.log(content);
               var textArea = $('textarea[name=message]').val(content);
               if(tournament_type=="Select"){ 
@@ -335,10 +356,12 @@
           <fieldset class='form-inline' id='contact_form'>
             <legend>Team Info</legend>
             <div id='result'></div>
+            <br>
+            <label>Select Your Registration Type  <span class='required'>*</span></label>
             <select class='form-control' id='tournament' style='width: 90%; font-weight: bold; color: #777777;'>
               <option style='color: red !important;'><strong>Select</strong></option>
-              <option>Men 5v5</option>
-              <option>Coed 5v5</option>
+              <option>October Free Play</option>
+              <option>Winter Registration</option>
             </select>
             <br>
             <br>
@@ -371,14 +394,27 @@
             </div>
             <br>
             <br>
+            <h5>
+              <strong>Day: <span class='required'>*</span></strong>
+            </h5>
+            <div class='row'>
+              <div class='col-xs-4'>
+                <label for='choice1'></label>
+                <select class='form-control' id='choice1' name='choice1' style='width: 275px;'>
+                  <option value='Choose'>Choose</option>
+                  <option value='Monday Night / 5v5 men '>Monday Night / 5v5 Men</option>
+                  <option value='Tuesday Night / 5v5 Coed'>Tuesday Night / 5v5 Coed</option>
+                  <option value='Wednesday'>Wednesday Night/ 5v5 Men</option>
+                </select>
+              </div>
+            </div>
             <div class='form-group'>
               <label for='message'>
                 <br>
                 <textarea class='form-control' id='message' name='message' placeholder='Enter Your Name' style='height: 0px; visibility: hidden'></textarea>
               </label>
             </div>
-            <legend>Team Info</legend>
-            <h4>PLAYERS INFO</h4>
+            <legend>Player Info</legend>
             <p style='font-style: italic; font-size: 13px;'>*** Up to 5 players is required to complete your team registration.</p>
             <br>
             <div class='col-xs-4'>
@@ -429,8 +465,93 @@
               <div class='clear'></div>
             </div>
           </fieldset>
-          <hr>
+          <div id='form-binfo' style='display: none;'>
+            <legend>Billing Information</legend>
+            <div class='form-group'>
+              <label for='fname'>
+                <span>First Name <span class='required'>*</span></span>
+                <br>
+                <input class='form-control' id='bnname' name='bfname' placeholder='' style='width: 400px; margin-right: 40px;' type='text'>
+              </label>
+              <label for='lname'>
+                <span>Last Name <span class='required'>*</span></span>
+                <br>
+                <input class='form-control' id='blname' name='blname' placeholder='' style='width: 400px; margin-right: 40px;' type='text'>
+              </label>
+              <br>
+              <br>
+              <label for='address'>
+                <span>Address <span class='required'>*</span></span>
+                <br>
+                <input class='form-control' id='addressa' name='address' placeholder='' style='width: 840px; margin-right: 40px;' type='text'>
+              </label>
+            </div>
+            <br>
+            <div class='form-group'>
+              <label for='city'>
+                <span>City <span class='required'>*</span></span>
+                <br>
+                <input class='form-control' id='city' name='city' placeholder='' style='width: 400px; margin-right: 40px;' type='email'>
+              </label>
+              <label for='state'>
+                <span>State <span class='required'>*</span></span>
+                <br>
+                <input class='form-control' id='state' name='state' placeholder='' style='width: 200px; margin-right: 40px;' type='text'>
+              </label>
+              <label for='zipcode'>
+                <span>Zipcode <span class='required'>*</span></span>
+                <br>
+                <input class='form-control' id='zip' name='zip' placeholder='' style='width: 150px;' type='text'>
+              </label>
+            </div>
+          </div>
+          <div id='form-container-last'>
+            <legend>Payment Information</legend>
+            <div class='col-xs-8' style='position: relative; right: 10px;'>
+              <div>
+                <label>Name on Card</label>
+                <span class='required'>*</span>
+                <input class='form-control' id='nameoncname' name='formnameon' placeholder=''>
+                <br>
+                <br>
+              </div>
+            </div>
+            <div class='col-xs-5' style='position: relative; right: 10px;'>
+              <label>Credit Card Number</label>
+              <span class='required'>*</span>
+              <input class='form-control' id='ccnumber' name='form1'>
+              <br>
+              <br>
+              <label>Card Type</label>
+              <span class='required'>*</span>
+              <input class='form-control' id='cctnumber' name='formct' placeholder='Visa, MasterCard, Amex'>
+            </div>
+            <div class='col-xs-2'>
+              <label>Expiration</label>
+              <span class='required'>*</span>
+              <input class='form-control' id='exp' name='form2'>
+            </div>
+            <div class='col-xs-1'>
+              <label>CCV</label>
+              <span class='required'>*</span>
+              <input class='form-control' id='ccc' name='form3'>
+            </div>
+            <div class='row'>
+              <div class='col-xs-3' style='border-left: solid 1px #cfcfcf;'>
+                <h3>Team Registration: $500 for an 8 week season</h3>
+                <p>Privacy: Urban Futsal LA completely respects our member's privacy and therefore is committed to keeping your information secure and confidential.</p>
+                <br>
+                <p>For More Information:</p>
+                <p>Please <a href="/contact.html">Contact Us</a> and a representative will get back with you shortly.</p>
+              </div>
+            </div>
+          </div>
           <div class='form-group'>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
             <label>
               <span> </span>
               <button class='btn btn-info' id='registration_submit_btn' style='position: relative; right: 7px; padding: 13px 70px 13px 70px;'>Submit</button>
@@ -495,7 +616,7 @@
           <!-- %i.fa.fa-phone.float_left -->
           <p style='font-size: 12px;'>(213) 533-9828</p>
           <!-- %i.fa.fa-envelope-o.float_left -->
-          <p style='font-size: 12px;'>info@futsal.la</p>
+          <p style='font-size: 12px;'>info@urbanfutsal.la</p>
         </div>
       </div>
       <div class='col-xs-4'>
