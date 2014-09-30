@@ -11,42 +11,46 @@
       %br
       %fieldset#contact_form.form-inline
         %legend Contact Form
-        #result
-        .form-group
-          %label{for: "name"}
-            %span Name
-            %br
-            %input#name{name: "name", placeholder: "Enter Your Name", type: "text", class: 'form-control', style: 'width: 280px; margin-right: 40px;'}
-        .form-group
-          %label{for: "email"}
-            %span Email Address
-            %br
-            %input#email{name: "email", placeholder: "Enter Your Email", type: "email", class: 'form-control', style: 'width: 280px;'}
-        %br
-        %br
-        %label{for: "phone"}
-          %span Phone
+        #form-success-message{style: 'height: 400px; display: none;'}
+          %h1 Thank you for Contacting Us
+          %p 
+            One of our representatives will get back to you shortly!  
+        #contact-form-container
+          .form-group
+            %label{for: "name"}
+              %span Name
+              %br
+              %input#name{name: "name", placeholder: "Enter Your Name", type: "text", class: 'form-control', style: 'width: 280px; margin-right: 40px;'}
+          .form-group
+            %label{for: "email"}
+              %span Email Address
+              %br
+              %input#email{name: "email", placeholder: "Enter Your Email", type: "email", class: 'form-control', style: 'width: 280px;'}
           %br
-          %input#phone{name: "phone", placeholder: "Phone Number", type: "text", class: 'form-control', style: 'width: 280px;'}
-        %br
-        %br
-        .form-group
-          %label{for: "message"}
-            %span Message
+          %br
+          %label{for: "phone"}
+            %span Phone
             %br
-            %textarea#message{name: "message", placeholder: "Enter Your Message Here", class: 'form-control', style: 'width: 650px; height: 200px;'}
-        %br
-        %br
-        .form-group
-          %label
-            %span  
-            %button#submit_btn.submit_btn.btn.btn-info{style: 'position: relative; right: 7px; padding: 13px 70px 13px 70px;'} Submit
-        %br
-        %br
-        %br
-        %br
-        %br
-        %br
+            %input#phone{name: "phone", placeholder: "Phone Number", type: "text", class: 'form-control', style: 'width: 280px;'}
+          %br
+          %br
+          .form-group
+            %label{for: "message"}
+              %span Message
+              %br
+              %textarea#message{name: "message", placeholder: "Enter Your Message Here", class: 'form-control', style: 'width: 650px; height: 200px;'}
+          %br
+          %br
+          .form-group
+            %label
+              %span  
+              %button#submit_btn.submit_btn.btn.btn-info{style: 'position: relative; right: 7px; padding: 13px 70px 13px 70px;'} Submit
+          %br
+          %br
+          %br
+          %br
+          %br
+          %br
     .col-xs-4.pull-right
       %h4 Contact Info
       %br
