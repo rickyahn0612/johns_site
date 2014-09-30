@@ -79,6 +79,9 @@
             }else{
                 output = '<div class="success">'+response.text+'</div>';
               
+              $('#free-agent-form-container').fadeOut(function(e){
+                $('#form-success-message').fadeIn();
+              });
               //reset values in all input fields
               $('#contact_form input').val(''); 
               $('#contact_form textarea').val(''); 

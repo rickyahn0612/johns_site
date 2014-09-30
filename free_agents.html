@@ -79,6 +79,9 @@
             }else{
                 output = '<div class="success">'+response.text+'</div>';
               
+              $('#free-agent-form-container').fadeOut(function(e){
+                $('#form-success-message').fadeIn();
+              });
               //reset values in all input fields
               $('#contact_form input').val(''); 
               $('#contact_form textarea').val(''); 
@@ -367,73 +370,81 @@
           </p>
           <hr>
           <fieldset class='form-inline' id='freeagent_form'>
-            <h3>Player Information</h3>
-            <p>
-              Choose 5v5 Men's 5v5 or Coed's 5v5 then provide us
-              with your name an email address and <br />phone
-              number for us to contact you at and we will get
-              you drafted and let you know when <br />you can
-              play next.
-            </p>
-            <div id='result' style='width: 610px;'></div>
-            <br>
-            <label>Select Your Registration Type  <span class='required'>*</span></label>
-            <br>
-            <select class='form-control' id='tournament' style='width: 52%; font-weight: bold; color: #777777;'>
-              <option style='color: red !important;'><strong>Select</strong></option>
-              <option>October Free Play</option>
-              <option>Winter Registration</option>
-            </select>
-            <br>
-            <br>
-            <div class='form-group'>
-              <label for='name'>
-                <span>Name <span class='required'>*</span></span>
-                <br>
-                <input class='form-control' id='name' name='name' placeholder='Enter Your Name' style='width: 280px; margin-right: 40px;' type='text'>
-              </label>
+            <div id='form-success-message' style='height: 400px; display: none;'>
+              <h1>Thank you for Registering</h1>
+              <p>
+                If you have any questions please feel free to <a href="">contact us</a>!
+              </p>
             </div>
-            <div class='form-group'>
-              <label for='email'>
-                <span>Email Address <span class='required'>*</span></span>
-                <br>
-                <input class='form-control' id='email' name='email' placeholder='Enter Your Email' style='width: 280px;' type='email'>
-              </label>
-            </div>
-            <br>
-            <br>
-            <label for='phone'>
-              <span>Phone <span class='required'>*</span></span>
+            <div id='free-agent-form-container'>
+              <h3>Player Information</h3>
+              <p>
+                Choose 5v5 Men's 5v5 or Coed's 5v5 then provide us
+                with your name an email address and <br />phone
+                number for us to contact you at and we will get
+                you drafted and let you know when <br />you can
+                play next.
+              </p>
+              <div id='result' style='width: 610px;'></div>
               <br>
-              <input class='form-control' id='phone' name='phone' placeholder='Phone Number' style='width: 280px;' type='text'>
-            </label>
-            <br>
-            <br>
-            <h5>
-              <strong>Day: <span class='required'>*</span></strong>
-            </h5>
-            <div class='row'>
-              <div class='col-xs-4'>
-                <label for='choice1'></label>
-                <select class='form-control' id='choice1' name='choice1' style='width: 275px;'>
-                  <option value='Choose'>Choose</option>
-                  <option value='Monday Night / 5v5 men '>Monday Night / 5v5 Men</option>
-                  <option value='Tuesday Night / 5v5 Coed'>Tuesday Night / 5v5 Coed</option>
-                  <option value='Wednesday'>Wednesday Night/ 5v5 Men</option>
-                </select>
+              <label>Select Your Registration Type  <span class='required'>*</span></label>
+              <br>
+              <select class='form-control' id='tournament' style='width: 52%; font-weight: bold; color: #777777;'>
+                <option style='color: red !important;'><strong>Select</strong></option>
+                <option>October Free Play</option>
+                <option>Winter Registration</option>
+              </select>
+              <br>
+              <br>
+              <div class='form-group'>
+                <label for='name'>
+                  <span>Name <span class='required'>*</span></span>
+                  <br>
+                  <input class='form-control' id='name' name='name' placeholder='Enter Your Name' style='width: 280px; margin-right: 40px;' type='text'>
+                </label>
               </div>
-              <!-- .col-xs-4 -->
-              <!-- %label{for: 'choice2'} -->
-              <!-- %span -->
-              <!-- %strong Choice 2 -->
-              <!-- %br -->
-              <!-- %select#choice2{class: 'form-control', name: 'choice2', style: 'width: 275px;'} -->
-              <!-- %option{value: 'Choose'} Choose -->
-              <!-- %option{value: 'Monday'} Monday -->
-              <!-- %option{value: 'Tuesday'} Tuesday -->
-              <!-- %option{value: 'Wednesday'} Wednesday -->
-              <!-- %option{value: 'Thursday'} Thursday -->
-              <!-- %option{value: 'Friday'} Friday -->
+              <div class='form-group'>
+                <label for='email'>
+                  <span>Email Address <span class='required'>*</span></span>
+                  <br>
+                  <input class='form-control' id='email' name='email' placeholder='Enter Your Email' style='width: 280px;' type='email'>
+                </label>
+              </div>
+              <br>
+              <br>
+              <label for='phone'>
+                <span>Phone <span class='required'>*</span></span>
+                <br>
+                <input class='form-control' id='phone' name='phone' placeholder='Phone Number' style='width: 280px;' type='text'>
+              </label>
+              <br>
+              <br>
+              <h5>
+                <strong>Day: <span class='required'>*</span></strong>
+              </h5>
+              <div class='row'>
+                <div class='col-xs-4'>
+                  <label for='choice1'></label>
+                  <select class='form-control' id='choice1' name='choice1' style='width: 275px;'>
+                    <option value='Choose'>Choose</option>
+                    <option value='Monday Night / 5v5 men '>Monday Night / 5v5 Men</option>
+                    <option value='Tuesday Night / 5v5 Coed'>Tuesday Night / 5v5 Coed</option>
+                    <option value='Wednesday'>Wednesday Night/ 5v5 Men</option>
+                  </select>
+                </div>
+                <!-- .col-xs-4 -->
+                <!-- %label{for: 'choice2'} -->
+                <!-- %span -->
+                <!-- %strong Choice 2 -->
+                <!-- %br -->
+                <!-- %select#choice2{class: 'form-control', name: 'choice2', style: 'width: 275px;'} -->
+                <!-- %option{value: 'Choose'} Choose -->
+                <!-- %option{value: 'Monday'} Monday -->
+                <!-- %option{value: 'Tuesday'} Tuesday -->
+                <!-- %option{value: 'Wednesday'} Wednesday -->
+                <!-- %option{value: 'Thursday'} Thursday -->
+                <!-- %option{value: 'Friday'} Friday -->
+              </div>
             </div>
           </fieldset>
           <div class='form-group'>
