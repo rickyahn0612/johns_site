@@ -74,53 +74,6 @@
       }
     });
     return;
-    $("#submit_btn").click(function() {
-      var post_data, proceed, user_email, user_message, user_name, user_phone;
-      user_name = $("input[name=name]").val();
-      user_email = $("input[name=email]").val();
-      user_phone = $("input[name=phone]").val();
-      user_message = $("textarea[name=message]").val();
-      proceed = true;
-      if (user_name === "") {
-        $("input[name=name]").css("border-color", "red");
-        proceed = false;
-      }
-      if (user_email === "") {
-        $("input[name=email]").css("border-color", "red");
-        proceed = false;
-      }
-      if (user_phone === "") {
-        $("input[name=phone]").css("border-color", "red");
-        proceed = false;
-      }
-      if (user_message === "") {
-        $("textarea[name=message]").css("border-color", "red");
-        proceed = false;
-      }
-      if (proceed) {
-        post_data = {
-          userName: user_name,
-          userEmail: user_email,
-          userPhone: user_phone,
-          userMessage: user_message
-        };
-        $.post("contact_me_test.php", post_data, (function(response) {
-          var output;
-          if (response.type === "error") {
-            output = "<div class=\"error\">" + response.text + "</div>";
-          } else {
-            output = "<div class=\"success\">" + response.text + "</div>";
-            $("#contact_form input").val("");
-            $("#contact_form textarea").val("");
-          }
-          $("#result").hide().html(output).slideDown();
-        }), "json");
-      }
-    });
-    $("#contact_form input, #contact_form textarea").keyup(function() {
-      $("#contact_form input, #contact_form textarea").css("border-color", "");
-      $("#result").slideUp();
-    });
     iedetect = function(v) {
       var r;
       r = RegExp("msie" + (!isNaN(v) ? "\\s" + v : ""), "i");

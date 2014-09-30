@@ -19,6 +19,66 @@
 
     <script type="text/javascript">
     $(document).ready(function() {
+        $('#submit_btn').on('click', function(){
+          var post_data, proceed, user_email, user_message, user_name, user_phone;
+
+          user_name = $("input[name=name]").val();
+          user_email = $("input[name=email]").val();
+          user_phone = $("input[name=phone]").val();
+          user_message = $("textarea[name=message]").val();
+          proceed = true;
+          if (user_name === "") {
+            $("input[name=name]").css("border-color", "red");
+            proceed = false;
+          }
+          if (user_email === "") {
+            $("input[name=email]").css("border-color", "red");
+            proceed = false;
+          }
+          if (user_phone === "") {
+            $("input[name=phone]").css("border-color", "red");
+            proceed = false;
+          }
+          if (user_message === "") {
+            $("textarea[name=message]").css("border-color", "red");
+            proceed = false;
+          }
+          if (proceed) {
+            post_data = {
+              userName: user_name,
+              userEmail: user_email,
+              userPhone: user_phone,
+              userMessage: user_message
+            };
+            $.post("contact_me_test.php", post_data, (function(response) {
+              var output;
+              if (response.type === "error") {
+                output = "<div class=\"error\">" + response.text + "</div>";
+              } else {
+                output = "<div class=\"success\">" + response.text + "</div>";
+                $('#contact-form-container').fadeOut(function(e){
+                  $('#form-success-message').fadeIn();
+                });
+                $("#contact_form input").val("");
+                $("#contact_form textarea").val("");
+              }
+              $("#result").hide().html(output).slideDown();
+            }), "json");
+          }
+        });
+
+
+
+
+
+
+
+
+
+        $("#contact_form input, #contact_form textarea").keyup(function() {
+          $("#contact_form input, #contact_form textarea").css("border-color", "");
+          $("#result").slideUp();
+        });
         $("#free_agent_btn").click(function() { 
             //get input field values
             var tournament_type = $('select#tournament').val();
@@ -367,51 +427,58 @@
       <br>
       <fieldset class='form-inline' id='contact_form'>
         <legend>Contact Form</legend>
-        <div id='result'></div>
-        <div class='form-group'>
-          <label for='name'>
-            <span>Name</span>
-            <br>
-            <input class='form-control' id='name' name='name' placeholder='Enter Your Name' style='width: 280px; margin-right: 40px;' type='text'>
-          </label>
+        <div id='form-success-message' style='height: 400px; display: none;'>
+          <h1>Thank you for Contacting Us</h1>
+          <p>
+            One of our representatives will get back to you shortly!
+          </p>
         </div>
-        <div class='form-group'>
-          <label for='email'>
-            <span>Email Address</span>
-            <br>
-            <input class='form-control' id='email' name='email' placeholder='Enter Your Email' style='width: 280px;' type='email'>
-          </label>
-        </div>
-        <br>
-        <br>
-        <label for='phone'>
-          <span>Phone</span>
+        <div id='contact-form-container'>
+          <div class='form-group'>
+            <label for='name'>
+              <span>Name</span>
+              <br>
+              <input class='form-control' id='name' name='name' placeholder='Enter Your Name' style='width: 280px; margin-right: 40px;' type='text'>
+            </label>
+          </div>
+          <div class='form-group'>
+            <label for='email'>
+              <span>Email Address</span>
+              <br>
+              <input class='form-control' id='email' name='email' placeholder='Enter Your Email' style='width: 280px;' type='email'>
+            </label>
+          </div>
           <br>
-          <input class='form-control' id='phone' name='phone' placeholder='Phone Number' style='width: 280px;' type='text'>
-        </label>
-        <br>
-        <br>
-        <div class='form-group'>
-          <label for='message'>
-            <span>Message</span>
+          <br>
+          <label for='phone'>
+            <span>Phone</span>
             <br>
-            <textarea class='form-control' id='message' name='message' placeholder='Enter Your Message Here' style='width: 650px; height: 200px;'></textarea>
+            <input class='form-control' id='phone' name='phone' placeholder='Phone Number' style='width: 280px;' type='text'>
           </label>
+          <br>
+          <br>
+          <div class='form-group'>
+            <label for='message'>
+              <span>Message</span>
+              <br>
+              <textarea class='form-control' id='message' name='message' placeholder='Enter Your Message Here' style='width: 650px; height: 200px;'></textarea>
+            </label>
+          </div>
+          <br>
+          <br>
+          <div class='form-group'>
+            <label>
+              <span> </span>
+              <button class='submit_btn btn btn-info' id='submit_btn' style='position: relative; right: 7px; padding: 13px 70px 13px 70px;'>Submit</button>
+            </label>
+          </div>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
         </div>
-        <br>
-        <br>
-        <div class='form-group'>
-          <label>
-            <span> </span>
-            <button class='submit_btn btn btn-info' id='submit_btn' style='position: relative; right: 7px; padding: 13px 70px 13px 70px;'>Submit</button>
-          </label>
-        </div>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
       </fieldset>
     </div>
     <div class='col-xs-4 pull-right'>
