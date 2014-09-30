@@ -523,56 +523,66 @@
             </div>
             <div id='form-container-last'>
               <legend>Payment Information</legend>
-              <div class='col-xs-8' style='position: relative; right: 10px;'>
-                <div>
-                  <label>Name on Card</label>
-                  <span class='required'>*</span>
-                  <input class='form-control' id='nameoncname' name='formnameon' placeholder=''>
-                  <br>
-                  <br>
+              <div class='col-xs-7'>
+                <div class='row'>
+                  <div class='col-xs-12' style='position: relative; right: 10px;'>
+                    <div>
+                      <label>Name on Card</label>
+                      <span class='required'>*</span>
+                      <input class='form-control' id='nameoncname' name='formnameon' placeholder=''>
+                      <br>
+                      <br>
+                    </div>
+                  </div>
+                </div>
+                <div class='row'>
+                  <div class='col-xs-6' style='position: relative; right: 10px;'>
+                    <label>Credit Card Number</label>
+                    <span class='required'>*</span>
+                    <input class='form-control' id='ccnumber' name='form1'>
+                  </div>
+                  <div class='col-xs-5'>
+                    <div class='col-xs-6'>
+                      <label>Expiration</label>
+                      <span class='required'>*</span>
+                      <input class='form-control' id='exp' name='form2'>
+                    </div>
+                  </div>
+                </div>
+                <br>
+                <br>
+                <div class='row'>
+                  <div class='col-xs-5' style='position: relative; right: 10px;'>
+                    <label>Card Type</label>
+                    <span class='required'>*</span>
+                    <select class='form-control' id='cctnumber' name='formct'>
+                      <option value='Select'>Select</option>
+                      <option value='Visa'>Visa</option>
+                      <option value='Mastercard'>Mastercard</option>
+                      <option value='Amex'>Amex</option>
+                    </select>
+                  </div>
+                  <div class='col-xs-4'>
+                    <label>CVV</label>
+                    <span class='required'>*</span>
+                    <input class='form-control' id='ccc' name='form3'>
+                    <span style="font-size: 10px;">(Front Side Amex, Back side Visa/MC)</span>
+                  </div>
                 </div>
               </div>
-              <div class='col-xs-5' style='position: relative; right: 10px;'>
-                <label>Credit Card Number</label>
-                <span class='required'>*</span>
-                <input class='form-control' id='ccnumber' name='form1'>
-                <br>
-                <br>
-                <label>Card Type</label>
-                <span class='required'>*</span>
-                <select class='form-control' id='cctnumber' name='formct'>
-                  <option value='Select'>Select</option>
-                  <option value='Visa'>Visa</option>
-                  <option value='Mastercard'>Mastercard</option>
-                  <option value='Amex'>Amex</option>
-                </select>
-              </div>
-              <div class='col-xs-2'>
-                <label>Expiration</label>
-                <span class='required'>*</span>
-                <input class='form-control' id='exp' name='form2'>
-              </div>
-              <div class='col-xs-1'>
-                <label>CCV</label>
-                <span class='required'>*</span>
-                <input class='form-control' id='ccc' name='form3'>
-              </div>
-              <div class='row'>
-                <div class='col-xs-3' style='border-left: solid 1px #cfcfcf;'>
+              <div class='col-xs-5'>
+                <div class='col-xs-9' style='border-left: solid 1px #cfcfcf;'>
                   <h3>Team Registration: $500 for an 8 week season</h3>
                   <p>Privacy: Urban Futsal LA completely respects our member's privacy and therefore is committed to keeping your information secure and confidential.</p>
                   <br>
                   <p>For More Information:</p>
                   <p>Please <a href="/contact.html">Contact Us</a> and a representative will get back with you shortly.</p>
                 </div>
+                <div class='clear'></div>
               </div>
+              <div class='clear'></div>
             </div>
             <div class='form-group'>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
               <label>
                 <span> </span>
                 <button class='btn btn-info' id='registration_submit_btn' style='position: relative; right: 7px; padding: 13px 70px 13px 70px;'>Submit</button>
