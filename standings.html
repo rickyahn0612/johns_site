@@ -208,6 +208,8 @@
               }else{
                   output = '<div class="success">'+response.text+'</div>';
                 
+                $('#team-registration-form').hide();
+                $('#form-success-message').fadeIn();
                 //reset values in all input fields
                 $('#contact_form input').val(''); 
                 $('#contact_form textarea').val(''); 
