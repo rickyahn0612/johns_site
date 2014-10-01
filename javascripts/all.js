@@ -78,6 +78,7 @@
             output = "<div class=\"error\">" + response.text + "</div>";
           } else {
             output = "<div class=\"success\">" + response.text + "</div>";
+            $('#free_agent_btn').detach();
             $("#free-agent-form-container").fadeOut(function(e) {
               $("#form-success-message").fadeIn();
             });
@@ -88,7 +89,6 @@
         }), "json");
       }
     });
-    $('#free_agent_btn').detach();
     $("#contact_form input, #contact_form textarea").keyup(function() {
       $("#contact_form input, #contact_form textarea").css("border-color", "");
       $("#result").slideUp();
