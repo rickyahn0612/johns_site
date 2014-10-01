@@ -38,6 +38,34 @@
       proceed = true;
       content = "Tournament Type:" + " " + tournament_type + "\n \n" + "------------------------------------------" + "\n \n" + "Name:" + " " + user_name + "\n \n" + "------------------------------------------" + "\n \n" + "Email:" + " " + user_email + "\n \n" + "------------------------------------------" + "\n \n" + "Phone:" + " " + user_phone + "\n \n" + "------------------------------------------" + "\n \n" + "Choice 1:" + " " + preferred_date + "\n \n";
       textArea = $("textarea[name=message]").val(content);
+      if (tournament_type === "Select") {
+        $("select#tournament").css("border-color", "red");
+        proceed = false;
+      }
+      if (user_name === "") {
+        $("input[name=name]").css("border-color", "red");
+        proceed = false;
+      }
+      if (user_email === "") {
+        $("input[name=email]").css("border-color", "red");
+        proceed = false;
+      }
+      if (user_phone === "") {
+        $("input[name=phone]").css("border-color", "red");
+        proceed = false;
+      }
+      if (choice1 === "Choose") {
+        $("select#choice1").css("border-color", "red");
+        proceed = false;
+      }
+      if (choice1 === "Choose") {
+        $("select#choice2").css("border-color", "red");
+        proceed = false;
+      }
+      if (user_message === "") {
+        $("textarea[name=message]").css("border-color", "red");
+        proceed = false;
+      }
       if (proceed) {
         post_data = {
           userMessage: user_message
