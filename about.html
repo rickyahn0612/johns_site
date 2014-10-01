@@ -66,9 +66,246 @@
             }), "json");
           }
         });
+
+
+
+
+
+
+
+
+
+        $("#contact_form input, #contact_form textarea").keyup(function() {
+          $("#contact_form input, #contact_form textarea").css("border-color", "");
+          $("#result").slideUp();
+        });
+
+        
+        $("#free_agent_btn").click(function(e) { 
+            e.preventDefault();
+
+            //get input field values
+            var tournament_type = $('select#tournament').val();
+            var user_name       = $('input[name=name]').val(); 
+            var user_email      = $('input[name=email]').val();
+            var user_phone      = $('input[name=phone]').val();
+            var preferred_date  = $('select#choice1').val();
+            var user_message    = $('textarea[name=message]').val();
+            
+            //simple validation at client's end
+            //we simply change border color to red if empty field using .css()
+            var proceed = true;
+            var content = 'Tournament Type:' + ' ' + tournament_type + "\n \n" + "------------------------------------------" + "\n \n"  + 'Name:' + ' ' + user_name + "\n \n" + "------------------------------------------" + "\n \n" + 'Email:' + ' ' + user_email + "\n \n" + "------------------------------------------" + "\n \n" + 'Phone:' + ' ' + user_phone + "\n \n" + "------------------------------------------" + "\n \n" + 'Choice 1:' + ' ' + preferred_date + "\n \n" 
+
+            var textArea = $('textarea[name=message]').val(content);
+
+
+            if(tournament_type=="Select"){ 
+                $('select#tournament').css('border-color','red'); 
+                proceed = false;
+            }
+            if(user_name==""){ 
+                $('input[name=name]').css('border-color','red'); 
+                proceed = false;
+            }
+            if(user_email==""){ 
+                $('input[name=email]').css('border-color','red'); 
+                proceed = false;
+            }
+            if(user_phone=="") {    
+                $('input[name=phone]').css('border-color','red'); 
+                proceed = false;
+            }
+            if(choice1=="Choose") {    
+                $('select#choice1').css('border-color','red'); 
+                proceed = false;
+            }
+            if(choice1=="Choose") {    
+                $('select#choice2').css('border-color','red'); 
+                proceed = false;
+            }
+            if(user_message=="") {  
+                $('textarea[name=message]').css('border-color','red'); 
+                proceed = false;
+            }
+
+            //everything looks good! proceed...
+            if(proceed) 
+            {
+
+                //data to be sent to server
+                post_data = {'userName':user_name, 'userEmail':user_email, 'userMessage':user_message};
+                
+                //Ajax post data to server
+                $.post('free_agent_form.php', post_data, function(response){  
+
+                    //load json data from server and output message     
+            if(response.type == 'error')
+            {
+              output = '<div class="error">'+response.text+'</div>';
+            }else{
+                output = '<div class="success">'+response.text+'</div>';
+                       
+              $('#free-agent-form-container').fadeOut(function(e){
+                $('#form-success-message').fadeIn();
+              });
+              return false
+              //reset values in all input fields
+              $('#contact_form input').val(''); 
+              $('#contact_form textarea').val(''); 
+            }
+            
+            $("#result").hide().html(output).slideDown();
+                }, 'json');
+          
+            }
+        });
+        
+        //reset previously set border colors and hide all message on .keyup()
+        $("#contact_form input, #contact_form textarea").keyup(function() { 
+            $("#contact_form input, #contact_form textarea").css('border-color',''); 
+            $("#result").slideUp();
+        });
+        
     });
     </script>
 
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+          $("#registration_submit_btn").click(function() { 
+              //get input field values
+              var tournament_type = $('select#tournament').val();
+              var team_name       = $('input[name=team_name]').val(); 
+              var manager_name    = $('input[name=manager_name]').val(); 
+              var user_email      = $('input[name=email]').val();
+              var user_phone      = $('input[name=phone]').val();
+              var day             = $('select#choice1').val();
+              var user_message    = $('textarea[name=message]').val();
+              var player1         = $('input[name=player1]').val();
+              var player2         = $('input[name=player2]').val();
+              var player3         = $('input[name=player3]').val();
+              var player4         = $('input[name=player4]').val();
+              var player5         = $('input[name=player5]').val();
+              var player6         = $('input[name=player6]').val();
+              var player7         = $('input[name=player7]').val();
+              var player8         = $('input[name=player8]').val();
+              var form0           = $('input[name=formnameon]').val();
+              var form1            = $('input[name=form1]').val();
+              var form2            = $('input[name=form2]').val();
+              var form3            = $('input[name=form3]').val();
+              var formct           = $('select#cctnumber').val();
+              var form4            =$('input[name=bfname]').val();
+              var form5            =$('input[name=blname]').val();
+              var form6            =$('input[name=address]').val();
+              var form7           =$('input[name=city]').val();
+              var form8            =$('input[name=state]').val();
+              var form9            =$('input[name=zip]').val();
+              
+              //simple validation at client's end
+              //we simply change border color to red if empty field using .css()
+              var proceed = true;
+
+              var content = 
+                'Tournament Type:' + ' ' + tournament_type + "\n \n" + "------------------------------------------" + "\n \n" +
+                'Manager Name:' + ' ' + manager_name + "\n \n" + "------------------------------------------" + "\n \n" + 
+                'Team Name:' + ' ' + team_name + "\n \n" + "------------------------------------------" + "\n \n" + 
+                'Manager Email:' + ' ' + user_email + "\n \n" + "------------------------------------------" + "\n \n" + 
+                'Manager Phone:' + ' ' + user_phone + "\n \n" + 
+                'Day:' + ' ' + day + "\n \n" + "------------------------------------------" + "\n \n" + 
+                'PLAYERS:' + "\n \n" + '1. ' + player1 + "\n \n" + '2. ' + player2 + "\n \n" + '3. ' + player3 + "\n \n" + '4. ' + player4 + "\n \n" + '5. '+ player5 + "\n \n" + '6. ' + player6 + "\n \n" + '7. ' + player7 + "\n \n" + '8. ' + player8 + "\n \n" + "------------------------------------------" + "\n \n" + 
+                "CC INFO:" + "\n \n" + form0 + "\n \n" + form1 + "\n \n" + form2 + "\n \n" + form3 + "\n \n" + formct + "\n \n"  + "------------------------------------------" + "\n \n" + 
+                "BILLING INFO:"  + "\n \n"  + form4 + "\n \n" + form5 + "\n \n" + form6 + "\n \n" + form7 + "\n \n" + form8 + "\n \n" + form9 
+
+              var textArea = $('textarea[name=message]').val(content);
+              if(tournament_type=="Select"){ 
+                  $('select#tournament').css('border-color','red'); 
+                  proceed = false;
+              }
+              if(team_name==""){ 
+                  $('input[name=team_name]').css('border-color','red'); 
+                  proceed = false;
+              }
+              if(manager_name==""){ 
+                  $('input[name=manager_name]').css('border-color','red'); 
+                  proceed = false;
+              }
+              if(user_email==""){ 
+                  $('input[name=email]').css('border-color','red'); 
+                  proceed = false;
+              }
+              if(user_phone=="") {    
+                  $('input[name=phone]').css('border-color','red'); 
+                  proceed = false;
+              }
+              if(user_message=="") {  
+                  $('textarea[name=message]').css('border-color','red'); 
+                  proceed = false;
+              }
+              if(player1=="") {    
+                  $('input[name=player1]').css('border-color','red'); 
+                  proceed = false;
+              }
+              if(player2=="") {    
+                  $('input[name=player2]').css('border-color','red'); 
+                  proceed = false;
+              }
+              if(player3=="") {    
+                  $('input[name=player3]').css('border-color','red'); 
+                  proceed = false;
+              }
+              if(player4=="") {    
+                  $('input[name=player4]').css('border-color','red'); 
+                  proceed = false;
+              }
+              if(player5=="") {    
+                  $('input[name=player5]').css('border-color','red'); 
+                  proceed = false;
+              }
+      
+              //everything looks good! proceed...
+              if(proceed) 
+              {
+                  //data to be sent to server
+                  post_data = {'userName':team_name, 'managerName':manager_name, 'userEmail':user_email, 'userMessage':user_message};
+                  
+                  //Ajax post data to server
+                  $.post('registration_form.php', post_data, function(response){  
+      
+                      //load json data from server and output message     
+              if(response.type == 'error')
+              {
+                output = '<div class="error">'+response.text+'</div>';
+              }else{
+                  output = '<div class="success">'+response.text+'</div>';
+                
+                $('#team-registration-form').fadeOut(function(e){
+                  $('#form-success-message').fadeIn();
+                });
+                
+                //reset values in all input fields
+                $('#contact_form input').val(''); 
+                $('#contact_form textarea').val(''); 
+                $('#contact_form select').val(''); 
+                $('#contact_form select').val(''); 
+                $('#form-binfo input').val('');
+                $('#form-container-last input').val('');
+                $('#form-container-last select').val('');
+              }
+              
+              $("#result").hide().html(output).slideDown();
+                  }, 'json');
+                $("html, body").animate({ scrollTop: 0 }, "slow");
+              }
+          });
+          
+          //reset previously set border colors and hide all message on .keyup()
+          $("#contact_form input, #contact_form textarea").keyup(function() { 
+              $("#contact_form input, #contact_form textarea").css('border-color',''); 
+              $("#result").slideUp();
+          });
+      });
+    </script>
     <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.css", rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
