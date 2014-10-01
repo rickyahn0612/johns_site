@@ -75,89 +75,89 @@
 
 
 
-        $("#contact_form input, #contact_form textarea").keyup(function() {
-          $("#contact_form input, #contact_form textarea").css("border-color", "");
-          $("#result").slideUp();
-        });
-        $("#free_agent_btn").click(function() { 
-            //get input field values
-            var tournament_type = $('select#tournament').val();
-            var user_name       = $('input[name=name]').val(); 
-            var user_email      = $('input[name=email]').val();
-            var user_phone      = $('input[name=phone]').val();
-            var preferred_date  = $('select#choice1').val();
-            var user_message    = $('textarea[name=message]').val();
+    //     $("#contact_form input, #contact_form textarea").keyup(function() {
+    //       $("#contact_form input, #contact_form textarea").css("border-color", "");
+    //       $("#result").slideUp();
+    //     });
+    //     $("#free_agent_btn").click(function() { 
+    //         //get input field values
+    //         var tournament_type = $('select#tournament').val();
+    //         var user_name       = $('input[name=name]').val(); 
+    //         var user_email      = $('input[name=email]').val();
+    //         var user_phone      = $('input[name=phone]').val();
+    //         var preferred_date  = $('select#choice1').val();
+    //         var user_message    = $('textarea[name=message]').val();
             
-            //simple validation at client's end
-            //we simply change border color to red if empty field using .css()
-            var proceed = true;
-            var content = 'Tournament Type:' + ' ' + tournament_type + "\n \n" + "------------------------------------------" + "\n \n"  + 'Name:' + ' ' + user_name + "\n \n" + "------------------------------------------" + "\n \n" + 'Email:' + ' ' + user_email + "\n \n" + "------------------------------------------" + "\n \n" + 'Phone:' + ' ' + user_phone + "\n \n" + "------------------------------------------" + "\n \n" + 'Choice 1:' + ' ' + preferred_date + "\n \n" 
+    //         //simple validation at client's end
+    //         //we simply change border color to red if empty field using .css()
+    //         var proceed = true;
+    //         var content = 'Tournament Type:' + ' ' + tournament_type + "\n \n" + "------------------------------------------" + "\n \n"  + 'Name:' + ' ' + user_name + "\n \n" + "------------------------------------------" + "\n \n" + 'Email:' + ' ' + user_email + "\n \n" + "------------------------------------------" + "\n \n" + 'Phone:' + ' ' + user_phone + "\n \n" + "------------------------------------------" + "\n \n" + 'Choice 1:' + ' ' + preferred_date + "\n \n" 
 
-            var textArea = $('textarea[name=message]').val(content);
-            if(tournament_type=="Select"){ 
-                $('select#tournament').css('border-color','red'); 
-                proceed = false;
-            }
-            if(user_name==""){ 
-                $('input[name=name]').css('border-color','red'); 
-                proceed = false;
-            }
-            if(user_email==""){ 
-                $('input[name=email]').css('border-color','red'); 
-                proceed = false;
-            }
-            if(user_phone=="") {    
-                $('input[name=phone]').css('border-color','red'); 
-                proceed = false;
-            }
-            if(choice1=="Choose") {    
-                $('select#choice1').css('border-color','red'); 
-                proceed = false;
-            }
-            if(choice1=="Choose") {    
-                $('select#choice2').css('border-color','red'); 
-                proceed = false;
-            }
-            if(user_message=="") {  
-                $('textarea[name=message]').css('border-color','red'); 
-                proceed = false;
-            }
+    //         var textArea = $('textarea[name=message]').val(content);
+    //         if(tournament_type=="Select"){ 
+    //             $('select#tournament').css('border-color','red'); 
+    //             proceed = false;
+    //         }
+    //         if(user_name==""){ 
+    //             $('input[name=name]').css('border-color','red'); 
+    //             proceed = false;
+    //         }
+    //         if(user_email==""){ 
+    //             $('input[name=email]').css('border-color','red'); 
+    //             proceed = false;
+    //         }
+    //         if(user_phone=="") {    
+    //             $('input[name=phone]').css('border-color','red'); 
+    //             proceed = false;
+    //         }
+    //         if(choice1=="Choose") {    
+    //             $('select#choice1').css('border-color','red'); 
+    //             proceed = false;
+    //         }
+    //         if(choice1=="Choose") {    
+    //             $('select#choice2').css('border-color','red'); 
+    //             proceed = false;
+    //         }
+    //         if(user_message=="") {  
+    //             $('textarea[name=message]').css('border-color','red'); 
+    //             proceed = false;
+    //         }
 
-            //everything looks good! proceed...
-            if(proceed) 
-            {
-                //data to be sent to server
-                post_data = {'userName':user_name, 'userEmail':user_email, 'userMessage':user_message};
+    //         //everything looks good! proceed...
+    //         if(proceed) 
+    //         {
+    //             //data to be sent to server
+    //             post_data = {'userName':user_name, 'userEmail':user_email, 'userMessage':user_message};
                 
-                //Ajax post data to server
-                $.post('free_agent_form.php', post_data, function(response){  
+    //             //Ajax post data to server
+    //             $.post('free_agent_form.php', post_data, function(response){  
 
-                    //load json data from server and output message     
-            if(response.type == 'error')
-            {
-              output = '<div class="error">'+response.text+'</div>';
-            }else{
-                output = '<div class="success">'+response.text+'</div>';
+    //                 //load json data from server and output message     
+    //         if(response.type == 'error')
+    //         {
+    //           output = '<div class="error">'+response.text+'</div>';
+    //         }else{
+    //             output = '<div class="success">'+response.text+'</div>';
               
-              $('#free-agent-form-container').fadeOut(function(e){
-                $('#form-success-message').fadeIn();
-              });
-              //reset values in all input fields
-              $('#contact_form input').val(''); 
-              $('#contact_form textarea').val(''); 
-            }
+    //           $('#free-agent-form-container').fadeOut(function(e){
+    //             $('#form-success-message').fadeIn();
+    //           });
+    //           //reset values in all input fields
+    //           $('#contact_form input').val(''); 
+    //           $('#contact_form textarea').val(''); 
+    //         }
             
-            $("#result").hide().html(output).slideDown();
-                }, 'json');
+    //         $("#result").hide().html(output).slideDown();
+    //             }, 'json');
           
-            }
-        });
+    //         }
+    //     });
         
-        //reset previously set border colors and hide all message on .keyup()
-        $("#contact_form input, #contact_form textarea").keyup(function() { 
-            $("#contact_form input, #contact_form textarea").css('border-color',''); 
-            $("#result").slideUp();
-        });
+    //     //reset previously set border colors and hide all message on .keyup()
+    //     $("#contact_form input, #contact_form textarea").keyup(function() { 
+    //         $("#contact_form input, #contact_form textarea").css('border-color',''); 
+    //         $("#result").slideUp();
+    //     });
         
     });
     </script>
@@ -474,7 +474,7 @@
             <div class='col-xs-4'>
               <div class='info_box_container float_left'>
                 <div class='image_container'>
-                  <img src="images/futsal-2.png" />
+                  <img style="width: 100%;" src="images/futsal-2.png" />
                 </div>
                 <div class='content_container'>
                   <h3>ABOUT US</h3>
@@ -541,7 +541,7 @@
           </div>
         </div>
         <div class='col-xs-10'>
-          <div class='carousel slide' data-interval='8000' data-ride='carousel' id='carousel-example-generic'>
+          <div class='carousel slide' data-interval='12000' data-ride='carousel' id='carousel-example-generic'>
             <!-- Wrapper for slides -->
             <div class='carousel-inner'>
               <div class='item active'>
