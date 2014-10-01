@@ -88,6 +88,7 @@
         }), "json");
       }
     });
+    $('#free_agent_btn').detach();
     $("#contact_form input, #contact_form textarea").keyup(function() {
       $("#contact_form input, #contact_form textarea").css("border-color", "");
       $("#result").slideUp();
