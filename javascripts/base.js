@@ -38,7 +38,6 @@
       content = "Tournament Type:" + " " + tournament_type + "\n \n" + "------------------------------------------" + "\n \n" + "Name:" + " " + user_name + "\n \n" + "------------------------------------------" + "\n \n" + "Email:" + " " + user_email + "\n \n" + "------------------------------------------" + "\n \n" + "Phone:" + " " + user_phone + "\n \n" + "------------------------------------------" + "\n \n" + "Choice 1:" + " " + preferred_date + "\n \n";
       textArea = $("textarea[name=message]").val(content);
       if (proceed) {
-        console.log('hey');
         post_data = {
           userName: user_name,
           userEmail: user_email,
