@@ -79,39 +79,6 @@
           }
         }), "json");
       }
-      return;
-      if (tournament_type === "Select") {
-        $("select#tournament").css("border-color", "red");
-        proceed = false;
-      }
-      if (user_name === "") {
-        $("input[name=name]").css("border-color", "red");
-        proceed = false;
-      }
-      if (user_email === "") {
-        $("input[name=email]").css("border-color", "red");
-        proceed = false;
-      }
-      if (user_phone === "") {
-        $("input[name=phone]").css("border-color", "red");
-        proceed = false;
-      }
-      if (choice1 === "Choose") {
-        $("select#choice1").css("border-color", "red");
-        proceed = false;
-      }
-      if (choice1 === "Choose") {
-        $("select#choice2").css("border-color", "red");
-        proceed = false;
-      }
-      if (user_message === "") {
-        $("textarea[name=message]").css("border-color", "red");
-        return proceed = false;
-      }
-    });
-    $("#contact_form input, #contact_form textarea").keyup(function() {
-      $("#contact_form input, #contact_form textarea").css("border-color", "");
-      $("#result").slideUp();
     });
     $('ul.main_nav li').mouseenter(function() {
       return $(this).addClass('active');

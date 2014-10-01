@@ -182,27 +182,12 @@
                   $('#form-success-message').fadeIn();
                 });
                 
-                //reset values in all input fields
-                $('#contact_form input').val(''); 
-                $('#contact_form textarea').val(''); 
-                $('#contact_form select').val(''); 
-                $('#contact_form select').val(''); 
-                $('#form-binfo input').val('');
-                $('#form-container-last input').val('');
-                $('#form-container-last select').val('');
               }
               
-              $("#result").hide().html(output).slideDown();
                   }, 'json');
-                $("html, body").animate({ scrollTop: 0 }, "slow");
               }
           });
           
-          //reset previously set border colors and hide all message on .keyup()
-          $("#contact_form input, #contact_form textarea").keyup(function() { 
-              $("#contact_form input, #contact_form textarea").css('border-color',''); 
-              $("#result").slideUp();
-          });
       });
     </script>
     <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.css", rel="stylesheet">
