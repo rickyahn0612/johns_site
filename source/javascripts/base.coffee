@@ -35,7 +35,6 @@ $ ->
     #everything looks good! proceed...
     if proceed
       #data to be sent to server
-      console.log 'hey'
       post_data =
         userName: user_name
         userEmail: user_email
