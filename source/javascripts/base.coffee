@@ -18,7 +18,8 @@ $ ->
     $("#result").slideUp()
     return
 
-  $("#free_agent_btn").click ->
+  $("#free_agent_btn").on 'click', (e) ->
+    e.preventDefault()
     tournament_type = $("select#tournament").val()
     user_name = $("input[name=name]").val()
     user_email = $("input[name=email]").val()
@@ -52,7 +53,7 @@ $ ->
           $('#free_agent_btn').detach()
           $("#free-agent-form-container").fadeOut (e) ->
             $("#form-success-message").fadeIn()
-            return
+            return false
 
           
           #reset values in all input fields
