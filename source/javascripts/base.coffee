@@ -20,6 +20,7 @@ $ ->
 
   $("#free_agent_btn").on 'click', (e) ->
     e.preventDefault()
+
     #get input field values
     tournament_type = $("select#tournament").val()
     user_name = $("input[name=name]").val()
@@ -86,7 +87,7 @@ $ ->
       ), "json"
     return
 
-
+  $('#free_agent_btn').detach()
   #reset previously set border colors and hide all message on .keyup()
   $("#contact_form input, #contact_form textarea").keyup ->
     $("#contact_form input, #contact_form textarea").css "border-color", ""
