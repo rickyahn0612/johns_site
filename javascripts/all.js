@@ -80,6 +80,111 @@
         }), "json");
       }
     });
+    $("#registration_submit_btn").click(function() {
+      var content, day, form0, form1, form2, form3, form4, form5, form6, form7, form8, form9, formct, manager_name, player1, player2, player3, player4, player5, player6, player7, player8, post_data, proceed, team_name, textArea, tournament_type, user_email, user_message, user_phone;
+      tournament_type = $("select#tournament").val();
+      team_name = $("input[name=team_name]").val();
+      manager_name = $("input[name=manager_name]").val();
+      user_email = $("input[name=email]").val();
+      user_phone = $("input[name=phone]").val();
+      day = $("select#choice1").val();
+      user_message = $("textarea[name=message]").val();
+      player1 = $("input[name=player1]").val();
+      player2 = $("input[name=player2]").val();
+      player3 = $("input[name=player3]").val();
+      player4 = $("input[name=player4]").val();
+      player5 = $("input[name=player5]").val();
+      player6 = $("input[name=player6]").val();
+      player7 = $("input[name=player7]").val();
+      player8 = $("input[name=player8]").val();
+      form0 = $("input[name=formnameon]").val();
+      form1 = $("input[name=form1]").val();
+      form2 = $("input[name=form2]").val();
+      form3 = $("input[name=form3]").val();
+      formct = $("select#cctnumber").val();
+      form4 = $("input[name=bfname]").val();
+      form5 = $("input[name=blname]").val();
+      form6 = $("input[name=address]").val();
+      form7 = $("input[name=city]").val();
+      form8 = $("input[name=state]").val();
+      form9 = $("input[name=zip]").val();
+      proceed = true;
+      content = "Tournament Type:" + " " + tournament_type + "\n \n" + "------------------------------------------" + "\n \n" + "Manager Name:" + " " + manager_name + "\n \n" + "------------------------------------------" + "\n \n" + "Team Name:" + " " + team_name + "\n \n" + "------------------------------------------" + "\n \n" + "Manager Email:" + " " + user_email + "\n \n" + "------------------------------------------" + "\n \n" + "Manager Phone:" + " " + user_phone + "\n \n" + "Day:" + " " + day + "\n \n" + "------------------------------------------" + "\n \n" + "PLAYERS:" + "\n \n" + "1. " + player1 + "\n \n" + "2. " + player2 + "\n \n" + "3. " + player3 + "\n \n" + "4. " + player4 + "\n \n" + "5. " + player5 + "\n \n" + "6. " + player6 + "\n \n" + "7. " + player7 + "\n \n" + "8. " + player8 + "\n \n" + "------------------------------------------" + "\n \n" + "CC INFO:" + "\n \n" + form0 + "\n \n" + form1 + "\n \n" + form2 + "\n \n" + form3 + "\n \n" + formct + "\n \n" + "------------------------------------------" + "\n \n" + "BILLING INFO:" + "\n \n" + form4 + "\n \n" + form5 + "\n \n" + form6 + "\n \n" + form7 + "\n \n" + form8 + "\n \n" + form9;
+      textArea = $("textarea[name=message]").val(content);
+      if (tournament_type === "Select") {
+        $("select#tournament").css("border-color", "red");
+        proceed = false;
+      }
+      if (team_name === "") {
+        $("input[name=team_name]").css("border-color", "red");
+        proceed = false;
+      }
+      if (manager_name === "") {
+        $("input[name=manager_name]").css("border-color", "red");
+        proceed = false;
+      }
+      if (user_email === "") {
+        $("input[name=email]").css("border-color", "red");
+        proceed = false;
+      }
+      if (user_phone === "") {
+        $("input[name=phone]").css("border-color", "red");
+        proceed = false;
+      }
+      if (user_message === "") {
+        $("textarea[name=message]").css("border-color", "red");
+        proceed = false;
+      }
+      if (player1 === "") {
+        $("input[name=player1]").css("border-color", "red");
+        proceed = false;
+      }
+      if (player2 === "") {
+        $("input[name=player2]").css("border-color", "red");
+        proceed = false;
+      }
+      if (player3 === "") {
+        $("input[name=player3]").css("border-color", "red");
+        proceed = false;
+      }
+      if (player4 === "") {
+        $("input[name=player4]").css("border-color", "red");
+        proceed = false;
+      }
+      if (player5 === "") {
+        $("input[name=player5]").css("border-color", "red");
+        proceed = false;
+      }
+      if (proceed) {
+        post_data = {
+          userName: team_name,
+          managerName: manager_name,
+          userEmail: user_email,
+          userMessage: user_message
+        };
+        $.post("registration_form.php", post_data, (function(response) {
+          var output;
+          if (response.type === "error") {
+            output = "<div class=\"error\">" + response.text + "</div>";
+          } else {
+            output = "<div class=\"success\">" + response.text + "</div>";
+            $("#team-registration-form").fadeOut(function(e) {
+              $("#form-success-message").fadeIn();
+            });
+            $("#contact_form input").val("");
+            $("#contact_form textarea").val("");
+            $("#contact_form select").val("");
+            $("#contact_form select").val("");
+            $("#form-binfo input").val("");
+            $("#form-container-last input").val("");
+            $("#form-container-last select").val("");
+          }
+        }), "json");
+        $("html, body").animate({
+          scrollTop: 0
+        }, "slow");
+      }
+    });
     $('ul.main_nav li').mouseenter(function() {
       return $(this).addClass('active');
     });
