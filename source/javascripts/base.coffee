@@ -33,34 +33,34 @@ $ ->
     proceed = true
     content = "Tournament Type:" + " " + tournament_type + "\n \n" + "------------------------------------------" + "\n \n" + "Name:" + " " + user_name + "\n \n" + "------------------------------------------" + "\n \n" + "Email:" + " " + user_email + "\n \n" + "------------------------------------------" + "\n \n" + "Phone:" + " " + user_phone + "\n \n" + "------------------------------------------" + "\n \n" + "Choice 1:" + " " + preferred_date + "\n \n"
     textArea = $("textarea[name=message]").val(content)
-    if tournament_type is "Select"
-      $("select#tournament").css "border-color", "red"
-      proceed = false
-    if user_name is ""
-      $("input[name=name]").css "border-color", "red"
-      proceed = false
-    if user_email is ""
-      $("input[name=email]").css "border-color", "red"
-      proceed = false
-    if user_phone is ""
-      $("input[name=phone]").css "border-color", "red"
-      proceed = false
-    if choice1 is "Choose"
-      $("select#choice1").css "border-color", "red"
-      proceed = false
-    if choice1 is "Choose"
-      $("select#choice2").css "border-color", "red"
-      proceed = false
-    if user_message is ""
-      $("textarea[name=message]").css "border-color", "red"
-      proceed = false
+    # if tournament_type is "Select"
+    #   $("select#tournament").css "border-color", "red"
+    #   proceed = false
+    # if user_name is ""
+    #   $("input[name=name]").css "border-color", "red"
+    #   proceed = false
+    # if user_email is ""
+    #   $("input[name=email]").css "border-color", "red"
+    #   proceed = false
+    # if user_phone is ""
+    #   $("input[name=phone]").css "border-color", "red"
+    #   proceed = false
+    # if choice1 is "Choose"
+    #   $("select#choice1").css "border-color", "red"
+    #   proceed = false
+    # if choice1 is "Choose"
+    #   $("select#choice2").css "border-color", "red"
+    #   proceed = false
+    # if user_message is ""
+    #   $("textarea[name=message]").css "border-color", "red"
+    #   proceed = false
     
     #everything looks good! proceed...
     if proceed
       #data to be sent to server
       post_data =
-        userName: user_name
-        userEmail: user_email
+        # userName: user_name
+        # userEmail: user_email
         userMessage: user_message
 
       
