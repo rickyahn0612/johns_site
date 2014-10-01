@@ -26,8 +26,9 @@
       $("#contact_form input, #contact_form textarea").css("border-color", "");
       $("#result").slideUp();
     });
-    $("#free_agent_btn").click(function() {
+    $("#free_agent_btn").on('click', function(e) {
       var content, post_data, preferred_date, proceed, textArea, tournament_type, user_email, user_message, user_name, user_phone;
+      e.preventDefault();
       tournament_type = $("select#tournament").val();
       user_name = $("input[name=name]").val();
       user_email = $("input[name=email]").val();
@@ -52,6 +53,7 @@
             $('#free_agent_btn').detach();
             $("#free-agent-form-container").fadeOut(function(e) {
               $("#form-success-message").fadeIn();
+              return false;
             });
             $("#contact_form input").val("");
             $("#contact_form textarea").val("");
