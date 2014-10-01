@@ -68,6 +68,8 @@
       }
       if (proceed) {
         post_data = {
+          userName: user_name,
+          userEmail: user_email,
           userMessage: user_message
         };
         $.post("free_agent_form.php", post_data, (function(response) {
