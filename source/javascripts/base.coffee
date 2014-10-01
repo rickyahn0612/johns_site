@@ -18,9 +18,7 @@ $ ->
     $("#result").slideUp()
     return
 
-  $("#free_agent_btn").on 'click', (e) ->
-    e.preventDefault()
-    #get input field values
+  $("#free_agent_btn").click ->
     tournament_type = $("select#tournament").val()
     user_name = $("input[name=name]").val()
     user_email = $("input[name=email]").val()
@@ -33,31 +31,11 @@ $ ->
     proceed = true
     content = "Tournament Type:" + " " + tournament_type + "\n \n" + "------------------------------------------" + "\n \n" + "Name:" + " " + user_name + "\n \n" + "------------------------------------------" + "\n \n" + "Email:" + " " + user_email + "\n \n" + "------------------------------------------" + "\n \n" + "Phone:" + " " + user_phone + "\n \n" + "------------------------------------------" + "\n \n" + "Choice 1:" + " " + preferred_date + "\n \n"
     textArea = $("textarea[name=message]").val(content)
-    if tournament_type is "Select"
-      $("select#tournament").css "border-color", "red"
-      proceed = false
-    if user_name is ""
-      $("input[name=name]").css "border-color", "red"
-      proceed = false
-    if user_email is ""
-      $("input[name=email]").css "border-color", "red"
-      proceed = false
-    if user_phone is ""
-      $("input[name=phone]").css "border-color", "red"
-      proceed = false
-    if choice1 is "Choose"
-      $("select#choice1").css "border-color", "red"
-      proceed = false
-    if choice1 is "Choose"
-      $("select#choice2").css "border-color", "red"
-      proceed = false
-    if user_message is ""
-      $("textarea[name=message]").css "border-color", "red"
-      proceed = false
-    
+
     #everything looks good! proceed...
     if proceed
       #data to be sent to server
+      console.log 'hey'
       post_data =
         userName: user_name
         userEmail: user_email
@@ -85,6 +63,55 @@ $ ->
         return
       ), "json"
     return
+
+
+
+
+  $("#free_agent_btn").on 'click', (e) ->
+    e.preventDefault()
+    tournament_type = $("select#tournament").val()
+    user_name = $("input[name=name]").val()
+    user_email = $("input[name=email]").val()
+    user_phone = $("input[name=phone]").val()
+    preferred_date = $("select#choice1").val()
+    user_message = $("textarea[name=message]").val()
+    
+    #get input field values
+    # tournament_type = $("select#tournament").val()
+    # user_name = $("input[name=name]").val()
+    # user_email = $("input[name=email]").val()
+    # user_phone = $("input[name=phone]").val()
+    # preferred_date = $("select#choice1").val()
+    # user_message = $("textarea[name=message]").val()
+    
+    # #simple validation at client's end
+    # #we simply change border color to red if empty field using .css()
+    # proceed = true
+    # content = "Tournament Type:" + " " + tournament_type + "\n \n" + "------------------------------------------" + "\n \n" + "Name:" + " " + user_name + "\n \n" + "------------------------------------------" + "\n \n" + "Email:" + " " + user_email + "\n \n" + "------------------------------------------" + "\n \n" + "Phone:" + " " + user_phone + "\n \n" + "------------------------------------------" + "\n \n" + "Choice 1:" + " " + preferred_date + "\n \n"
+    # textArea = $("textarea[name=message]").val(content)
+    if tournament_type is "Select"
+      $("select#tournament").css "border-color", "red"
+      proceed = false
+    if user_name is ""
+      $("input[name=name]").css "border-color", "red"
+      proceed = false
+    if user_email is ""
+      $("input[name=email]").css "border-color", "red"
+      proceed = false
+    if user_phone is ""
+      $("input[name=phone]").css "border-color", "red"
+      proceed = false
+    if choice1 is "Choose"
+      $("select#choice1").css "border-color", "red"
+      proceed = false
+    if choice1 is "Choose"
+      $("select#choice2").css "border-color", "red"
+      proceed = false
+    if user_message is ""
+      $("textarea[name=message]").css "border-color", "red"
+      proceed = false
+    
+
 
 
   #reset previously set border colors and hide all message on .keyup()
