@@ -18,7 +18,8 @@ $ ->
     $("#result").slideUp()
     return
 
-  $("#free_agent_btn").click ->
+  $("#free_agent_btn").on 'click', (e) ->
+    e.preventDefault()
     #get input field values
     tournament_type = $("select#tournament").val()
     user_name = $("input[name=name]").val()
