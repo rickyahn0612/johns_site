@@ -90,13 +90,12 @@
             var user_email      = $('input[name=email]').val();
             var user_phone      = $('input[name=phone]').val();
             var preferred_date  = $('select#choice1').val();
-            var preferred_date2  = $('select#choice2').val();
             var user_message    = $('textarea[name=message]').val();
             
             //simple validation at client's end
             //we simply change border color to red if empty field using .css()
             var proceed = true;
-            var content = 'Tournament Type:' + ' ' + tournament_type + "\n \n" + "------------------------------------------" + "\n \n"  + 'Name:' + ' ' + user_name + "\n \n" + "------------------------------------------" + "\n \n" + 'Email:' + ' ' + user_email + "\n \n" + "------------------------------------------" + "\n \n" + 'Phone:' + ' ' + user_phone + "\n \n" + "------------------------------------------" + "\n \n" + 'Day:' + "\n \n" + preferred_date  + "\n \n" + preferred_date2
+            var content = 'Tournament Type:' + ' ' + tournament_type + "\n \n" + "------------------------------------------" + "\n \n"  + 'Name:' + ' ' + user_name + "\n \n" + "------------------------------------------" + "\n \n" + 'Email:' + ' ' + user_email + "\n \n" + "------------------------------------------" + "\n \n" + 'Phone:' + ' ' + user_phone + "\n \n" + "------------------------------------------" + "\n \n" + 'Day:' + "\n \n" + preferred_date  
 
             var textArea = $('textarea[name=message]').val(content);
 
@@ -121,10 +120,7 @@
               $('select#choice1').css('border-color','red'); 
                 proceed = false;
             }
-            if(preferred_date2=="Choose") {
-              $('select#choice2').css('border-color','red'); 
-                proceed = false;
-            }
+
             if(user_message=="") {  
                 $('textarea[name=message]').css('border-color','red'); 
                 proceed = false;

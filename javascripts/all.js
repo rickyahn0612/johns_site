@@ -24,13 +24,19 @@
     });
     tournamentType = $('select#tournament').val();
     $('select#tournament').change(function() {
+      if ($(this).val() === 'Select') {
+        $('#choice1').find('option').remove();
+      }
       if ($(this).val() === 'October Free Play') {
-        $('#choice2').hide();
-        $('#choice1').show();
+        $('#choice1').find('option').remove();
+        $('#choice1').append('<option value="Monday Night / 5v5 men ">Monday Night / 5v5 men </option>');
+        $('#choice1').append('<option value="Tuesday Night / 5v5 Coed">Tuesday Night / 5v5 Coed</option>');
       }
       if ($(this).val() === 'Winter Registration') {
-        $('#choice2').show();
-        return $('#choice1').hide();
+        $('#choice1').find('option').remove();
+        $('#choice1').append('<option value="Monday Night / 5v5 men ">Monday Night / 5v5 men </option>');
+        $('#choice1').append('<option value="Tuesday Night / 5v5 Coed">Tuesday Night / 5v5 Coed</option>');
+        return $('#choice1').append('<option value="Wednesday Night/ 5v5 Men">Wednesday Night/ 5v5 Men</option>');
       }
     });
     $("#free_agent_btn").click(function() {
@@ -60,7 +66,7 @@
         $("input[name=phone]").css("border-color", "red");
         proceed = false;
       }
-      if (choice1 === "Choose") {
+      if (preferred_date === "Choose") {
         $("select#choice1").css("border-color", "red");
         proceed = false;
       }
