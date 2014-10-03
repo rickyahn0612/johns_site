@@ -11,6 +11,18 @@ $ ->
     )
   )
 
+  tournamentType = $('select#tournament').val()
+  
+
+  $('select#tournament').change ->
+    if $(this).val() == 'October Free Play'
+      $('#choice2').hide()
+      $('#choice1').show()
+    if $(this).val() == 'Winter Registration'
+      $('#choice2').show()
+      $('#choice1').hide()
+    
+
   $("#free_agent_btn").click ->
     
     #get input field values
