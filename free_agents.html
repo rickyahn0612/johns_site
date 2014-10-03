@@ -225,6 +225,11 @@
                   $('input[name=team_name]').css('border-color','red'); 
                   proceed = false;
               }
+              if(day=="Choose") {
+                $('select#choice1').css('border-color','red'); 
+                  proceed = false;
+                
+              }
               if(manager_name==""){ 
                   $('input[name=manager_name]').css('border-color','red'); 
                   proceed = false;

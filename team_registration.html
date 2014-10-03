@@ -225,6 +225,11 @@
                   $('input[name=team_name]').css('border-color','red'); 
                   proceed = false;
               }
+              if(day=="Choose") {
+                $('select#choice1').css('border-color','red'); 
+                  proceed = false;
+                
+              }
               if(manager_name==""){ 
                   $('input[name=manager_name]').css('border-color','red'); 
                   proceed = false;
@@ -490,16 +495,8 @@
               <div class='row'>
                 <div class='col-xs-4'>
                   <label for='choice1'></label>
-                  <select class='form-control' id='choice1' name='choice1' style='width: 275px; display: none;'>
+                  <select class='form-control' id='choice1' name='choice1' style='width: 275px;'>
                     <option value='Choose'>Choose</option>
-                    <option value='Monday Night / 5v5 men '>Monday Night / 5v5 Men</option>
-                    <option value='Tuesday Night / 5v5 Coed'>Tuesday Night / 5v5 Coed</option>
-                  </select>
-                  <select class='form-control' id='choice2' name='choice1' style='width: 275px;'>
-                    <option value='Choose'>Choose</option>
-                    <option value='Monday Night / 5v5 men '>Monday Night / 5v5 Men</option>
-                    <option value='Tuesday Night / 5v5 Coed'>Tuesday Night / 5v5 Coed</option>
-                    <option class='wednesday' value='Wednesday'>Wednesday Night/ 5v5 Men</option>
                   </select>
                 </div>
               </div>
