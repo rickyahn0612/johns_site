@@ -1,6 +1,6 @@
 (function() {
   $(function() {
-    var adjSize, iedetect;
+    var adjSize, iedetect, tournamentType;
     $('body').fadeIn(1000, function() {
       return $('.banner-content-container #banner-main-header').animate({
         'top': 0,
@@ -21,6 +21,17 @@
           });
         });
       });
+    });
+    tournamentType = $('select#tournament').val();
+    $('select#tournament').change(function() {
+      if ($(this).val() === 'October Free Play') {
+        $('#choice2').hide();
+        $('#choice1').show();
+      }
+      if ($(this).val() === 'Winter Registration') {
+        $('#choice2').show();
+        return $('#choice1').hide();
+      }
     });
     $("#free_agent_btn").click(function() {
       var content, post_data, preferred_date, proceed, textArea, tournament_type, user_email, user_message, user_name, user_phone;
