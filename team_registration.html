@@ -96,7 +96,7 @@
             //simple validation at client's end
             //we simply change border color to red if empty field using .css()
             var proceed = true;
-            var content = 'Tournament Type:' + ' ' + tournament_type + "\n \n" + "------------------------------------------" + "\n \n"  + 'Name:' + ' ' + user_name + "\n \n" + "------------------------------------------" + "\n \n" + 'Email:' + ' ' + user_email + "\n \n" + "------------------------------------------" + "\n \n" + 'Phone:' + ' ' + user_phone + "\n \n" + "------------------------------------------" + "\n \n" + 'Day' + "\n \n" + preferred_date  + "\n \n" + preferred_date2
+            var content = 'Tournament Type:' + ' ' + tournament_type + "\n \n" + "------------------------------------------" + "\n \n"  + 'Name:' + ' ' + user_name + "\n \n" + "------------------------------------------" + "\n \n" + 'Email:' + ' ' + user_email + "\n \n" + "------------------------------------------" + "\n \n" + 'Phone:' + ' ' + user_phone + "\n \n" + "------------------------------------------" + "\n \n" + 'Day:' + "\n \n" + preferred_date  + "\n \n" + preferred_date2
 
             var textArea = $('textarea[name=message]').val(content);
 
@@ -117,18 +117,19 @@
                 $('input[name=phone]').css('border-color','red'); 
                 proceed = false;
             }
-            if(choice1=="Choose") {    
-                $('select#choice1').css('border-color','red'); 
+            if(preferred_date=="Choose") {
+              $('select#choice1').css('border-color','red'); 
                 proceed = false;
             }
-            if(choice1=="Choose") {    
-                $('select#choice2').css('border-color','red'); 
+            if(preferred_date2=="Choose") {
+              $('select#choice2').css('border-color','red'); 
                 proceed = false;
             }
             if(user_message=="") {  
                 $('textarea[name=message]').css('border-color','red'); 
                 proceed = false;
             }
+
 
             //everything looks good! proceed...
             if(proceed) 
