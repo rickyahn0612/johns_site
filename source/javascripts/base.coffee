@@ -23,7 +23,7 @@ $ ->
       $('#choice1').append('<option value="Monday Night / 5v5 men ">Monday Night / 5v5 men </option>')
       $('#choice1').append('<option value="Tuesday Night / 5v5 Coed">Tuesday Night / 5v5 Coed</option>')
 
-    if $(this).val() == 'Winter Registration'
+    if $(this).val() == 'Fall Registration'
       $('#choice1').find('option').remove()
       $('#choice1').append('<option value="Choose">Choose')
       $('#choice1').append('<option value="Monday Night / 5v5 men ">Monday Night / 5v5 men </option>')
