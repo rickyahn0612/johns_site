@@ -36,7 +36,7 @@
       if ($(this).val() === 'Fall Registration') {
         $('#choice1').find('option').remove();
         $('#choice1').append('<option value="Choose">Choose');
-        $('#choice1').append('<option value="Monday Night / 5v5 men ">Monday Night / 5v5 men </option>');
+        $('#choice1').append('<option value="Monday Night / 5v5 Men ">Monday Night / 5v5 Men </option>');
         $('#choice1').append('<option value="Tuesday Night / 5v5 Coed">Tuesday Night / 5v5 Coed</option>');
         return $('#choice1').append('<option value="Wednesday Night/ 5v5 Men">Wednesday Night/ 5v5 Men</option>');
       }
