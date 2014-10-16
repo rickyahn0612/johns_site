@@ -30,8 +30,8 @@
       if ($(this).val() === 'October Free Play') {
         $('#choice1').find('option').remove();
         $('#choice1').append('<option value="Choose">Choose');
-        $('#choice1').append('<option value="Monday Night / 5v5 men ">Monday Night / 5v5 Men / Coed </option>');
-        $('#choice1').append('<option value="Wednesday Night / 5v5 Coed">Wednesday Night / 5v5 Men / Coed</option>');
+        $('#choice1').append('<option value="Monday Night / 5v5 Men / Coed ">Monday Night / 5v5 Men / Coed </option>');
+        $('#choice1').append('<option value="Wednesday Night / 5v5 Men / Coed">Wednesday Night / 5v5 Men / Coed</option>');
       }
       if ($(this).val() === 'Fall Registration') {
         $('#choice1').find('option').remove();
