@@ -90,12 +90,14 @@
             var user_email      = $('input[name=email]').val();
             var user_phone      = $('input[name=phone]').val();
             var preferred_date  = $('select#choice1').val();
+            var preferred_date2  = $('select#choice3').val();
+            var comment         = $('textarea[name=comments]').val();
             var user_message    = $('textarea[name=message]').val();
             
             //simple validation at client's end
             //we simply change border color to red if empty field using .css()
             var proceed = true;
-            var content = 'Tournament Type:' + ' ' + tournament_type + "\n \n" + "------------------------------------------" + "\n \n"  + 'Name:' + ' ' + user_name + "\n \n" + "------------------------------------------" + "\n \n" + 'Email:' + ' ' + user_email + "\n \n" + "------------------------------------------" + "\n \n" + 'Phone:' + ' ' + user_phone + "\n \n" + "------------------------------------------" + "\n \n" + 'Day:' + "\n \n" + preferred_date  
+            var content = 'Tournament Type:' + ' ' + tournament_type + "\n \n" + "------------------------------------------" + "\n \n"  + 'Name:' + ' ' + user_name + "\n \n" + "------------------------------------------" + "\n \n" + 'Email:' + ' ' + user_email + "\n \n" + "------------------------------------------" + "\n \n" + 'Phone:' + ' ' + user_phone + "\n \n" + "------------------------------------------" + "\n \n" + 'Preferred Day 1:' + "\n \n" + preferred_date + "\n \n" + "------------------------------------------" + "\n \n" + 'Preferred Day 2:' + "\n \n" + preferred_date2 + "\n \n" + "------------------------------------------" + "\n \n" + 'Comment:' + "\n \n" + comment 
 
             var textArea = $('textarea[name=message]').val(content);
 
@@ -435,7 +437,7 @@
     <br>
     <br>
     <br>
-    <div class='about_content_wrapper' style='height: 800px;'>
+    <div class='about_content_wrapper' style='height: 1000px;'>
       <div class='left_content float_left'>
         <div class='container'>
           <h1>Free Agent Registration Form</h1>
@@ -494,22 +496,44 @@
               </label>
               <br>
               <br>
-              <h5>
-                <strong>Day: <span class='required'>*</span></strong>
-              </h5>
-              <div class='row'>
-                <div class='col-xs-4'>
-                  <label for='choice1'></label>
-                  <select class='form-control' id='choice1' name='choice1' style='width: 275px;'>
-                    <option value='Choose'>Choose</option>
-                  </select>
-                  <select class='form-control' id='choice2' name='choice1' style='width: 275px; display: none;'>
-                    <option value='Choose'>Choose</option>
-                    <option value='Monday Night / 5v5 men '>Monday Night / 5v5 Men</option>
-                    <option value='Tuesday Night / 5v5 Coed'>Tuesday Night / 5v5 Coed</option>
-                    <option value='Wednesday'>Wednesday Night/ 5v5 Men</option>
-                  </select>
-                </div>
+              <div class='form-group'>
+                <h5 style='margin: 0 0 5px 0; padding: 0;'>
+                  <span>Day: <span class='required'>*</span></span>
+                </h5>
+                <label for='choice1'></label>
+                <select class='form-control' id='choice1' name='choice1' style='width: 275px'>
+                  <option value='Choose 1'>First Choice</option>
+                </select>
+                <select class='form-control' id='choice2' name='choice1' style='width: 275px; display: none'>
+                  <option value='Choose 1'>First Choice</option>
+                  <option value='Monday Night / 5v5 men '>Monday Night / 5v5 Men</option>
+                  <option value='Tuesday Night / 5v5 Coed'>Tuesday Night / 5v5 Coed</option>
+                  <option value='Wednesday'>Wednesday Night/ 5v5 Men</option>
+                </select>
+              </div>
+              <div class='form-group' style='margin-left: 40px;'>
+                <h5 style='margin: 0 0 5px 0 ; padding: 0;'>
+                  <span>Day: <span class='required'>*</span></span>
+                </h5>
+                <label for='choice2'></label>
+                <select class='form-control' id='choice3' name='choice1' style='width: 275px'>
+                  <option value='Choose 2'>Second Choice</option>
+                </select>
+                <select class='form-control' id='choice4' name='choice1' style='width: 275px; display: none'>
+                  <option value='Choose 2'>Second Choice</option>
+                  <option value='Monday Night / 5v5 men '>Monday Night / 5v5 Men</option>
+                  <option value='Tuesday Night / 5v5 Coed'>Tuesday Night / 5v5 Coed</option>
+                  <option value='Wednesday'>Wednesday Night/ 5v5 Men</option>
+                </select>
+              </div>
+              <br>
+              <br>
+              <div class='form-group'>
+                <label for='comments'>
+                  <span>Comments</span>
+                  <br>
+                  <textarea class='form-control' name='comments' style='width: 600px; height: 200px;' value='Comment'></textarea>
+                </label>
               </div>
             </div>
           </fieldset>

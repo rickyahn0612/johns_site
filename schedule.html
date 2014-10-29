@@ -90,12 +90,14 @@
             var user_email      = $('input[name=email]').val();
             var user_phone      = $('input[name=phone]').val();
             var preferred_date  = $('select#choice1').val();
+            var preferred_date2  = $('select#choice3').val();
+            var comment         = $('textarea[name=comments]').val();
             var user_message    = $('textarea[name=message]').val();
             
             //simple validation at client's end
             //we simply change border color to red if empty field using .css()
             var proceed = true;
-            var content = 'Tournament Type:' + ' ' + tournament_type + "\n \n" + "------------------------------------------" + "\n \n"  + 'Name:' + ' ' + user_name + "\n \n" + "------------------------------------------" + "\n \n" + 'Email:' + ' ' + user_email + "\n \n" + "------------------------------------------" + "\n \n" + 'Phone:' + ' ' + user_phone + "\n \n" + "------------------------------------------" + "\n \n" + 'Day:' + "\n \n" + preferred_date  
+            var content = 'Tournament Type:' + ' ' + tournament_type + "\n \n" + "------------------------------------------" + "\n \n"  + 'Name:' + ' ' + user_name + "\n \n" + "------------------------------------------" + "\n \n" + 'Email:' + ' ' + user_email + "\n \n" + "------------------------------------------" + "\n \n" + 'Phone:' + ' ' + user_phone + "\n \n" + "------------------------------------------" + "\n \n" + 'Preferred Day 1:' + "\n \n" + preferred_date + "\n \n" + "------------------------------------------" + "\n \n" + 'Preferred Day 2:' + "\n \n" + preferred_date2 + "\n \n" + "------------------------------------------" + "\n \n" + 'Comment:' + "\n \n" + comment 
 
             var textArea = $('textarea[name=message]').val(content);
 
