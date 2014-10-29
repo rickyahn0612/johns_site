@@ -52,67 +52,6 @@
         return $('#form-container-last').show();
       }
     });
-    $("#free_agent_btn").click(function() {
-      var comment, content, post_data, preferred_date, preferred_date2, proceed, textArea, tournament_type, user_email, user_message, user_name, user_phone;
-      tournament_type = $("select#tournament").val();
-      user_name = $("input[name=name]").val();
-      user_email = $("input[name=email]").val();
-      user_phone = $("input[name=phone]").val();
-      preferred_date = $("select#choice1").val();
-      preferred_date2 = $("select#choice3").val();
-      comment = $('textarea[name=comments]').val();
-      user_message = $("textarea[name=message]").val();
-      proceed = true;
-      content = "Tournament Type:" + " " + tournament_type + "\n \n" + "------------------------------------------" + "\n \n" + "Name:" + " " + user_name + "\n \n" + "------------------------------------------" + "\n \n" + "Email:" + " " + user_email + "\n \n" + "------------------------------------------" + "\n \n" + "Phone:" + " " + user_phone + "\n \n" + "------------------------------------------" + "\n \n" + "Preferred Date 1:" + " " + preferred_date + "\n \n" + "\n \n" + "------------------------------------------" + "\n \n" + "Preferred Date 2:" + " " + preferred_date2 + "\n \n" + "------------------------------------------" + "\n \n" + "Comment:" + " " + comment + "\n \n";
-      textArea = $("textarea[name=message]").val(content);
-      console.log(content);
-      if (tournament_type === "Select") {
-        $("select#tournament").css("border-color", "red");
-        proceed = false;
-      }
-      if (user_name === "") {
-        $("input[name=name]").css("border-color", "red");
-        proceed = false;
-      }
-      if (user_email === "") {
-        $("input[name=email]").css("border-color", "red");
-        proceed = false;
-      }
-      if (user_phone === "") {
-        $("input[name=phone]").css("border-color", "red");
-        proceed = false;
-      }
-      if (preferred_date === "Choose") {
-        $("select#choice1").css("border-color", "red");
-        proceed = false;
-      }
-      if (choice1 === "Choose") {
-        $("select#choice2").css("border-color", "red");
-        proceed = false;
-      }
-      if (user_message === "") {
-        $("textarea[name=message]").css("border-color", "red");
-        proceed = false;
-      }
-      if (proceed) {
-        post_data = {
-          userName: user_name,
-          userEmail: user_email,
-          userMessage: user_message
-        };
-        $.post("free_agent_form.php", post_data, (function(response) {
-          var output;
-          if (response.type === "error") {
-            output = "<div class=\"error\">" + response.text + "</div>";
-          } else {
-            output = "<div class=\"success\">" + response.text + "</div>";
-            $("#free-agent-form-container").fadeOut(function(e) {
-              $("#form-success-message").fadeIn();
-            });
-          }
-        }), "json");
-      }
-    });
     $("#registration_submit_btn").click(function() {
       var content, day, form0, form1, form2, form3, form4, form5, form6, form7, form8, form9, formct, manager_name, player1, player2, player3, player4, player5, player6, player7, player8, post_data, proceed, team_name, textArea, tournament_type, user_email, user_message, user_phone;
       tournament_type = $("select#tournament").val();
