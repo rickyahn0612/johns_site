@@ -50,14 +50,26 @@
                   %input#phone{name: "phone", placeholder: "Enter Manager Phone Number", type: "text", class: 'form-control', style: 'width: 400px;'}
               %br
               %br
-              %h5
-                %strong Day: <span class='required'>*</span> 
-              .row
-                .col-xs-4
-                  %label{for: 'choice1'}
-                  %select#choice1{class: 'form-control', name: 'choice1', style: 'width: 275px;'}
-                    %option{value: 'Choose'} Choose
-
+              .form-group
+                %h5
+                  %strong Day: <span class='required'>*</span> 
+                %label{for: 'choice1'}
+                %select#choice1{class: 'form-control', name: 'choice1', style: 'width: 275px;'}
+                  %option{value: 'Choose'} First Choice
+              .form-group{style: 'margin-left: 40px;'}
+                %h5
+                  %strong Day: <span class='required'>*</span> 
+                %label{for: 'choice2'}
+                %select#choice3{class: 'form-control', name: 'choice1', style: 'width: 275px;'}
+                  %option{value: 'Choose'} Second Choice
+              %br
+              %br
+              .form-group 
+                %label{for: 'comments'} 
+                  %span Comments
+                  %br
+                  %textarea{name: 'comments', value: 'Comment', class: 'form-control', style: 'width: 600px; height: 200px;'}
+              %br
               .form-group
                 %label{for: "message"}
                   %br
