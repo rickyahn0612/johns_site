@@ -54,12 +54,13 @@ $ ->
     user_email = $("input[name=email]").val()
     user_phone = $("input[name=phone]").val()
     preferred_date = $("select#choice1").val()
+    preferred_date = $("select#choice3").val()
     user_message = $("textarea[name=message]").val()
     
     #simple validation at client's end
     #we simply change border color to red if empty field using .css()
     proceed = true
-    content = "Tournament Type:" + " " + tournament_type + "\n \n" + "------------------------------------------" + "\n \n" + "Name:" + " " + user_name + "\n \n" + "------------------------------------------" + "\n \n" + "Email:" + " " + user_email + "\n \n" + "------------------------------------------" + "\n \n" + "Phone:" + " " + user_phone + "\n \n" + "------------------------------------------" + "\n \n" + "Choice 1:" + " " + preferred_date + "\n \n"
+    content = "Tournament Type:" + " " + tournament_type + "\n \n" + "------------------------------------------" + "\n \n" + "Name:" + " " + user_name + "\n \n" + "------------------------------------------" + "\n \n" + "Email:" + " " + user_email + "\n \n" + "------------------------------------------" + "\n \n" + "Phone:" + " " + user_phone + "\n \n" + "------------------------------------------" + "\n \n" + "Preferred Date 1:" + " " + preferred_date + "\n \n" + "\n \n" + "------------------------------------------" + "\n \n" + "Preferred Date 2:" + " " + preferred_date2 + "\n \n"
     textArea = $("textarea[name=message]").val(content)
     if tournament_type is "Select"
       $("select#tournament").css "border-color", "red"
