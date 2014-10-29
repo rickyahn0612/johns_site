@@ -181,7 +181,8 @@
               var user_email      = $('input[name=email]').val();
               var user_phone      = $('input[name=phone]').val();
               var day             = $('select#choice1').val();
-              var preferred_date2  = $('select#choice2').val();
+              var preferred_date2  = $('select#choice3').val();
+              var comment         = $('textarea[name=comments]').val();
               var user_message    = $('textarea[name=message]').val();
               var player1         = $('input[name=player1]').val();
               var player2         = $('input[name=player2]').val();
@@ -212,8 +213,8 @@
                 'Manager Name:' + ' ' + manager_name + "\n \n" + "------------------------------------------" + "\n \n" + 
                 'Team Name:' + ' ' + team_name + "\n \n" + "------------------------------------------" + "\n \n" + 
                 'Manager Email:' + ' ' + user_email + "\n \n" + "------------------------------------------" + "\n \n" + 
-                'Manager Phone:' + ' ' + user_phone + "\n \n" + 
-                'Day:' + ' ' + day + "\n \n" + preferred_date2 + "\n \n" + "------------------------------------------" + "\n \n" + 
+                'Manager Phone:' + ' ' + user_phone + "\n \n" + "------------------------------------------" + "\n \n" + 
+                'Preferred Day 1:' + ' ' + day + "\n \n" + 'Preferred Day 2:' + ' ' + preferred_date2 + "\n \n" + "------------------------------------------" + "\n \n" + "Comment" + "\n \n" + comment + "\n \n" + "------------------------------------------" + "\n \n" +
                 'PLAYERS:' + "\n \n" + '1. ' + player1 + "\n \n" + '2. ' + player2 + "\n \n" + '3. ' + player3 + "\n \n" + '4. ' + player4 + "\n \n" + '5. '+ player5 + "\n \n" + '6. ' + player6 + "\n \n" + '7. ' + player7 + "\n \n" + '8. ' + player8 + "\n \n" + "------------------------------------------" + "\n \n" + 
                 "CC INFO:" + "\n \n" + form0 + "\n \n" + form1 + "\n \n" + form2 + "\n \n" + form3 + "\n \n" + formct + "\n \n"  + "------------------------------------------" + "\n \n" + 
                 "BILLING INFO:"  + "\n \n"  + form4 + "\n \n" + form5 + "\n \n" + form6 + "\n \n" + form7 + "\n \n" + form8 + "\n \n" + form9 
@@ -491,17 +492,34 @@
               </div>
               <br>
               <br>
-              <h5>
-                <strong>Day: <span class='required'>*</span></strong>
-              </h5>
-              <div class='row'>
-                <div class='col-xs-4'>
-                  <label for='choice1'></label>
-                  <select class='form-control' id='choice1' name='choice1' style='width: 275px;'>
-                    <option value='Choose'>Choose</option>
-                  </select>
-                </div>
+              <div class='form-group'>
+                <h5>
+                  <strong>Day: <span class='required'>*</span></strong>
+                </h5>
+                <label for='choice1'></label>
+                <select class='form-control' id='choice1' name='choice1' style='width: 275px;'>
+                  <option value='Choose'>First Choice</option>
+                </select>
               </div>
+              <div class='form-group' style='margin-left: 40px;'>
+                <h5>
+                  <strong>Day: <span class='required'>*</span></strong>
+                </h5>
+                <label for='choice2'></label>
+                <select class='form-control' id='choice3' name='choice1' style='width: 275px;'>
+                  <option value='Choose'>Second Choice</option>
+                </select>
+              </div>
+              <br>
+              <br>
+              <div class='form-group'>
+                <label for='comments'>
+                  <span>Comments</span>
+                  <br>
+                  <textarea class='form-control' name='comments' style='width: 600px; height: 200px;' value='Comment'></textarea>
+                </label>
+              </div>
+              <br>
               <div class='form-group'>
                 <label for='message'>
                   <br>
