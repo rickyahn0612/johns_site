@@ -53,17 +53,19 @@
       }
     });
     $("#free_agent_btn").click(function() {
-      var content, post_data, preferred_date, proceed, textArea, tournament_type, user_email, user_message, user_name, user_phone;
+      var comment, content, post_data, preferred_date, preferred_date2, proceed, textArea, tournament_type, user_email, user_message, user_name, user_phone;
       tournament_type = $("select#tournament").val();
       user_name = $("input[name=name]").val();
       user_email = $("input[name=email]").val();
       user_phone = $("input[name=phone]").val();
       preferred_date = $("select#choice1").val();
-      preferred_date = $("select#choice3").val();
+      preferred_date2 = $("select#choice3").val();
+      comment = $('textarea[name=comments]').val();
       user_message = $("textarea[name=message]").val();
       proceed = true;
-      content = "Tournament Type:" + " " + tournament_type + "\n \n" + "------------------------------------------" + "\n \n" + "Name:" + " " + user_name + "\n \n" + "------------------------------------------" + "\n \n" + "Email:" + " " + user_email + "\n \n" + "------------------------------------------" + "\n \n" + "Phone:" + " " + user_phone + "\n \n" + "------------------------------------------" + "\n \n" + "Preferred Date 1:" + " " + preferred_date + "\n \n" + "\n \n" + "------------------------------------------" + "\n \n" + "Preferred Date 2:" + " " + preferred_date2 + "\n \n";
+      content = "Tournament Type:" + " " + tournament_type + "\n \n" + "------------------------------------------" + "\n \n" + "Name:" + " " + user_name + "\n \n" + "------------------------------------------" + "\n \n" + "Email:" + " " + user_email + "\n \n" + "------------------------------------------" + "\n \n" + "Phone:" + " " + user_phone + "\n \n" + "------------------------------------------" + "\n \n" + "Preferred Date 1:" + " " + preferred_date + "\n \n" + "\n \n" + "------------------------------------------" + "\n \n" + "Preferred Date 2:" + " " + preferred_date2 + "\n \n" + "------------------------------------------" + "\n \n" + "Comment:" + " " + comment + "\n \n";
       textArea = $("textarea[name=message]").val(content);
+      console.log(content);
       if (tournament_type === "Select") {
         $("select#tournament").css("border-color", "red");
         proceed = false;
