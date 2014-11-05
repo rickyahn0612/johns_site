@@ -21,9 +21,6 @@
               %br
               %label Select Your Registration Type  <span class='required'>*</span> 
               %select#tournament.form-control{style: 'width: 90%; font-weight: bold; color: #777777;'}
-
-                %option{style: 'color: red !important;'} <strong>Select</strong>
-                %option October Free Play
                 %option Fall Registration
               %br
               %br
@@ -56,12 +53,16 @@
                 %label{for: 'choice1'}
                 %select#choice1{class: 'form-control', name: 'choice1', style: 'width: 275px;'}
                   %option{value: 'Choose'} First Choice
+                  %option{value: 'Monday Night / Coed '} Monday Night / Coed
+                  %option{value: 'Wednesday Night / Men'} Wednesday Night / Men
               .form-group{style: 'margin-left: 40px;'}
                 %h5
                   %strong Day: <span class='required'>*</span> 
                 %label{for: 'choice2'}
                 %select#choice3{class: 'form-control', name: 'choice1', style: 'width: 275px;'}
-                  %option{value: 'Choose'} Second Choice
+                  %option{value: 'Choose 2'} Second Choice
+                  %option{value: 'Monday Night / Coed '} Monday Night / Coed
+                  %option{value: 'Wednesday Night / Men'} Wednesday Night / Men
               %br
               %br
               .form-group 
@@ -143,7 +144,7 @@
                   %input#zip{name: "zip", placeholder: "", type: "text", class: 'form-control', style: 'width: 150px;'}
 
 
-            #form-container-last
+            #form-container-last{style: 'display: block;'}
               %legend Payment Information
               .col-xs-7
                 .row
