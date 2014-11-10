@@ -849,6 +849,37 @@ body {
 }
 
 
+.date-container {
+  .month-header {
+    background: #1D1D1D;
+    color: white;
+    text-align: center;
+    padding: 2px;
+    height: 30px;
+  }
+
+  .date-container {
+    text-align: center;
+    background: #111111;
+    color: white;
+    font-size: 30px;
+  }
+}
+
+.team-info {
+  h2 {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.game-info {
+  font-size: 10px;
+}
+
+.game-type {
+  font-size: 10px;
+}
 
 
 
