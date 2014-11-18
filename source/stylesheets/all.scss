@@ -906,7 +906,23 @@ body {
   }
 }
 
+#schedule-container {
+  table {
+    img {
+      width: 12px;
+      position: relative;
+      top: -2px;
+      right: -2px;
+    }
+    width: 700px;
 
+    tr {
+      td:first-child {
+        width: 600px; 
+      }
+    }
+  }
+}
 
 
 
