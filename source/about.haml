@@ -22,15 +22,43 @@
         %p
           Our facility is an impressive classic industrial warehouse event aesthetics with modern artistic sensibilities. The arena is unique with over 10,000+ square feet that provides ample room for the best possible indoor futsal experience. 
         %br
-        .row
+        .row#about-image-gallery
           .col-xs-3
-            = image_tag 'images/soccer1.png', style: 'width: 130px;'
+            .image-container
+              %a{"data-target" => ".bs-example-modal-lg", "data-toggle" => "modal"}
+                %img.image{:src => "images/facility_image_03.jpg", style: 'width: 130x; height: 111px'}
+            .modal.fade.bs-example-modal-lg{"aria-hidden" => "true", "aria-labelledby" => "myLargeModalLabel", :role => "dialog", :tabindex => "-1"} 
+              .modal-dialog.modal-lg
+                .modal-content
+                  = image_tag('facility_image_03.jpg')
           .col-xs-3
-            = image_tag 'images/soccer2.png', style: 'width: 130px;'
+            .image-container
+              %a{"data-target" => ".bs-example-modal-lg2", "data-toggle" => "modal"}
+                %img.image{:src => "images/facility_image_04.jpg", style: 'width: 130x; height: 111px'}
+            .modal.fade.bs-example-modal-lg2{"aria-hidden" => "true", "aria-labelledby" => "myLargeModalLabel", :role => "dialog", :tabindex => "-1"} 
+              .modal-dialog.modal-lg
+                .modal-content
+                  = image_tag('facility_image_04.jpg')
+ 
+
           .col-xs-3
-            = image_tag 'images/soccer3.png', style: 'width: 130px;'
+            .image-container
+              %a{"data-target" => ".bs-example-modal-lg3", "data-toggle" => "modal"}
+                %img.image{:src => "images/facility_image_05.jpg", style: 'width: 130x; height: 111px'}
+            .modal.fade.bs-example-modal-lg3{"aria-hidden" => "true", "aria-labelledby" => "myLargeModalLabel", :role => "dialog", :tabindex => "-1"} 
+              .modal-dialog.modal-lg
+                .modal-content
+                  = image_tag('facility_image_05.jpg')
+ 
           .col-xs-3
-            = image_tag 'images/soccer4.png', style: 'width: 130px;'
+            .image-container
+              %a{"data-target" => ".bs-example-modal-lg4", "data-toggle" => "modal"}
+                %img.image{:src => "images/facility_image_06.jpg", style: 'width: 130x; height: 111px'}
+            .modal.fade.bs-example-modal-lg4{"aria-hidden" => "true", "aria-labelledby" => "myLargeModalLabel", :role => "dialog", :tabindex => "-1"} 
+              .modal-dialog.modal-lg
+                .modal-content
+                  = image_tag('facility_image_06.jpg')
+ 
         %br
         %hr
         %br

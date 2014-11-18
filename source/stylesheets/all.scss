@@ -925,7 +925,27 @@ body {
 }
 
 
+#about-image-gallery {
+  a {
+  
+    &:hover {
+      cursor: pointer;
+    }
+  }
 
+}
+
+.image-container:hover .image {
+  -webkit-transform:scale(1.3);
+  transform:scale(1.3);
+}
+.image-container {
+  overflow:hidden;
+}
+.image {
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+}
 
 
 
