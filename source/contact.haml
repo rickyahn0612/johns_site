@@ -74,11 +74,14 @@
       %br
       %br
       .social-icons{style: 'font-size: 30px; color: #333333;'}
-        %i.fa.fa-facebook{style:'margin-right: 10px;'}
+        = link_to 'https://www.facebook.com/pages/UrbanFutsal-LA/1485597695058240' do 
+          %i.fa.fa-facebook{style:'margin-right: 10px;'}
         = link_to 'https://twitter.com/UrbanFutsal' do
           %i.fa.fa-twitter{style:'margin-right: 10px;'}
-        %i.fa.fa-instagram{style:'margin-right: 10px;'}
-        %i.fa.fa-youtube
+        = link_to 'http://instagram.com/urbanfutsallosangeles' do 
+          %i.fa.fa-instagram{style:'margin-right: 10px;'}
+        = link_to 'https://www.youtube.com/channel/UCCzRgSjnF11t3HsirOxsLFA' do 
+          %i.fa.fa-youtube
     .clear
 %a{href: '#', id: 'uparrow'}
   %i.glyphicon.glyphicon-arrow-up

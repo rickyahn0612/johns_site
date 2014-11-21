@@ -79,6 +79,10 @@ body {
         padding-right: 20px;
         padding-left: 20px;
         border-right: solid #292929 1px;
+
+        a {
+          color: #bebebe;
+        }
       }
     }
   }
@@ -948,7 +952,11 @@ body {
 }
 
 
-
+  .social-icons {
+    a {
+      color: black;
+    }
+  }
 
 
 
