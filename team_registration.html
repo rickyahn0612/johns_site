@@ -192,6 +192,8 @@
               var player6         = $('input[name=player6]').val();
               var player7         = $('input[name=player7]').val();
               var player8         = $('input[name=player8]').val();
+              var player9         = $('input[name=player9]').val();
+              var player10         = $('input[name=player10]').val();
               var form0           = $('input[name=formnameon]').val();
               var form1            = $('input[name=form1]').val();
               var form2            = $('input[name=form2]').val();
@@ -215,7 +217,7 @@
                 'Manager Email:' + ' ' + user_email + "\n \n" + "------------------------------------------" + "\n \n" + 
                 'Manager Phone:' + ' ' + user_phone + "\n \n" + "------------------------------------------" + "\n \n" + 
                 'Preferred Day 1:' + ' ' + day + "\n \n" + 'Preferred Day 2:' + ' ' + preferred_date2 + "\n \n" + "------------------------------------------" + "\n \n" + "Comment" + "\n \n" + comment + "\n \n" + "------------------------------------------" + "\n \n" +
-                'PLAYERS:' + "\n \n" + '1. ' + player1 + "\n \n" + '2. ' + player2 + "\n \n" + '3. ' + player3 + "\n \n" + '4. ' + player4 + "\n \n" + '5. '+ player5 + "\n \n" + '6. ' + player6 + "\n \n" + '7. ' + player7 + "\n \n" + '8. ' + player8 + "\n \n" + "------------------------------------------" + "\n \n" + 
+                'PLAYERS:' + "\n \n" + '1. ' + player1 + "\n \n" + '2. ' + player2 + "\n \n" + '3. ' + player3 + "\n \n" + '4. ' + player4 + "\n \n" + '5. '+ player5 + "\n \n" + '6. ' + player6 + "\n \n" + '7. ' + player7 + "\n \n" + '8. ' + player8 + "\n \n" + '9. ' + player9 + "\n \n" + '10. ' + player10 + "\n \n"  +  "------------------------------------------" + "\n \n" + 
                 "CC INFO:" + "\n \n" + form0 + "\n \n" + form1 + "\n \n" + form2 + "\n \n" + form3 + "\n \n" + formct + "\n \n"  + "------------------------------------------" + "\n \n" + 
                 "BILLING INFO:"  + "\n \n"  + form4 + "\n \n" + form5 + "\n \n" + form6 + "\n \n" + form7 + "\n \n" + form8 + "\n \n" + form9 
                 console.log(content)
@@ -463,7 +465,8 @@
               <br>
               <label>Select Your Registration Type  <span class='required'>*</span></label>
               <select class='form-control' id='tournament' style='width: 90%; font-weight: bold; color: #777777;'>
-                <option>Fall Registration</option>
+                <option>Winter Registration</option>
+                <option>Januaray Torunament</option>
               </select>
               <br>
               <br>
@@ -565,6 +568,12 @@
                       <li>
                         <label>Player Name</label>
                       </li>
+                      <li>
+                        <label>Player Name</label>
+                      </li>
+                      <li>
+                        <label>Player Name</label>
+                      </li>
                     </ol>
                   </div>
                 </div>
@@ -580,6 +589,8 @@
                     <input class='form-control' id='player6' name='player6' style='margin-bottom: 25px; width: 400px;'>
                     <input class='form-control' id='player7' name='player7' style='margin-bottom: 25px; width: 400px;'>
                     <input class='form-control' id='player8' name='player8' style='margin-bottom: 25px; width: 400px;'>
+                    <input class='form-control' id='player9' name='player9' style='margin-bottom: 25px; width: 400px;'>
+                    <input class='form-control' id='player10' name='player10' style='margin-bottom: 25px; width: 400px;'>
                   </div>
                 </div>
                 <div class='clear'></div>
@@ -674,9 +685,10 @@
                   </div>
                 </div>
               </div>
-              <div class='col-xs-5'>
+              <div class='col-xs-5' id='winter-registration-info'>
                 <div class='col-xs-9' style='border-left: solid 1px #cfcfcf;'>
-                  <h3>Team Registration: $500 for an 8 week season</h3>
+                  <h3 class='winter-info'>Team Registration: $500 for an 8 week season</h3>
+                  <h3 class='tourny-info'>Cash Prize: $1000 For Winning Team</h3>
                   <p>Privacy: Urban Futsal LA completely respects our member's privacy and therefore is committed to keeping your information secure and confidential.</p>
                   <br>
                   <p>For More Information:</p>
