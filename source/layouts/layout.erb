@@ -67,14 +67,6 @@
           }
         });
 
-
-
-
-
-
-
-
-
         $("#contact_form input, #contact_form textarea").keyup(function() {
           $("#contact_form input, #contact_form textarea").css("border-color", "");
           $("#result").slideUp();
@@ -85,23 +77,36 @@
             e.preventDefault();
 
             //get input field values
-            var tournament_type = $('select#tournament').val();
-            var user_name       = $('input[name=name]').val(); 
-            var user_email      = $('input[name=email]').val();
-            var user_phone      = $('input[name=phone]').val();
-            var preferred_date  = $('select#choice1').val();
+            var tournament_type  = $('select#tournament').val();
+            var user_name        = $('input[name=name]').val(); 
+            var user_email       = $('input[name=email]').val();
+            var user_phone       = $('input[name=phone]').val();
+            var preferred_date   = $('select#choice1').val();
             var preferred_date2  = $('select#choice3').val();
-            var comment         = $('textarea[name=comments]').val();
-            var user_message    = $('textarea[name=message]').val();
+            var comment          = $('textarea[name=comments]').val();
+            var user_message     = $('textarea[name=message]').val();
+            var form0            = $('input[name=formnameon]').val();
+            var form1            = $('input[name=form1]').val();
+            var form2            = $('input[name=form2]').val();
+            var form3            = $('input[name=form3]').val();
+            var formct           = $('select#cctnumber').val();
+            var form4            = $('input[name=bfname]').val();
+            var form5            = $('input[name=blname]').val();
+            var form6            = $('input[name=address]').val();
+            var form7            = $('input[name=city]').val();
+            var form8            = $('input[name=state]').val();
+            var form9            = $('input[name=zip]').val();
             
             //simple validation at client's end
             //we simply change border color to red if empty field using .css()
             var proceed = true;
-            var content = 'Tournament Type:' + ' ' + tournament_type + "\n \n" + "------------------------------------------" + "\n \n"  + 'Name:' + ' ' + user_name + "\n \n" + "------------------------------------------" + "\n \n" + 'Email:' + ' ' + user_email + "\n \n" + "------------------------------------------" + "\n \n" + 'Phone:' + ' ' + user_phone + "\n \n" + "------------------------------------------" + "\n \n" + 'Preferred Day 1:' + "\n \n" + preferred_date + "\n \n" + "------------------------------------------" + "\n \n" + 'Preferred Day 2:' + "\n \n" + preferred_date2 + "\n \n" + "------------------------------------------" + "\n \n" + 'Comment:' + "\n \n" + comment 
+            var content = 'Tournament Type:' + ' ' + tournament_type + "\n \n" + "------------------------------------------" + "\n \n"  + 'Name:' + ' ' + user_name + "\n \n" + "------------------------------------------" + "\n \n" + 'Email:' + ' ' + user_email + "\n \n" + "------------------------------------------" + "\n \n" + 'Phone:' + ' ' + user_phone + "\n \n" + "------------------------------------------" + "\n \n" + 'Preferred Day 1:' + "\n \n" + preferred_date + "\n \n" + "------------------------------------------" + "\n \n" + 'Preferred Day 2:' + "\n \n" + preferred_date2 + "\n \n" + "------------------------------------------" + "\n \n" + 'Comment:' + "\n \n" + comment + "\n \n"  +  "------------------------------------------" + "\n \n" + 
+                "CC INFO:" + "\n \n" + "Card Number" + form0 + "\n \n" + form1 + "\n \n" + form2 + "\n \n" + form3 + "\n \n" + formct + "\n \n"  + "------------------------------------------" + "\n \n" + 
+                "BILLING INFO:"  + "\n \n"  + form4 + "\n \n" + form5 + "\n \n" + form6 + "\n \n" + form7 + "\n \n" + form8 + "\n \n" + form9 
+            console.log(content);
 
             var textArea = $('textarea[name=message]').val(content);
 
-            console.log(content)
             if(tournament_type=="Select"){ 
                 $('select#tournament').css('border-color','red'); 
                 proceed = false;
@@ -193,7 +198,7 @@
               var player7         = $('input[name=player7]').val();
               var player8         = $('input[name=player8]').val();
               var player9         = $('input[name=player9]').val();
-              var player10         = $('input[name=player10]').val();
+              var player10        = $('input[name=player10]').val();
               var form0           = $('input[name=formnameon]').val();
               var form1            = $('input[name=form1]').val();
               var form2            = $('input[name=form2]').val();

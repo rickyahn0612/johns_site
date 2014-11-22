@@ -4,7 +4,7 @@
     %br
     %br
     %br
-    .about_content_wrapper{style: 'height: 1000px;'}
+    .about_content_wrapper{style: 'height: 1800px;'}
       .left_content.float_left
         .container
           %h1 Free Agent Registration Form
@@ -30,7 +30,7 @@
               %label Select Your Registration Type  <span class='required'>*</span> 
               %br
               %select#tournament.form-control{style: 'width: 52%; font-weight: bold; color: #777777;'}
-                %option Fall Registration
+                %option Winter Registration
               %br
               %br
               .form-group
@@ -90,10 +90,7 @@
             %label{for: "message"}
               %br
               %textarea#message{name: "message", placeholder: "Enter Your Name", class: 'form-control', style: 'height: 0px; visibility: hidden'}
-            .form-group
-              %label
-                %span  
-                %button#free_agent_btn.submit_btn.btn.btn-info{style: 'position: relative; right: 7px; padding: 13px 70px 13px 70px;'} Submit 
+
           %p Questions?  Feel free to call us at (213) 533-9828 or send us an email at info@urbanfutsal.la
       .right_content.float_right{style: 'border-left: solid 1px #cfcfcf; margin-top: 150px; padding-left: 30px; height: 450px; margin-right: 40px;'}
         %h3{style: 'width: 400px; margin: 0;'} How Our Free Agent <br /> Registration Works.
@@ -108,6 +105,101 @@
           %li If there are not enough free agents drafted, then we will attempt to form a team with the remaining agents.
 
       .clear
+        %br
+        %br
+        #form-binfo
+          %legend Billing Information
+          .form-group
+            %label{for: "fname"}
+              %span First Name <span class='required'>*</span> 
+              %br 
+              %input#bnname{name: "bfname", placeholder: "", type: "text", class: 'form-control', style: 'width: 400px; margin-right: 40px;'}
+            %label{for: "lname"}
+              %span Last Name <span class='required'>*</span> 
+              %br
+              %input#blname{name: "blname", placeholder: "", type: "text", class: 'form-control', style: 'width: 400px; margin-right: 40px;'}
+            %br
+            %br
+            %label{for: "address"}
+              %span Address <span class='required'>*</span> 
+              %br
+              %input#addressa{name: "address", placeholder: "", type: "text", class: 'form-control', style: 'width: 840px; margin-right: 40px;'}
+
+          %br
+          .form-group
+            %label{for: "city"}
+              %span City <span class='required'>*</span> 
+              %br
+              %input#city{name: "city", placeholder: "", type: "email", class: 'form-control', style: 'width: 400px; margin-right: 40px;'}
+            %label{for: "state"}
+              %span State <span class='required'>*</span> 
+              %br
+              %input#state{name: "state", placeholder: "", type: "text", class: 'form-control', style: 'width: 200px; margin-right: 40px;'}
+            %label{for: "zipcode"}
+              %span Zipcode <span class='required'>*</span> 
+              %br
+              %input#zip{name: "zip", placeholder: "", type: "text", class: 'form-control', style: 'width: 150px;'}
+
+
+        #form-container-last{style: 'display: block;'}
+          %legend Payment Information
+          .col-xs-7
+            .row
+              .col-xs-12{style: 'position: relative; right: 10px;'}
+                %div
+                  %label Name on Card
+                  <span class='required'>*</span> 
+                  %input.form-control#nameoncname{ name: 'formnameon', placeholder: ""}
+                  %br
+                  %br
+            .row
+              .col-xs-6{style: 'position: relative; right: 10px;'}
+                %label Credit Card Number
+                <span class='required'>*</span> 
+                %input.form-control#ccnumber{name: 'form1'}
+
+
+              .col-xs-5
+                .col-xs-6
+                  %label Expiration
+                  <span class='required'>*</span> 
+                  %input.form-control#exp{name: 'form2'}
+
+            %br
+            %br
+            .row  
+              .col-xs-5{style: 'position: relative; right: 10px;'}
+                %label Card Type
+                <span class='required'>*</span> 
+                %select.form-control#cctnumber{name: 'formct'}
+                  %option{value: 'Select'} Select
+                  %option{value: 'Visa'} Visa
+                  %option{value: 'Mastercard'} Mastercard
+                  %option{value: 'Amex'} Amex
+              .col-xs-4
+                %label CVV 
+                <span class='required'>*</span> 
+                %input.form-control#ccc{name: 'form3'} 
+                <span style="font-size: 10px;">(Front Side Amex, Back side Visa/MC)</span>
+          #winter-registration-info.col-xs-5
+            .col-xs-9{style: 'border-left: solid 1px #cfcfcf;'}
+              %h3.winter-info $75 for an 8 week season 
+
+              %p Privacy: Urban Futsal LA completely respects our member's privacy and therefore is committed to keeping your information secure and confidential.
+              %br
+              %p For More Information: 
+              %p Please <a href="/contact.html">Contact Us</a> and a representative will get back with you shortly. 
+            .clear
+          .clear
+
+
+        %p{style: 'margin-bottom: 40px; margin-left: 20px;'} Privacy: Urban Futsal LA completely respects our member's privacy and therefore is committed to keeping your information secure and confidential.
+        .clear
+        .form-group
+          %label
+            %span  
+            %button#free_agent_btn.submit_btn.btn.btn-info{style: 'position: relative; right: 7px; padding: 13px 70px 13px 70px;'} Submit 
+
 %a{href: '#', id: 'uparrow'}
   %i.glyphicon.glyphicon-arrow-up
   %p back to top
