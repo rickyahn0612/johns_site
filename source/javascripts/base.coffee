@@ -269,8 +269,10 @@ $ ->
       $('.tourny-info').hide()
       $('.winter-info').show()
       bformContainer.show()
+      $('.day-container').show()
     else
       $('.tourny-info').show()
+      $('.day-container').hide()
       $('.winter-info').hide()
       bformContainer.hide()
   return
