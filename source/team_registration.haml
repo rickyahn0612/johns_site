@@ -21,7 +21,9 @@
               %br
               %label Select Your Registration Type  <span class='required'>*</span> 
               %select#tournament.form-control{style: 'width: 90%; font-weight: bold; color: #777777;'}
-                %option Fall Registration
+                %option Winter Registration
+                %option Januaray Torunament 
+                
               %br
               %br
               .form-group
@@ -98,6 +100,11 @@
                         %label Player Name 
                       %li 
                         %label Player Name 
+                      %li 
+                        %label Player Name 
+                      %li 
+                        %label Player Name 
+ 
               .col-xs-6
                 .form-sets
                   .float-right
@@ -109,6 +116,9 @@
                     %input.form-control#player6{style: 'margin-bottom: 25px; width: 400px;', name: 'player6'}
                     %input.form-control#player7{style: 'margin-bottom: 25px; width: 400px;', name: 'player7'}
                     %input.form-control#player8{style: 'margin-bottom: 25px; width: 400px;', name: 'player8'}
+                    %input.form-control#player9{style: 'margin-bottom: 25px; width: 400px;', name: 'player9'}
+                    %input.form-control#player10{style: 'margin-bottom: 25px; width: 400px;', name: 'player10'}
+ 
                 .clear
             #form-binfo
               %legend Billing Information
@@ -184,9 +194,11 @@
                     <span class='required'>*</span> 
                     %input.form-control#ccc{name: 'form3'} 
                     <span style="font-size: 10px;">(Front Side Amex, Back side Visa/MC)</span>
-              .col-xs-5
+              #winter-registration-info.col-xs-5
                 .col-xs-9{style: 'border-left: solid 1px #cfcfcf;'}
-                  %h3 Team Registration: $500 for an 8 week season 
+                  %h3.winter-info Team Registration: $500 for an 8 week season 
+                  %h3.tourny-info Cash Prize: $1000 For Winning Team
+
                   %p Privacy: Urban Futsal LA completely respects our member's privacy and therefore is committed to keeping your information secure and confidential.
                   %br
                   %p For More Information: 

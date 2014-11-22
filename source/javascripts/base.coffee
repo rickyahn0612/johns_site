@@ -19,19 +19,9 @@ $ ->
       $('#choice1').find('option').remove()
       $('#choice3').find('option').remove()
  
-    if $(this).val() == 'October Free Play'
-      $('#choice1').find('option').remove()
-      $('#choice1').append('<option value="First Choice">First Choice')
-      $('#choice1').append('<option value="Monday Night / 5v5 Men / Coed ">Monday Night / 5v5 Men / Coed </option>')
-      $('#choice1').append('<option value="Wednesday Night / 5v5 Men / Coed">Wednesday Night / 5v5 Men / Coed</option>')
-
-      $('#choice3').find('option').remove()
-      $('#choice3').append('<option value="Second Choice">Second Choice')
-      $('#choice3').append('<option value="Monday Night / 5v5 Men / Coed ">Monday Night / 5v5 Men / Coed </option>')
-      $('#choice3').append('<option value="Wednesday Night / 5v5 Men / Coed">Wednesday Night / 5v5 Men / Coed</option>')
-
-
-    if $(this).val() == 'Fall Registration'
+    #if $(this).val() == 'Januaray Torunament'
+     #$('.tourny-info').show() 
+    if $(this).val() == 'Winter Registration'
       $('#choice1').find('option').remove()
       $('#choice1').append('<option value="First Choice">First Choice')
       $('#choice1').append('<option value="Monday Night / 5v5 Men ">Monday Night / 5v5 Men </option>')
@@ -44,7 +34,6 @@ $ ->
       $('#choice3').append('<option value="Tuesday Night / 5v5 Coed">Tuesday Night / 5v5 Coed</option>')
       $('#choice3').append('<option value="Wednesday Night/ 5v5 Men">Wednesday Night/ 5v5 Men</option>')
 
-      $('#form-container-last').show()
 
   # $("#free_agent_btn").click ->
     
@@ -274,14 +263,15 @@ $ ->
 
   $('#tournament').change ->
     registrationType = $('select#tournament').find(":selected").text()
-    formContainer = $('#form-container-last')
     bformContainer = $('#form-binfo ')
     
-    if registrationType == "Fall Registration"
-      formContainer.show()
+    if registrationType == "Winter Registration"
+      $('.tourny-info').hide()
+      $('.winter-info').show()
       bformContainer.show()
     else
-      formContainer.hide()
+      $('.tourny-info').show()
+      $('.winter-info').hide()
       bformContainer.hide()
   return
 
