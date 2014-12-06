@@ -83,6 +83,7 @@
             var user_email       = $('input[name=email]').val();
             var user_phone       = $('input[name=phone]').val();
             var user_age         = $('input[name=age]').val();
+            var childs_name      = $('input[name=childs_name]').val();
             var comment          = $('textarea[name=comment]').val();
             var user_message     = $('textarea[name=message]').val();
             //simple validation at client's end
@@ -91,6 +92,7 @@
             var content =  'Name:' + ' ' + user_name + "\n \n" + "------------------------------------------" + "\n \n" + 
                            'Email:' + ' ' + user_email + "\n \n" + "------------------------------------------" + "\n \n" + 
                            'Phone:' + ' ' + user_phone + "\n \n" + "------------------------------------------" + "\n \n" +
+                           'Childs Name:' + ' ' + childs_name + "\n \n" + "------------------------------------------" + "\n \n" + 
                            'Age:'   + ' ' + user_age + "\n \n" + "------------------------------------------" + "\n \n" +
                            'Comment:'   + ' ' + comment + "\n \n" + "------------------------------------------" + "\n \n" 
                            
@@ -111,6 +113,12 @@
                 $('input[name=phone]').css('border-color','red'); 
                 proceed = false;
             }
+            if(childs_name=="") {
+              $('input[name=childs_name]').css('border-color','red'); 
+                proceed = false;
+            }
+
+
             if(user_age=="") {
               $('input[name=age]').css('border-color','red'); 
                 proceed = false;
@@ -576,6 +584,7 @@
             </p>
           </div>
           <div id='contact-form-container'>
+            <h3>Parent/Guardian Information</h3>
             <div class='form-group'>
               <label for='name'>
                 <span>Name</span>
@@ -598,19 +607,28 @@
               <input class='form-control' id='phone' name='phone' placeholder='Phone Number' style='width: 280px;' type='text'>
                 <div class='form-group' style='margin-left: 40px;'></div>
               </input>
-              <label for='age'>
-                <span>Age</span>
-                <br>
-                <input class='form-control' id='phone' name='age' placeholder="Child's Age" style='width: 280px;' type='text'>
-              </label>
+            </label>
+            <br>
+            <br>
+            <h3>Child's Information</h3>
+            <label for='childs_name'>
+              <span>Child's Name</span>
               <br>
+              <input class='form-control' id='childs_name' name='childs_name' placeholder="Child's Name" style='width: 280px;' type='text'>
+            </label>
+            <label for='age' style='margin-left: 30px;'>
+              <span>Age</span>
+              <br>
+              <input class='form-control' id='phone' name='age' placeholder="Child's Age" style='width: 280px;' type='text'>
+            </label>
+            <br>
               <br>
               <div class='form-group'>
                 <label>Comment</label>
                 <br>
                 <textarea class='form-control' id='comment' name='comment' placeholder='Enter Your Message' style='width: 610px; height: 200px;'></textarea>
               </div>
-            </label>
+            </br>
             <div class='form-group'>
               <label for='message'>
                 <textarea class='form-control' id='message' name='message' placeholder='Enter Your Name' style='height: 0px; visibility: hidden'></textarea>

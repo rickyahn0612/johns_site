@@ -83,6 +83,7 @@
             var user_email       = $('input[name=email]').val();
             var user_phone       = $('input[name=phone]').val();
             var user_age         = $('input[name=age]').val();
+            var childs_name      = $('input[name=childs_name]').val();
             var comment          = $('textarea[name=comment]').val();
             var user_message     = $('textarea[name=message]').val();
             //simple validation at client's end
@@ -91,6 +92,7 @@
             var content =  'Name:' + ' ' + user_name + "\n \n" + "------------------------------------------" + "\n \n" + 
                            'Email:' + ' ' + user_email + "\n \n" + "------------------------------------------" + "\n \n" + 
                            'Phone:' + ' ' + user_phone + "\n \n" + "------------------------------------------" + "\n \n" +
+                           'Childs Name:' + ' ' + childs_name + "\n \n" + "------------------------------------------" + "\n \n" + 
                            'Age:'   + ' ' + user_age + "\n \n" + "------------------------------------------" + "\n \n" +
                            'Comment:'   + ' ' + comment + "\n \n" + "------------------------------------------" + "\n \n" 
                            
@@ -111,6 +113,12 @@
                 $('input[name=phone]').css('border-color','red'); 
                 proceed = false;
             }
+            if(childs_name=="") {
+              $('input[name=childs_name]').css('border-color','red'); 
+                proceed = false;
+            }
+
+
             if(user_age=="") {
               $('input[name=age]').css('border-color','red'); 
                 proceed = false;
