@@ -893,3 +893,7 @@ ol {
     padding: 0;
     text-align: center;
     letter-spacing: 1px; }
+
+/* line 1068, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
+#carousel-example-generic2 {
+  min-width: 1200px !important; }
