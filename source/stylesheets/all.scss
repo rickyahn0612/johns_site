@@ -622,7 +622,8 @@ body {
 }
 
 .about_top_header_image_container {
-  background: url('../images/feet_running.jpg');
+  background: url('../images/Jauregui_l_7798141001.jpg');
+  background-position: 0 50%;
   background-size: cover;
   moz-background-size: cover;
   webkit-background-size: cover;
@@ -630,6 +631,18 @@ body {
   width: 100%;
   min-width: 1200px;
 }
+
+.youth_top_header_image_container {
+  background: url('../images/youth-futsal-celeb.jpg');
+  background-position: 80% 25%;
+  background-size: cover;
+  moz-background-size: cover;
+  webkit-background-size: cover;
+  height: 170px;
+  width: 100%;
+  min-width: 1200px;
+}
+
 
 .about_content_container {
   background: #E9E9E9;

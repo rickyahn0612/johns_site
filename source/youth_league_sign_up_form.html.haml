@@ -1,58 +1,82 @@
-.container
-  #form-success-message{style: 'height: 400px; display: none;'}
-    %h1 Thank you for Registering
-    %p 
-      If you have any questions please feel free to <a href="/contact.html">contact us</a>!
+.youth_top_header_image_container
+.about_content_container
+  %br
+  %br
+  %br
+  .container
+    .about_content_wrapper{style: 'height: 1800px;'}
+ 
+      #form-success-message{style: 'height: 400px; display: none;'}
+        %h1 Thank you for Registering
+        %p 
+          If you have any questions please feel free to <a href="/contact.html">contact us</a>!
 
-  %fieldset#youth_form.form-inline
-    %legend Youth League Signup From (Ages 4-12) 
-    #form-success-message{style: 'height: 400px; display: none;'}
-      %h1 Thank you for Contacting Us
-      %p 
-        One of our representatives will get back to you shortly!  
-    #contact-form-container
-      .form-group
-        %label{for: "name"}
-          %span Name
-          %br
-          %input#name{name: "name", placeholder: "Enter Your Name", type: "text", class: 'form-control', style: 'width: 280px; margin-right: 40px;'}
-      .form-group
-        %label{for: "email"}
-          %span Email Address
-          %br
-          %input#email{name: "email", placeholder: "Enter Your Email", type: "email", class: 'form-control', style: 'width: 280px;'}
-      %br
-      %br
-      %label{for: "phone"}
-        %span Phone
+      .col-xs-7
+        %fieldset#youth_form.form-inline
+          %legend 
+            %h1 Youth League Signup From 
+          #form-success-message{style: 'height: 400px; display: none;'}
+            %h1 Thank you for Contacting Us
+            %p 
+              One of our representatives will get back to you shortly!  
+          #contact-form-container
+            .form-group
+              %label{for: "name"}
+                %span Name
+                %br
+                %input#name{name: "name", placeholder: "Enter Your Name", type: "text", class: 'form-control', style: 'width: 280px; margin-right: 40px;'}
+            .form-group
+              %label{for: "email"}
+                %span Email Address
+                %br
+                %input#email{name: "email", placeholder: "Enter Your Email", type: "email", class: 'form-control', style: 'width: 280px;'}
+            %br
+            %br
+            %label{for: "phone"}
+              %span Phone
+              %br
+              %input#phone{name: "phone", placeholder: "Phone Number", type: "text", class: 'form-control', style: 'width: 280px;'}
+                .form-group{style: 'margin-left: 40px;'}
+              %label{for: "age"}
+                %span Age
+                %br
+                %input#phone{name: "age", placeholder: "Child's Age", type: "text", class: 'form-control', style: 'width: 280px;'}
+              %br
+              %br
+              .form-group
+                %label Comment
+                %br
+                %textarea#comment{style: 'width: 610px; height: 200px;',name: 'comment', placeholder: "Enter Your Message", class: 'form-control'}
+           
+            .form-group
+              %label{for: "message"}
+                %textarea#message{name: "message", placeholder: "Enter Your Name", class: 'form-control', style: 'height: 0px; visibility: hidden'}
+                
+            %br
+            %br
+            .form-group
+              %label
+                %span  
+                %button#youth_submit_btn.submit_btn.btn.btn-info{style: 'position: relative; right: 7px; padding: 13px 70px 13px 70px;'} Submit
+      .col-xs-5
+        %h3 Kids Soccer Clinic
+        %hr
+        %ul{style: 'padding: 0; padding-left: 14px;'}
+          %li Date: Saturday, Jan. 10, 2015
+          %li Location: 310 N. Madison Ave Los Angeles, CA 90004
+          %li Time: 9:00 a.m. - 2:00 p.m.
+          %li Cost: $10 per player
+          %li For More Information Call: (818) 731-8558
         %br
-        %input#phone{name: "phone", placeholder: "Phone Number", type: "text", class: 'form-control', style: 'width: 280px;'}
-          .form-group{style: 'margin-left: 40px;'}
-        %label{for: "age"}
-          %span Age
-          %br
-          %input#phone{name: "age", placeholder: "Child's Age", type: "text", class: 'form-control', style: 'width: 280px;'}
+        %h4 Brought to you by
         %br
-        %br
-        .form-group
-          %label Comment
-          %br
-          %textarea#comment{style: 'width: 610px; height: 200px;',name: 'comment', placeholder: "Enter Your Message", class: 'form-control'}
-     
-      .form-group
-        %label{for: "message"}
-          %textarea#message{name: "message", placeholder: "Enter Your Name", class: 'form-control', style: 'height: 0px; visibility: hidden'}
-          
-      %br
-      %br
-      .form-group
-        %label
-          %span  
-          %button#youth_submit_btn.submit_btn.btn.btn-info{style: 'position: relative; right: 7px; padding: 13px 70px 13px 70px;'} Submit
+        = image_tag 'ole_logo.jpg', style: 'width: 100px;'
+        = image_tag 'uf_logo.png', style: 'width: 100px'
+      .clear
       %br
       %br
       %br
       %br
       %br
       %br
-
+      %br
