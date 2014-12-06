@@ -1,0 +1,53 @@
+.container
+  %fieldset#youth_form.form-inline
+    %legend Youth League Signup From (Ages 4-12) 
+    #form-success-message{style: 'height: 400px; display: none;'}
+      %h1 Thank you for Contacting Us
+      %p 
+        One of our representatives will get back to you shortly!  
+    #contact-form-container
+      .form-group
+        %label{for: "name"}
+          %span Name
+          %br
+          %input#name{name: "name", placeholder: "Enter Your Name", type: "text", class: 'form-control', style: 'width: 280px; margin-right: 40px;'}
+      .form-group
+        %label{for: "email"}
+          %span Email Address
+          %br
+          %input#email{name: "email", placeholder: "Enter Your Email", type: "email", class: 'form-control', style: 'width: 280px;'}
+      %br
+      %br
+      %label{for: "phone"}
+        %span Phone
+        %br
+        %input#phone{name: "phone", placeholder: "Phone Number", type: "text", class: 'form-control', style: 'width: 280px;'}
+          .form-group{style: 'margin-left: 40px;'}
+        %label{for: "age"}
+          %span Age
+          %br
+          %input#phone{name: "age", placeholder: "Child's Age", type: "text", class: 'form-control', style: 'width: 280px;'}
+        %br
+        %br
+        .form-group
+          %label Comment
+          %br
+          %textarea#comment{style: 'width: 610px; height: 200px;',name: 'comment', placeholder: "Enter Your Message", class: 'form-control'}
+     
+      .form-group
+        %label{for: "message"}
+          %textarea#message{name: "message", placeholder: "Enter Your Name", class: 'form-control', style: 'height: 0px; visibility: hidden'}
+          
+      %br
+      %br
+      .form-group
+        %label
+          %span  
+          %button#youth_submit_btn.submit_btn.btn.btn-info{style: 'position: relative; right: 7px; padding: 13px 70px 13px 70px;'} Submit
+      %br
+      %br
+      %br
+      %br
+      %br
+      %br
+
