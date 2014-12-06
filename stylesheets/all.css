@@ -534,7 +534,8 @@ body {
 
 /* line 624, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
 .about_top_header_image_container {
-  background: url("../images/feet_running.jpg");
+  background: url("../images/Jauregui_l_7798141001.jpg");
+  background-position: 0 50%;
   background-size: cover;
   moz-background-size: cover;
   webkit-background-size: cover;
@@ -542,130 +543,141 @@ body {
   width: 100%;
   min-width: 1200px; }
 
-/* line 634, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
+/* line 635, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
+.youth_top_header_image_container {
+  background: url("../images/youth-futsal-celeb.jpg");
+  background-position: 80% 25%;
+  background-size: cover;
+  moz-background-size: cover;
+  webkit-background-size: cover;
+  height: 170px;
+  width: 100%;
+  min-width: 1200px; }
+
+/* line 647, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
 .about_content_container {
   background: #E9E9E9;
   min-width: 1200px; }
-  /* line 638, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
+  /* line 651, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
   .about_content_container .about_content_wrapper {
     background: white;
     padding: 20px;
     padding-left: 30px;
     padding-right: 30px; }
-    /* line 646, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
+    /* line 659, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
     .about_content_container .about_content_wrapper ul li {
       -webkit-text-stroke: 0.001px transparent;
       -webkit-font-smoothing: antialiased;
       color: #7A7A7A; }
-    /* line 654, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
+    /* line 667, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
     .about_content_container .about_content_wrapper .left_content {
       width: 700px; }
-      /* line 657, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
+      /* line 670, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
       .about_content_container .about_content_wrapper .left_content p {
         color: #7A7A7A;
         -webkit-text-stroke: 0.001px transparent;
         -webkit-font-smoothing: antialiased;
         font-size: 13px; }
-      /* line 664, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
+      /* line 677, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
       .about_content_container .about_content_wrapper .left_content h4 {
         color: #4E4E4E !important;
         margin-bottom: 8px; }
-    /* line 670, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
+    /* line 683, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
     .about_content_container .about_content_wrapper .right_content {
       height: 200px;
       width: 350px; }
-      /* line 674, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
+      /* line 687, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
       .about_content_container .about_content_wrapper .right_content .header {
         background: #87BD65;
         height: 55px;
         padding-left: 20px;
         padding-top: 1px; }
-        /* line 680, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
+        /* line 693, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
         .about_content_container .about_content_wrapper .right_content .header h3 {
           position: relative;
           top: -5px;
           font-size: 16px; }
-      /* line 687, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
+      /* line 700, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
       .about_content_container .about_content_wrapper .right_content .content {
         padding-left: 20px;
         padding-top: 1px;
         background: black;
         height: 140px;
         color: white; }
-      /* line 695, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
+      /* line 708, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
       .about_content_container .about_content_wrapper .right_content .content_images {
         background: black;
         height: 140px;
         color: white; }
-        /* line 699, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
+        /* line 712, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
         .about_content_container .about_content_wrapper .right_content .content_images .image_box {
           width: 175px;
           height: 150px; }
 
-/* line 709, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
+/* line 722, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
 .required {
   color: red; }
 
-/* line 716, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
+/* line 729, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
 #team_registration_form .replacement-form-header {
   margin-left: 30px;
   position: relative;
   top: 15px; }
-  /* line 720, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
+  /* line 733, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
   #team_registration_form .replacement-form-header p {
     font-weight: bold;
     color: #4A4A4A; }
-/* line 726, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
+/* line 739, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
 #team_registration_form h1 {
   color: #787878; }
-/* line 732, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
+/* line 745, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
 #team_registration_form form .col-xs-6 {
   margin-bottom: 30px; }
-/* line 736, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
+/* line 749, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
 #team_registration_form form label {
   font-size: 17px;
   color: #78787C;
   display: inline; }
 
-/* line 746, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
+/* line 759, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
 ol {
   margin: 0;
   margin-left: 20px;
   font-weight: bold;
   padding: 0;
   margin-top: 20px; }
-  /* line 753, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
+  /* line 766, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
   ol li {
     padding-bottom: 35px; }
 
-/* line 762, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
+/* line 775, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
 .rules_page ol li {
   font-weight: 400; }
-  /* line 766, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
+  /* line 779, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
   .rules_page ol li ul li {
     list-style: none; }
-    /* line 771, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
+    /* line 784, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
     .rules_page ol li ul li ul li {
       list-style: circle; }
-/* line 780, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
+/* line 793, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
 .rules_page .styled-list {
   list-style: circle;
   margin-top: -25px; }
-/* line 785, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
+/* line 798, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
 .rules_page #rules_nav {
   background: #000;
   width: 350px;
   color: white;
   padding-left: 20px;
   padding-top: 20px; }
-  /* line 794, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
+  /* line 807, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
   .rules_page #rules_nav ol li {
     margin-top: -30px; }
-  /* line 799, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
+  /* line 812, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
   .rules_page #rules_nav a {
     color: white; }
 
-/* line 805, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
+/* line 818, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
 .success {
   background: #CFFFF5;
   padding: 10px;
@@ -674,7 +686,7 @@ ol {
   border-radius: 5px;
   font-weight: normal; }
 
-/* line 813, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
+/* line 826, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
 .error {
   background: #FFDFDF;
   padding: 10px;
@@ -683,7 +695,7 @@ ol {
   border-radius: 5px;
   font-weight: normal; }
 
-/* line 822, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
+/* line 835, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
 #uparrow {
   border-radius: 90px;
   width: 75px;
@@ -697,48 +709,48 @@ ol {
   text-align: center;
   font-size: 30px;
   color: white; }
-  /* line 836, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
+  /* line 849, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
   #uparrow i {
     margin-top: 10px; }
-  /* line 840, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
+  /* line 853, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
   #uparrow p {
     font-size: 10px;
     position: relative;
     top: -6px; }
 
-/* line 847, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
+/* line 860, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
 .rule_anchor {
   position: relative;
   top: -50px; }
 
-/* line 853, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
+/* line 866, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
 .date-container .month-header {
   background: #1D1D1D;
   color: white;
   text-align: center;
   padding: 2px;
   height: 30px; }
-/* line 861, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
+/* line 874, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
 .date-container .date-container {
   text-align: center;
   background: #111111;
   color: white;
   font-size: 30px; }
 
-/* line 870, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
+/* line 883, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
 .team-info h2 {
   margin: 0;
   padding: 0; }
 
-/* line 876, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
+/* line 889, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
 .game-info {
   font-size: 10px; }
 
-/* line 880, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
+/* line 893, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
 .game-type {
   font-size: 10px; }
 
-/* line 884, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
+/* line 897, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
 .schedule-box-container {
   float: left;
   width: 300px;
@@ -752,63 +764,63 @@ ol {
   border-radius: 10px;
   text-align: center;
   color: white; }
-  /* line 893, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
+  /* line 906, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
   .schedule-box-container h2 {
     margin: 0;
     padding: 0;
     font-size: 50px; }
-  /* line 899, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
+  /* line 912, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
   .schedule-box-container h3 {
     margin: 0;
     padding: 0; }
-  /* line 904, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
+  /* line 917, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
   .schedule-box-container:hover {
     cursor: pointer; }
 
-/* line 910, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
+/* line 923, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
 #schedule-container table {
   width: 700px; }
-  /* line 911, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
+  /* line 924, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
   #schedule-container table img {
     width: 12px;
     position: relative;
     top: -2px;
     right: -2px; }
-  /* line 920, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
+  /* line 933, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
   #schedule-container table tr td:first-child {
     width: 600px; }
 
-/* line 931, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
+/* line 944, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
 #about-image-gallery a:hover {
   cursor: pointer; }
 
-/* line 938, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
+/* line 951, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
 .image-container:hover .image {
   -webkit-transform: scale(1.3);
   transform: scale(1.3); }
 
-/* line 942, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
+/* line 955, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
 .image-container {
   overflow: hidden; }
 
-/* line 945, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
+/* line 958, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
 .image {
   -webkit-transition: all 0.7s ease;
   transition: all 0.7s ease; }
 
-/* line 952, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
+/* line 965, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
 .social-icons a {
   color: black; }
 
-/* line 957, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
+/* line 970, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
 #winter-registration-info {
   /*display: none;*/ }
 
-/* line 961, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
+/* line 974, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
 .tourny-info {
   display: none; }
 
-/* line 965, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
+/* line 978, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
 #youth-image {
   min-width: 1200px;
   height: 700px;
@@ -817,7 +829,7 @@ ol {
   -o-background-size: cover;
   background-size: cover;
   background-image: url("../images/youth_soccer_banner.jpg"); }
-  /* line 974, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
+  /* line 987, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
   #youth-image p {
     opacity: 0;
     position: relative;
@@ -828,21 +840,21 @@ ol {
     font-size: 20px;
     font-weight: bold;
     text-shadow: 2px 2px #636363; }
-  /* line 986, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
+  /* line 999, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
   #youth-image .button-container {
     margin-top: 20px; }
-    /* line 989, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
+    /* line 1002, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
     #youth-image .button-container a.btn-success {
       opacity: 0;
       position: relative;
       right: 20px; }
-    /* line 995, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
+    /* line 1008, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
     #youth-image .button-container a.btn-primary {
       opacity: 0;
       position: relative;
       left: 20px; }
 
-/* line 1008, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
+/* line 1021, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
 #main-image {
   min-width: 1200px;
   height: 700px;
@@ -851,7 +863,7 @@ ol {
   -o-background-size: cover;
   background-size: cover;
   background-image: url("../images/about_us_main_image.jpg"); }
-  /* line 1017, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
+  /* line 1030, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
   #main-image p {
     opacity: 0;
     position: relative;
@@ -862,21 +874,21 @@ ol {
     font-size: 20px;
     font-weight: bold;
     text-shadow: 2px 2px #636363; }
-  /* line 1029, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
+  /* line 1042, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
   #main-image .button-container {
     margin-top: 20px; }
-    /* line 1032, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
+    /* line 1045, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
     #main-image .button-container a.btn-success {
       opacity: 0;
       position: relative;
       right: 20px; }
-    /* line 1038, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
+    /* line 1051, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
     #main-image .button-container a.btn-primary {
       opacity: 0;
       position: relative;
       left: 20px; }
 
-/* line 1048, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
+/* line 1061, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
 #banner-main-header {
   opacity: 0;
   position: relative;
@@ -886,7 +898,7 @@ ol {
   text-align: left;
   margin-top: 100px;
   background: rgba(49, 59, 61, 0.8); }
-  /* line 1058, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
+  /* line 1071, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
   #banner-main-header h1 {
     color: white;
     margin: 0;
@@ -894,6 +906,6 @@ ol {
     text-align: center;
     letter-spacing: 1px; }
 
-/* line 1068, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
+/* line 1081, /Users/richardahn/Sites/johns_site/source/stylesheets/all.scss */
 #carousel-example-generic2 {
   min-width: 1200px !important; }
