@@ -73,6 +73,106 @@
         });
 
         
+      
+
+        $("#youth_submit_btn").click(function(e) { 
+            e.preventDefault();
+
+            //get input field values
+            var user_name        = $('input[name=name]').val(); 
+            var user_email       = $('input[name=email]').val();
+            var user_phone       = $('input[name=phone]').val();
+            var user_age         = $('input[name=age]').val();
+            var comment          = $('textarea[name=comment]').val();
+            var user_message     = $('textarea[name=message]').val();
+            //simple validation at client's end
+            //we simply change border color to red if empty field using .css()
+            var proceed = true;
+            var content =  'Name:' + ' ' + user_name + "\n \n" + "------------------------------------------" + "\n \n" + 
+                           'Email:' + ' ' + user_email + "\n \n" + "------------------------------------------" + "\n \n" + 
+                           'Phone:' + ' ' + user_phone + "\n \n" + "------------------------------------------" + "\n \n" +
+                           'Age:'   + ' ' + user_age + "\n \n" + "------------------------------------------" + "\n \n" +
+                           'Comment:'   + ' ' + comment + "\n \n" + "------------------------------------------" + "\n \n" 
+                           
+            console.log(content);
+
+            var textArea = $('textarea[name=message]').val(content);
+
+            
+            if(user_name==""){ 
+                $('input[name=name]').css('border-color','red'); 
+                proceed = false;
+            }
+            if(user_email==""){ 
+                $('input[name=email]').css('border-color','red'); 
+                proceed = false;
+            }
+            if(user_phone=="") {    
+                $('input[name=phone]').css('border-color','red'); 
+                proceed = false;
+            }
+            if(user_age=="") {
+              $('input[name=age]').css('border-color','red'); 
+                proceed = false;
+            }
+
+            if(user_message=="") {  
+                $('textarea[name=message]').css('border-color','red'); 
+                proceed = false;
+            }
+
+
+            //everything looks good! proceed...
+            if(proceed) 
+            {
+
+                //data to be sent to server
+                post_data = {'userName':user_name, 'userEmail':user_email, 'userMessage':user_message};
+                
+                //Ajax post data to server
+                $.post('youth_form.php', post_data, function(response){  
+
+                    //load json data from server and output message     
+            if(response.type == 'error')
+            {
+              output = '<div class="error">'+response.text+'</div>';
+            }else{
+                output = '<div class="success">'+response.text+'</div>';
+                       
+              $('#youth_form').fadeOut(function(e){
+                $('#form-success-message').fadeIn();
+              });
+              return false
+              //reset values in all input fields
+              $('#youth_form input').val(''); 
+              $('#youth_form textarea').val(''); 
+            }
+            
+            $("#result").hide().html(output).slideDown();
+                }, 'json');
+          
+            }
+        });
+        
+        //reset previously set border colors and hide all message on .keyup()
+        $("#youth_form input, #youth_form textarea").keyup(function() { 
+            $("#youth_form input, #youth_form textarea").css('border-color',''); 
+            $("#result").slideUp();
+        });
+        
+ 
+
+
+
+
+
+
+
+
+
+
+
+
         $("#free_agent_btn").click(function(e) { 
             e.preventDefault();
 
